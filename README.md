@@ -1,3 +1,4 @@
 # PROYECTO BASTILLA
 Repositorio para la página web de la Bastilla.
-Acá no dice nada. 1
+
+Sobre esta rama se trabaja el Frontend, aunque esté incompleto o con errores, cuando tenga una versión semi-completa y presentable se podrá hacer el Pull a la rama Frontend
