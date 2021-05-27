@@ -1,0 +1,25 @@
+ICONO BASURA - <i class="fas fa-trash"></i>
+BARRITAS MENU (4) - <i class="fas fa-align-justify"></i> - (3) - <i class="fas fa-bars"></i>
+< - <i class="fas fa-angle-left"></i>
+> - <i class="fas fa-angle-right"></i>
+ICONO LIBRO OPEN - <i class="fas fa-book-open"></i>
+ICONO LIBRO CERRADO - <i class="fas fa-book"></i>
+BOOKMARK FILL - <i class="fas fa-bookmark"></i>
+BOOKMARK VACIO - <i class="far fa-bookmark"></i>
+3 PUNTICOS (OPCIONES) - <i class="fas fa-ellipsis-h"></i>
+FACEBOOK ICON - <i class="fab fa-facebook"></i>
+FILTER - <i class="fas fa-filter"></i>
+PA KENSHIN - <i class="fas fa-hand-middle-finger"></i>
+HOME - <i class="fas fa-home"></i>
+INFO - <i class="fas fa-info"></i>
+IG ICON - <i class="fab fa-instagram"></i>
+MAP - <i class="fas fa-map"></i>
+MAP ALTERNATIVO - <i class="far fa-map"></i>
+NEWSPAPER - <i class="far fa-newspaper"></i>
+PEN - <i class="fas fa-pen"></i>
+? - <i class="fas fa-question"></i>
+SEARCH - <i class="fas fa-search"></i>
+SORT DOWN - <i class="fas fa-sort-alpha-down"></i>
+SORT DOWN ALT - <i class="fas fa-sort-alpha-down-alt"></i>
+SORT AMOUNT - <i class="fas fa-sort-amount-down"></i>
+SORT AMOUNT ALT - <i class="fas fa-sort-amount-down-alt"></i>
