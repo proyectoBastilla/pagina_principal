@@ -9,12 +9,10 @@ include("includes/header.php");
 ?>
 
 <div id="margenes">
-  <?php if (isset($_GET["id"])) { ?>
-    <?php if ($_GET["id"]=="verificacion") { ?>
+  <?php if (isset($_GET["id"]) && $_GET["id"]=="verifica") { ?>
       <div class="container pb-4">
         <h3>Inicia sesión para completar la verificación de tu cuenta</h3>
       </div>
-    <?php } ?>
   <?php } ?>
 
   <!-- Mensaje emergente sobre un posible error de login (opcional) -->
@@ -32,7 +30,15 @@ include("includes/header.php");
       <p id="texto_tarjeta">Ingresa tus datos</p>
     </div>
 
-    <form method="post" action="<?php if(isset($_GET["id"])&&$_GET["id"]=="verificacion") {echo "verifica.php";} else {echo "login.php";}?>">
+    <?php
+    if(isset($_GET["id"]) {
+      $ir = "$_GET['id'].'.php'";
+    } else {
+      $ir = "login.php";
+    }
+    ?>
+
+    <form method="post" action="<?= $ir ?>">
       <div class="form-group pt-4 ">
         <input class="form-control" type="email" name="correo" placeholder="Correo Electrónico" autofocus>
       </div>
