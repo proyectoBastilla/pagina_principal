@@ -40,7 +40,7 @@ if (!empty($correo_db)) {
 
   $_SESSION["correo"] = $correo;
   $_SESSION["nombre"] = $nombre;
-  header("location: mail.php");
+  header("location: mail.php?type=verifica");
 }
 
 ?>
