@@ -71,7 +71,7 @@ $cuerpo_verifica =
         <h3>El pasaje de librerías La Bastilla te da la bienvenida, este es el lugar donde podrás encontrar la disponibilidad de libros de tus tiendas favoritas a tan solo unos clicks de distancia.<br><br>Para poder usar todas nuestras funcionalidades verifica tu cuenta en el enlace de abajo:</h3>
       </div>
       <div id="boton">
-        <a href="localhost/login/login_page.php?id=verificacion">Verifica tu cuenta</a>
+        <a href="localhost/pagina_principal/login/login_page.php?id=verifica">Verifica tu cuenta</a>
       </div>
     </div>
     <div id="pie">
@@ -153,7 +153,7 @@ $cuerpo_cambio =
         <h3>Haz clic en el botón de abajo para ir a cambiar tu contraseña, asegúrate de recordarla luego:</h3>
       </div>
       <div id="boton">
-        <a href="localhost/login/login_page.php?id=cambio">Cambio contraseña</a>
+        <a href="localhost/pagina_principal/login/login_page.php?id=cambio">Cambio contraseña</a>
       </div>
     </div>
     <div id="pie">
