@@ -14,7 +14,7 @@ require("vendor/autoload.php");
 if ($_GET["type"]=="verifica") {
   $asunto = $asunto_verifica;
   $cuerpo = $cuerpo_verifica;
-} elseif ($_GET["type"]=="cambio") {
+} elseif ($_GET["type"]=="restablecer") {
   $asunto = $asunto_cambio;
   $cuerpo = $cuerpo_cambio;
 }
@@ -48,5 +48,5 @@ try {
 } catch (Exception $e) {
   echo "Algo salió mal:".$e->getMessage();
 }
-//header("location: index.php");
+header("location: index.php");
 ?>
