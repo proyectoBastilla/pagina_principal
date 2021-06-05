@@ -100,7 +100,6 @@ $cuerpo_cambio =
       color: black;
     }
     #principal h1{
-      color: black;
       text-align: center;
       font-weight: bold;
       font-size: 36px;
@@ -124,6 +123,7 @@ $cuerpo_cambio =
       text-decoration:none;
       font-weight: 500;
       font-size: 18px;
+      color: black;
       padding-top:15px;
       padding-bottom:15px;
       padding-left:40px;
@@ -153,7 +153,7 @@ $cuerpo_cambio =
         <h3>Haz clic en el botón de abajo para ir a cambiar tu contraseña, asegúrate de recordarla luego:</h3>
       </div>
       <div id="boton">
-        <a href="localhost/pagina_principal/login/login_page.php?id=cambio">Cambio contraseña</a>
+        <a href="localhost/pagina_principal/login/login_page.php?id=restablecer">Cambio contraseña</a>
       </div>
     </div>
     <div id="pie">
