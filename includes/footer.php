@@ -2,7 +2,6 @@
 
     <footer class="footer">
       <div class="container">
-        <p>Página diseñada por Anita</p>
       </div>
     </footer>
 
