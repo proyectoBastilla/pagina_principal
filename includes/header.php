@@ -15,17 +15,22 @@
 
 <body>
     <header class="Header">
-        <div class="container">
-            <a href="#" class="LOGO"></a>
-            <span class="nav-bar" id="btnMenu"><i class="fas fa-bars"></i>MENÚ</span>
-            <nav class="navegación">
-                <ul>
-                    <li><a href="index.php">Inicio</a></li>
-                    <li><a href="librerias.php">Librerías</a></li>
-                    <li><a href="mapa.php">Mapa</a></li>
-                    <li><a href="busqueda.php">Búsqueda</a></li>
-                    <li><a href="acerca.php">Acerca de</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+            <a class="navbar-brand" href="#">La Bastilla</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="librerias.php">Librerias</a></li>
+                <li class="nav-item"><a class="nav-link" href="mapa.php">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="Acerca.php">Acerca de</a></li>
+                <li class="nav-item"><a class="nav-link" href="busqueda.php">Búsqueda por filtro</a></li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Busqueda</button>
+            </form>
             </nav>
-        </div>
     </header>
