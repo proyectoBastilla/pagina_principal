@@ -23,3 +23,4 @@ SORT DOWN - <i class="fas fa-sort-alpha-down"></i>
 SORT DOWN ALT - <i class="fas fa-sort-alpha-down-alt"></i>
 SORT AMOUNT - <i class="fas fa-sort-amount-down"></i>
 SORT AMOUNT ALT - <i class="fas fa-sort-amount-down-alt"></i>
+LOGIN - <i class="far fa-user"></i>
