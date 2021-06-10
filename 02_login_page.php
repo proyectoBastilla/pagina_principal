@@ -9,9 +9,9 @@ include("includes/header.php");
 
 //Asigna el nombre del archivo al que irá el form
 if(isset($_GET["id"])) {
-  $ir = $_GET['id'].'.php';
+  $ir = '02_'.$_GET['id'].'.php';
 } else {
-  $ir = "login.php";
+  $ir = "02_login.php";
 }
 
 //Asigna el nombre que tendrá el botón para enviar el form
@@ -30,7 +30,7 @@ if (isset($_GET["id"])) {
 }
 ?>
 
-<div id="margenes">
+<div id="margenes_login">
   <!-- Mensaje emergente sobre un posible error de login (opcional) -->
   <?php if (isset($_SESSION["mensaje"])) { ?>
     <div class="container alert alert-<?= $_SESSION["mensaje_color"] ?> alert-dismissible fade show" role="alert">
@@ -41,22 +41,22 @@ if (isset($_GET["id"])) {
   <?php } ?>
 
   <!-- Texto que está arriba del form indicando que hacer -->
-  <div id="tarjeta" class="card card-body">
+  <div class="card card-body">
     <?php if (isset($_GET["id"]) && $_GET["id"]=="verifica") { ?>
       <div class="container pb-4">
-        <p id="texto_tarjeta">Inicia sesión para completar la verificación de tu cuenta</p>
+        <p>Inicia sesión para completar la verificación de tu cuenta</p>
       </div>
     <?php } elseif (isset($_GET["id"]) && $_GET["id"]=="edit") { ?>
       <div class="container pb-4">
-        <p id="texto_tarjeta">Ingresa tu correo registrado</p>
+        <p>Ingresa tu correo registrado</p>
       </div>
     <?php } elseif (isset($_GET["id"]) && $_GET["id"]=="restablecer") { ?>
       <div class="container pb-4">
-        <p id="texto_tarjeta">Ingresa tu correo y escribe tu nueva contraseña</p>
+        <p>Ingresa tu correo y escribe tu nueva contraseña</p>
       </div>
     <?php } else { ?>
       <div class="container">
-        <p id="texto_tarjeta">Ingresa tus datos</p>
+        <p>Ingresa tus datos</p>
       </div>
     <?php } ?>
 
@@ -97,11 +97,11 @@ if (isset($_GET["id"])) {
     <!-- Botón para restablecer contraseña si es un login normal -->
     <?php if (!isset($_GET["id"])): ?>
       <div class="container pt-4">
-        <a class="text-dark" href="login_page.php?id=edit">¿Olvidaste tu contraseña?</a>
+        <a class="text-dark" href="02_login_page.php?id=edit">¿Olvidaste tu contraseña?</a>
       </div>
     <?php endif; ?>
   </div>
 </div>
 
-
+<!-- Include del footer y scripts -->
 <?php include("includes/footer.php") ?>

@@ -9,7 +9,7 @@ include("includes/header.php");
 ?>
 
 <!-- Aquí comienza la página como tal -->
-<div id="margenes">
+<div id="margenes_login">
 
   <!-- Mensaje emergente sobre un posible error de registro (opcional) -->
   <?php if (isset($_SESSION["mensaje"])) { ?>
@@ -21,12 +21,12 @@ include("includes/header.php");
   <?php } ?>
 
   <!-- Recuadro específico del registro -->
-  <div id="tarjeta" class="card card-body">
+  <div class="card card-body">
     <div class="container">
-      <p id="texto_tarjeta">Registra tu información personal</p>
+      <p>Registra tu información personal</p>
     </div>
 
-    <form action="registro.php" method="post">
+    <form action="02_registro.php" method="post">
       <div class="form-group pt-5">
         <input class="form-control" type="text" name="nombre" placeholder="Nombre(s)" autofocus>
       </div>

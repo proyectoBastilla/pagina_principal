@@ -20,15 +20,20 @@
     <header class="Header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="navbar-collapse mx-md-3">
-              <a class="navbar-brand" href="index.php">La Bastilla</a>
+              <a class="navbar-brand" href="01_index.php">La Bastilla</a>
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="librerias.php">Librerias</a></li>
-                <li class="nav-item"><a class="nav-link" href="mapa.php">Mapa</a></li>
-                <li class="nav-item"><a class="nav-link" href="acerca.php">Acerca de</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="01_index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="01_librerias.php">Librerias</a></li>
+                <li class="nav-item"><a class="nav-link" href="01_mapa.php">Mapa</a></li>
+                <li class="nav-item"><a class="nav-link" href="01_acerca.php">Acerca de</a></li>
               </ul>
-              <form action="busqueda.php" method="post" class="d-flex">
-                <i href="" class="far fa-user color-white me-4 mt-2" style="color: white;"></i>
+              <form action="01_busqueda.php" method="post" class="d-flex">
+                <?php if (!empty($_SESSION["iniciado"])) { ?>
+                  <div class="container">
+                    <p class="text-white">Hola, <?= $_SESSION["iniciado"] ?></p>
+                  </div>
+                <?php } ?>
+                <a href="02_index_login.php"><i class="far fa-user color-white me-4 mt-2" style="color: white;"></i></a>
                 <input class="form-control me-2" type="search" placeholder="Búsqueda" style="background-color:#f5f5f5;" aria-label="Search">
                 <input class="btn btn-outline-success" type="submit" value="Buscar">
               </form>

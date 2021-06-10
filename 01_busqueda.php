@@ -1,5 +1,7 @@
+<!-- Incluye la sesión y la base de datos -->
+<?php include("includes/database.php"); ?>
 <!-- Trae todo el código del header a la página principal -->
-<?php include("includes/header.php") ?>
+<?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
 <div class="mx-md-4">
@@ -9,4 +11,4 @@
  le corresponde a Daniel Correa y Juan Pablo Atehortua con bases de datos.</p>
 </div>
 <!-- Trae todo el código del footer a la página principal -->
-<?php include("includes/footer.php") ?>
+<?php include("includes/footer.php"); ?>

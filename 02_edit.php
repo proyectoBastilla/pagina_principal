@@ -3,5 +3,5 @@ session_start();
 
 $_SESSION["correo"] = $_POST["correo"];
 
-header("location: mail.php?type=restablecer");
+header("location: 02_mail.php?type=restablecer");
 ?>

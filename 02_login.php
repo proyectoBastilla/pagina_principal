@@ -28,25 +28,23 @@ if ($verificacion["verificación"]!=0) {
       $nombre = mysqli_fetch_array($result_nombre);
 
       $_SESSION["iniciado"] = $nombre["nombre"];
-      $_SESSION["mensaje"] = "Ha iniciado sesión correctamente";
-      $_SESSION["mensaje_color"] = "success";
       $_SESSION["sesion"] = true;
-      header("location: index.php");
+      header("location: 01_index.php");
 
     } else {
       $_SESSION["mensaje"] = "La contraseña es incorrecta";
       $_SESSION["mensaje_color"] = "danger";
-      header("location: login_page.php");
+      header("location: 02_login_page.php");
     }
   } else {
     $_SESSION["mensaje"] = "El correo no está registrado";
     $_SESSION["mensaje_color"] = "danger";
-    header("location: login_page.php");
+    header("location: 02_login_page.php");
   }
 } else {
   $_SESSION["mensaje"] = "La cuenta no está verificada";
   $_SESSION["mensaje_color"] = "warning";
-  header("location: login_page.php");
+  header("location: 02_login_page.php");
 
 }
 

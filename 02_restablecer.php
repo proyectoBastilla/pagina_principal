@@ -13,19 +13,19 @@ if(empty($correo) || empty($contra1) || empty($contra2)) {
 
   $_SESSION["mensaje"] = "Por favor, llena todos los campos correctamente";
   $_SESSION["mensaje_color"] = "danger";
-  header("location: login_page.php?id=restablecer");
+  header("location: 02_login_page.php?id=restablecer");
 
 } elseif ($contra1 != $contra2) {
 
   $_SESSION["mensaje"] = "Las contraseñas no coinciden";
   $_SESSION["mensaje_color"] = "danger";
-  header("location: login_page.php?id=restablecer");
+  header("location: 02_login_page.php?id=restablecer");
 
 } elseif (empty($correo_db)) {
 
   $_SESSION["mensaje"] = "El correo no está registrado";
   $_SESSION["mensaje_color"] = "warning";
-  header("location: login_page.php?id=restablecer");
+  header("location: 02_login_page.php?id=restablecer");
 
 } else {
 
@@ -34,7 +34,7 @@ if(empty($correo) || empty($contra1) || empty($contra2)) {
 
   $_SESSION["mensaje"] = "La contraseña fue restablecida correctamente";
   $_SESSION["mensaje_color"] = "success";
-  header("location: login_page.php");
+  header("location: 02_login_page.php");
 
 }
 

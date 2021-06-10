@@ -48,5 +48,5 @@ try {
 } catch (Exception $e) {
   echo "Algo salió mal:".$e->getMessage();
 }
-header("location: index.php");
+header("location: 02_index_login.php");
 ?>

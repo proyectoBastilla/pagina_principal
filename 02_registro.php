@@ -16,19 +16,19 @@ if (!empty($correo_db)) {
 
   $_SESSION["mensaje"] = "El correo ya está registrado";
   $_SESSION["mensaje_color"] = "warning";
-  header("location: registro_page.php");
+  header("location: 02_registro_page.php");
 
 } elseif(empty($nombre) || empty($apellido) || empty($correo) || empty($contra1) || empty($contra2)) {
 
   $_SESSION["mensaje"] = "Por favor, llena todos los campos correctamente";
   $_SESSION["mensaje_color"] = "danger";
-  header("location: registro_page.php");
+  header("location: 02_registro_page.php");
 
 } elseif ($contra1 != $contra2) {
 
   $_SESSION["mensaje"] = "Las contraseñas no coinciden";
   $_SESSION["mensaje_color"] = "danger";
-  header("location: registro_page.php");
+  header("location: 02_registro_page.php");
 
 } else {
 
@@ -40,7 +40,7 @@ if (!empty($correo_db)) {
 
   $_SESSION["correo"] = $correo;
   $_SESSION["nombre"] = $nombre;
-  header("location: mail.php?type=verifica");
+  header("location: 02_mail.php?type=verifica");
 }
 
 ?>

@@ -1,5 +1,7 @@
+<!-- Incluye la sesión y la base de datos -->
+<?php include("includes/database.php"); ?>
 <!-- Trae todo el código del header a la página principal -->
-<?php include("includes/header.php") ?>
+<?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
 <div class="mx-md-4">
@@ -30,11 +32,11 @@
     </div>
     <div class="mx-md-4">
       <br><h1><b>¡NUEVOS LANZAMIENTOS!</b></h1>
-      <p>Acá aparecen los libros que fueron recientemente añadidos a la pagina desde cualquier libreria, con la intencion de captar 
+      <p>Acá aparecen los libros que fueron recientemente añadidos a la pagina desde cualquier libreria, con la intencion de captar
       la atención del usuario.</p><br>
     </div>
   </div>
 </main>
 
 <!-- Trae todo el código del footer a la página principal -->
-<?php include("includes/footer.php") ?>
+<?php include("includes/footer.php"); ?>

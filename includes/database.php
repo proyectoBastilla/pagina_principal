@@ -6,7 +6,7 @@ session_start();
 $hostname = "localhost";
 $username = "root";
 $pass = "";
-$database = "login";
+$database = "bastilla";
 
 $mysql = mysqli_connect($hostname, $username, $pass, $database);
 
