@@ -6,7 +6,7 @@
     <br><h1><b>MAPA</b></h1>
     <img src="img/mapita.jpg">
     <br><h1>Librerías e información</h1>
-    <p>LIBRO LIBRO LIBRO LIBRO LIBRO INFO INFO INFO INFO </p>
+    <p>Aca va el mapa general y la informacion general y dinamica</p><br>
 </div>
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php") ?>
