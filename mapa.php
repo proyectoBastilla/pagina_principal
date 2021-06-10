@@ -2,10 +2,11 @@
 <?php include("includes/header.php") ?>
 
 <!-- Aquí va todo el código propio de la página -->
-    <h1>MAPA</h1>
-    <img src="img/pngtree-cartoon-map-green-map-map-illustration-location-map-png-image_447719.jpg">
-    <h1>Librerías e información</h1>
-    <p>LIBRO LIBRO LIBRO LIBRO LIBRO INFO INFO INFO INFO </p>
-
+<div class="mx-md-4">   
+    <br><h1><b>MAPA</b></h1>
+    <img src="img/mapita.jpg">
+    <br><h1>Librerías e información</h1>
+    <p>Aca va el mapa general y la informacion general y dinamica</p><br>
+</div>
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php") ?>

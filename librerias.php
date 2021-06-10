@@ -2,9 +2,11 @@
 <?php include("includes/header.php") ?>
 
 <!-- Aquí va todo el código propio de la página -->
-<h1>AQUÍ VAN LAS LIBRERÍAS</h1>
-<h2>NO DISPONIBLE POR AHORA</h2>
-<p>LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROSLIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROSLIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROSLIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROS LIBROSLIBROS LIBROS LIBROS LIBROS LIBROS</p>
-
+<div class="mx-md-4">
+<br><h1><b>AQUÍ VAN LAS LIBRERÍAS</b></h1>
+<h2>NO DISPONIBLE POR AHORA...</h2><br>
+<p> Acá se encuentran todas las librerias en formato de perfil, algo parecido a Facebook donde pueden investigar el local, la direccion, redes sociales, horarios
+y numeros de contacto.</p>
+</div>
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php") ?>
