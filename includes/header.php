@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body style="background-color:#f5f5f5;">
     <header class="Header">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="navbar-collapse mx-md-3">
@@ -26,7 +26,7 @@
                 <li class="nav-item"><a class="nav-link" href="acerca.php">Acerca de</a></li>
               </ul>
               <form action="busqueda.php" method="post" class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" style="background-color:#f5f5f5;" aria-label="Search">
                 <input class="btn btn-outline-success" type="submit" value="Búsqueda">
               </form>
             </div>

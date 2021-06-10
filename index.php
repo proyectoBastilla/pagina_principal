@@ -2,6 +2,9 @@
 <?php include("includes/header.php") ?>
 
 <!-- Aquí va todo el código propio de la página -->
+<div class="mx-md-4">
+<br><h1><b>LOGO</b></h1><br>
+</div>
 <main class="main">
   <div class="containter">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -25,8 +28,11 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-      <h2>NUEVOS LANZAMIENTOS</h2>
-      <p>LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO LIBRO </p>
+    <div class="mx-md-4">
+      <br><h1><b>¡NUEVOS LANZAMIENTOS!</b></h1>
+      <p>Acá aparecen los libros que fueron recientemente añadidos a la pagina desde cualquier libreria, con la intencion de captar 
+      la atención del usuario.</p><br>
+    </div>
   </div>
 </main>
 
