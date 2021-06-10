@@ -5,7 +5,7 @@ include("includes/database.php");
 include("includes/header.php");
 ?>
 <!--Margenes generales del body-->
-<div id="margenes_login">
+<div class="ml-md-4">
 
   <!-- Mensaje emergente si algo fue exitoso (opcional) -->
   <?php if (isset($_SESSION["mensaje"])) { ?>
@@ -27,8 +27,8 @@ include("includes/header.php");
       <a href="02_logout.php"><button type="button" class="btn btn-danger">Cerrar sesión</button></a>
     </div>
   <?php else: ?>
-    <h4>Por favor Regístrate o Inicia Sesión:</h4>
-    <div class="pt-3">
+    <div class="mx-md-4"><br><h4><b>Por favor Regístrate o Inicia Sesión:</b></h4><br></div>
+    <div class="mx-md-4">
       <a href="02_registro_page.php"><button type="button" class="btn btn-secondary">Registro</button></a>
       o
       <a href="02_login_page.php"><button type="button" class="btn btn-primary">Inicio Sesión</button></a>
