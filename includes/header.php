@@ -17,26 +17,55 @@
 </head>
 
 <body style="background-color:#f5f5f5;">
-    <header class="Header">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="navbar-collapse mx-md-3">
-              <a class="navbar-brand" href="01_index.php">La Bastilla</a>
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" aria-current="page" href="01_index.php">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="01_librerias.php">Librerias</a></li>
-                <li class="nav-item"><a class="nav-link" href="01_mapa.php">Mapa</a></li>
-                <li class="nav-item"><a class="nav-link" href="01_acerca.php">Acerca de</a></li>
-              </ul>
-              <form action="01_busqueda.php" method="post" class="d-flex">
-                <?php if (!empty($_SESSION["iniciado"])) { ?>
-                  <div class="container">
-                    <p class="text-white">Hola, <?= $_SESSION["iniciado"] ?></p>
+  <header class="Header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="navbar-collapse mx-md-3">
+        <a class="navbar-brand" href="01_index.php">La Bastilla</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="01_index.php">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="01_librerias.php">Librerias</a></li>
+            <li class="nav-item"><a class="nav-link" href="01_mapa.php">Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="01_acerca.php">Acerca de</a></li>
+          </ul>
+          <form action="01_busqueda.php" method="post" class="d-flex">
+            <?php if (!empty($_SESSION["iniciado"])) { ?>
+              <div class="container">
+                <p class="text-white">Hola, <?= $_SESSION["iniciado"] ?></p>
+              </div>
+            <?php } ?>
+
+            <!-- Botón login -->
+            <i class="far fa-user color-white me-4 mt-2" style="color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+
+            <!-- Modal login -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¿Que quieres hacer?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                <?php } ?>
-                <a href="02_index_login.php"><i class="far fa-user color-white me-4 mt-2" style="color: white;"></i></a>
-                <input class="form-control me-2" type="search" placeholder="Búsqueda" style="background-color:#f5f5f5;" aria-label="Search">
-                <input class="btn btn-outline-success" type="submit" value="Buscar">
-              </form>
+                  <div class="modal-body text-center">
+                    <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
+                        <a href="02_logout.php"><button type="button" class="btn btn-outline-secondary">Cerrar sesión</button></a>
+                    <?php else: ?>
+                        <a href="02_registro_page.php"><button type="button" class="btn btn-outline-secondary">Regístrate</button></a>
+                        o
+                        <a href="02_login_page.php"><button type="button" class="btn btn-outline-secondary">Inicia Sesión</button></a>
+                    <?php endif; ?>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
             </div>
-      </nav>
-    </header>
+            <!-- Fin Modal login -->
+
+            <!-- Búsqueda -->
+            <input class="form-control me-2" type="search" placeholder="Búsqueda" style="background-color:#f5f5f5;" aria-label="Search">
+            <input class="btn btn-outline-success" type="submit" value="Buscar">
+          </form>
+        </div>
+    </nav>
+  </header>
