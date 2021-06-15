@@ -1,0 +1,9 @@
+{
+    "name": "proyectobastilla/pagina",
+    "description": "Login de la p\u0000gina web de la Bastilla",
+    "type": "project",
+    "minimum-stability": "alpha",
+    "require": {
+        "phpmailer/phpmailer": "^6.4"
+    }
+}
