@@ -13,11 +13,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Link a estilo CSS -->
     <link href="css/styles.css" rel="stylesheet">
-
 </head>
 
 <body style="background-color:#f5f5f5;">
-  <header class="Header">
+  <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="navbar-collapse mx-md-3">
         <a class="navbar-brand" href="01_index.php">La Bastilla</a>

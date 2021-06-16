@@ -44,8 +44,8 @@
         </div>
       </div>
     </form>
-
   </div>
 </div>
+
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php"); ?>

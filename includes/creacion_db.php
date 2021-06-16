@@ -1,4 +1,7 @@
 <?php
+//USAR ESTE ARCHIVO SOLO UNA VEZ
+//CREA LA BASE DE DATOS DEL LOGIN AUTOMÁTICAMENTE EN CUALQUIER PC
+
 include("database.php");
 
 $query = "CREATE TABLE usuarios (

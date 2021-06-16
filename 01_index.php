@@ -7,13 +7,17 @@
 <div class="mx-md-4">
 <br><h1><b>LOGO</b></h1><br>
 </div>
+
 <main class="main">
   <div class="containter">
+    <!-- Inicio Carrusel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
+        <!-- Botones inferiores Carrusel -->
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       </div>
+      <!-- Imágenes Carrusel -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="img/reloj_arena-banner.jpg" class="d-block w-100">
@@ -22,6 +26,7 @@
           <img src="img/cuphead-banner.jpg" class="d-block w-100">
         </div>
       </div>
+      <!-- Botones laterales Carrusel -->
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -31,6 +36,9 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <!-- Fin Carrusel -->
+
+    <!-- Sección lanzamientos -->
     <div class="mx-md-4">
       <br><h1><b>¡NUEVOS LANZAMIENTOS!</b></h1>
       <p>Acá aparecen los libros que fueron recientemente añadidos a la pagina desde cualquier libreria, con la intencion de captar

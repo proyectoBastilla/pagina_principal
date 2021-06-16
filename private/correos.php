@@ -1,4 +1,11 @@
 <?php
+/*
+Este archivo define las diferentes variantes de correos que se
+pueden dar, se definen con el método get que va al archivo "mail.php"
+y allí elige que mensaje usa.
+*/
+
+//Los archivos usan el css dentro de HTML por necesidad
 
 $asunto_verifica = "Verifica tu cuenta La Bastilla";
 $cuerpo_verifica =

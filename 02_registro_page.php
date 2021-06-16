@@ -25,7 +25,7 @@ include("includes/header.php");
     <div class="container">
       <p>Registra tu información personal</p>
     </div>
-
+    <!-- Form de registro -->
     <form action="02_registro.php" method="post">
       <div class="form-group pt-5">
         <input class="form-control" type="text" name="nombre" placeholder="Nombre(s)" autofocus>
