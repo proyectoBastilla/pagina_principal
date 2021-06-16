@@ -1,27 +1,32 @@
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #bfbfbf;
-    color: black;
-    font-size: 1.2rem;
-    line-height: 1.2em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #bfbfbf;
+  color: black;
+  font-size: 1.2rem;
+  line-height: 1.2em;
 }
-.header {
-    background-color:rgb(0, 0, 0);
-    color: white;
+/* Modifica la barra completa del footer */
+#footer{
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+  margin-bottom: 0px;
 }
-#margenes_login {
+/* Modifica los íconos(links) del footer */
+#footer_icon{
+  display: inline;
+  padding: 0.3em;
+}
+/* Márgenes del registro/login para la tarjeta */
+#margenes_login{
   text-align: center;
-  margin-right: 10em;
-  margin-left: 10em;
+  margin-right: 15em;
+  margin-left: 15em;
   margin-top: 2em;
   font-size: 20px;
 }
-
-#centrado {
-  background-color: #fafafa;
-  margin: 1rem;
-  padding: 1rem;
-  border: 2px solid #ccc;
-  /* IMPORTANTE */
-  text-align: center;
+/* Márgenes del form de contacto */
+#contacto{
+  margin-left: 8em;
+  margin-right: 8em;
+  margin-bottom: 2em;
 }

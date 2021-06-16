@@ -13,8 +13,39 @@
   <p>Somos una pagina web desarrollada de forma experimental por los estudiantes:<br> Ana Sofia Alvarez Giraldo <br>
    Santiago Villada Ortiz <br> Daniel Correa Botero <br> Juan Pablo Atehortua <br> Cristian David Hoyos Rodriguez</p>
   <br>
-  <h4>Apoya nuestro proyecto dejando tus sugerencias en el correo a continuación.</h4>
-  <p>proyectobastilla@gmail.com</p>
+  <!-- Form de contacto -->
+  <h4 class="text-center">Apóyanos enviando tus sugerencias y dudas aquí:</h4>
+  <div id="contacto">
+    <form class="" action="index.html" method="post">
+      <div class="row pb-4 pt-4">
+        <div class="col-md">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Correo" name="correo">
+          </div>
+        </div>
+      </div>
+      <div class="row pb-4">
+        <div class="col-md">
+          <div class="form-group">
+            <textarea class="form-control" placeholder="Comentarios" style="height: 150px;" name="comentario"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row pb-4">
+        <div class="col-md">
+          <div class="form-group text-center">
+            <input class="btn btn-primary" type="submit" name="enviar" value="Enviar">
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
 </div>
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php"); ?>
