@@ -2,7 +2,7 @@
 
     <footer class="bg-dark text-center text-white">
       <!-- Container footer -->
-      <div id="footer">
+      <div id="footer1">
         <!-- Correo -->
         <div id="footer_icon">
           <a class="btn btn-outline-light btn-floating m-1" href= "01_acerca.php#contacto"  role="button">
@@ -11,7 +11,7 @@
         </div>
         <!-- Instagram -->
         <div id="footer_icon">
-          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/la_bastilla_proyecto/" role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/la_bastilla_proyecto/" target="_blank" role="button">
             <i class="fab fa-instagram"></i>
           </a>
         </div>

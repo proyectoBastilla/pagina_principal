@@ -6,9 +6,9 @@ body{
   line-height: 1.2em;
 }
 /* Modifica la barra completa del footer */
-#footer{
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
+#footer1{
+  padding-top: 2,5em;
+  padding-bottom: 2,5em;
   margin-bottom: 0px;
 }
 /* Modifica los íconos(links) del footer */
