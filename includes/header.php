@@ -27,9 +27,9 @@
             <li class="nav-item"><a class="nav-link" href="01_acerca.php">Acerca de</a></li>
           </ul>
           <form action="01_busqueda.php" method="post" class="d-flex">
-            <?php if (!empty($_SESSION["iniciado"])) { ?>
+            <?php if (!empty($_SESSION["nombre_iniciado"])) { ?>
               <div class="container">
-                <p class="text-white">Hola, <?= $_SESSION["iniciado"] ?></p>
+                <p class="text-white">Hola, <?= $_SESSION["nombre_iniciado"] ?></p>
               </div>
             <?php } ?>
 

@@ -23,7 +23,12 @@
       <?= $_SESSION["mensaje"] ?>
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <?php session_unset(); ?>
+    <?php
+      //Hacer que siempre se borren las varibles del mensaje emergente
+      unset($_SESSION["mensaje"], $_SESSION["mensaje_color"]);
+      //Condición para cerrar TODAS las variables de sesión. Para que no se cierre se debe iniciar sesión bien.
+      if (!isset($_SESSION["sesion"])) { session_unset(); }
+    ?>
   <?php } ?>
 
   <!-- Form de contacto -->
@@ -32,12 +37,20 @@
       <div class="row pb-4 pt-4">
         <div class="col-md">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+            <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
+              <input class="form-control" type="text" value="<?= $_SESSION["nombre_iniciado"]." ".$_SESSION["apellido_iniciado"] ?>" aria-label="readonly input example" disabled>
+            <?php else: ?>
+              <input type="text" class="form-control" placeholder="Nombre" name="nombre">
+            <?php endif; ?>
           </div>
         </div>
         <div class="col-md">
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="Correo" name="correo">
+            <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
+              <input class="form-control" type="email" value="<?= $_SESSION["correo_iniciado"] ?>" aria-label="readonly input example" disabled>
+            <?php else: ?>
+              <input type="email" class="form-control" placeholder="Correo" name="correo">
+            <?php endif; ?>
           </div>
         </div>
       </div>

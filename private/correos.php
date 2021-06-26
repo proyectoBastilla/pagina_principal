@@ -171,7 +171,16 @@ $cuerpo_cambio =
 </html>'
 ;
 
-$asunto_contacto = "Nuevo Comentario";
-$cuerpo_contacto = "Se ha registrado una nueva respuesta en el formulario de contacto: \n\nNombre usuario: ".$_POST["nombre"]."\nCorreo: ".$_POST["correo"]."\n\n".$_POST["comentario"];
+if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true) {
+
+  $asunto_contacto = "Nuevo Comentario";
+  $cuerpo_contacto = "Se ha registrado una nueva respuesta en el formulario de contacto: \n\nNombre usuario: ".$_SESSION["nombre_iniciado"]." ".$_SESSION["apellido_iniciado"]."\nCorreo: ".$_SESSION["correo_iniciado"]."\n\n".$_POST["comentario"];
+
+} else {
+
+  $asunto_contacto = "Nuevo Comentario";
+  $cuerpo_contacto = "Se ha registrado una nueva respuesta en el formulario de contacto: \n\nNombre usuario: ".$_POST["nombre"]."\nCorreo: ".$_POST["correo"]."\n\n".$_POST["comentario"];
+
+}
 
 ?>
