@@ -1,32 +1,51 @@
-body{
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #bfbfbf;
   color: black;
   font-size: 1.2rem;
   line-height: 1.2em;
 }
+
 /* Modifica la barra completa del footer */
-#footer1{
-  padding-top: 2,5em;
-  padding-bottom: 2,5em;
-  margin-bottom: 0px;
+#footer {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
+
 /* Modifica los íconos(links) del footer */
-#footer_icon{
+#footer_icon {
   display: inline;
   padding: 0.3em;
 }
+
 /* Márgenes del registro/login para la tarjeta */
-#margenes_login{
+#margenes_login {
   text-align: center;
-  margin-right: 15em;
-  margin-left: 15em;
-  margin-top: 2em;
+  margin-right: 18em;
+  margin-left: 18em;
+  margin-top: 3em;
+  margin-bottom: 3em;
   font-size: 20px;
 }
+
+/* Texto que hace link para recuperar la contraseña */
+#link_recuperar {
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
 /* Márgenes del form de contacto */
-#contacto{
+#contacto {
   margin-left: 8em;
   margin-right: 8em;
   margin-bottom: 2em;
+}
+
+/* Márgenes del mensaje emergente del contacto */
+#mensaje_emergente {
+  text-align: center;
+  font-size: 18px;
+  margin-left: 20em;
+  margin-right: 20em;
 }

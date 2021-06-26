@@ -171,4 +171,7 @@ $cuerpo_cambio =
 </html>'
 ;
 
+$asunto_contacto = "Nuevo Comentario";
+$cuerpo_contacto = "Se ha registrado una nueva respuesta en el formulario de contacto: \n\nNombre usuario: ".$_POST["nombre"]."\nCorreo: ".$_POST["correo"]."\n\n".$_POST["comentario"];
+
 ?>

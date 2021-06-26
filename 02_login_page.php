@@ -24,7 +24,6 @@ if (isset($_GET["id"])) {
   } elseif ($_GET["id"]=="edit") {
     $enviar = "Enviar correo";
   }
-
 } else {
   $enviar = "Iniciar Sesión"; //Si no hay nada es un login normal
 }
@@ -43,19 +42,19 @@ if (isset($_GET["id"])) {
   <!-- Texto que está arriba del form indicando que hacer -->
   <div class="card card-body">
     <?php if (isset($_GET["id"]) && $_GET["id"]=="verifica") { ?>
-      <div class="container pb-4">
+      <div class="container pb-4 pt-4">
         <p>Inicia sesión para completar la verificación de tu cuenta</p>
       </div>
     <?php } elseif (isset($_GET["id"]) && $_GET["id"]=="edit") { ?>
-      <div class="container pb-4">
+      <div class="container pb-4 pt-4">
         <p>Ingresa tu correo registrado</p>
       </div>
     <?php } elseif (isset($_GET["id"]) && $_GET["id"]=="restablecer") { ?>
-      <div class="container pb-4">
+      <div class="container pb-4 pt-4">
         <p>Ingresa tu correo y escribe tu nueva contraseña</p>
       </div>
     <?php } else { ?>
-      <div class="container">
+      <div class="container pt-4">
         <p>Ingresa tus datos</p>
       </div>
     <?php } ?>
@@ -96,8 +95,8 @@ if (isset($_GET["id"])) {
 
     <!-- Botón para restablecer contraseña si es un login normal -->
     <?php if (!isset($_GET["id"])): ?>
-      <div class="container pt-4">
-        <a class="text-dark" href="02_login_page.php?id=edit">¿Olvidaste tu contraseña?</a>
+      <div class="container pt-4 pb-4">
+        <a id="link_recuperar" href="02_login_page.php?id=edit">¿Olvidaste tu contraseña?</a>
       </div>
     <?php endif; ?>
   </div>

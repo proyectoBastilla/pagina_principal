@@ -22,12 +22,12 @@ include("includes/header.php");
 
   <!-- Recuadro específico del registro -->
   <div class="card card-body">
-    <div class="container">
+    <div class="container pt-4">
       <p>Registra tu información personal</p>
     </div>
     <!-- Form de registro -->
     <form action="02_registro.php" method="post">
-      <div class="form-group pt-5">
+      <div class="form-group pt-4">
         <input class="form-control" type="text" name="nombre" placeholder="Nombre(s)" autofocus>
       </div>
 
@@ -47,7 +47,7 @@ include("includes/header.php");
         <input class="form-control" type="password" name="contra2" placeholder="Repite la contraseña">
       </div>
 
-      <div class="form-group pt-5">
+      <div class="form-group pt-5 pb-4">
         <input class="btn btn-primary" type="submit" name="enviar" value="Regístrate">
       </div>
     </form>

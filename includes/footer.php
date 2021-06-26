@@ -2,7 +2,7 @@
 
     <footer class="bg-dark text-center text-white">
       <!-- Container footer -->
-      <div id="footer1">
+      <div id="footer">
         <!-- Correo -->
         <div id="footer_icon">
           <a class="btn btn-outline-light btn-floating m-1" href= "01_acerca.php#contacto"  role="button">
