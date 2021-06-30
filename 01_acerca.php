@@ -37,20 +37,28 @@
       <div class="row pb-4 pt-4">
         <div class="col-md">
           <div class="form-group">
-            <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
+
+            <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true && isset($_SESSION["nombre_iniciado"])) : ?>
               <input class="form-control" type="text" value="<?= $_SESSION["nombre_iniciado"]." ".$_SESSION["apellido_iniciado"] ?>" aria-label="readonly input example" disabled>
+            <?php elseif (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true && isset($_SESSION["nombre_lib"])) : ?>
+              <input class="form-control" type="text" value="<?= "Librería ".$_SESSION["nombre_lib"] ?>" aria-label="readonly input example" disabled>
             <?php else: ?>
               <input type="text" class="form-control" placeholder="Nombre" name="nombre">
             <?php endif; ?>
+
           </div>
         </div>
         <div class="col-md">
           <div class="form-group">
-            <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
+
+            <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true && isset($_SESSION["correo_iniciado"])) : ?>
               <input class="form-control" type="email" value="<?= $_SESSION["correo_iniciado"] ?>" aria-label="readonly input example" disabled>
+            <?php elseif (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true && isset($_SESSION["correo_lib"])) : ?>
+              <input class="form-control" type="email" value="<?= $_SESSION["correo_lib"] ?>" aria-label="readonly input example" disabled>
             <?php else: ?>
-              <input type="email" class="form-control" placeholder="Correo" name="correo">
+              <input type="email" class="form-control" placeholder="Email" name="correo">
             <?php endif; ?>
+
           </div>
         </div>
       </div>

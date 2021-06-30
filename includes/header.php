@@ -26,7 +26,9 @@
             <li class="nav-item"><a class="nav-link" href="01_librerias.php">Librerías</a></li>
             <li class="nav-item"><a class="nav-link" href="01_mapa.php">Mapa</a></li>
             <li class="nav-item"><a class="nav-link" href="01_acerca.php">Acerca de</a></li>
-            
+            <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
+              <li class="nav-item"><a class="nav-link" href="03_gestor_page.php">Gestión Libros</a></li>
+            <?php endif; ?>
           </ul>
           <form action="01_busqueda.php" method="post" class="d-flex">
             <?php if (!empty($_SESSION["nombre_iniciado"])) { ?>
