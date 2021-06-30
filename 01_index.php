@@ -62,7 +62,7 @@
       <div class="card" class="style1_card" style="width: 18rem;">
         <img class="card-img-top" src="https://www.planetadelibros.com.co/usuaris/libros/fotos/164/m_libros/que-tiene-ella-que-no-tenga-yo_9789584232618.jpg" alt="Card image cap">
          <div class="card-body">
-         <h2><p class="card-text">¿Qué tiene ella que no tenga yo? </p></h2>
+         <h2><p class="card-text">¿Qué tiene ella que no tenga yo?123 </p></h2>
          <p> Alberto Linero </p>
         </div>
       </div>
