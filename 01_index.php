@@ -40,10 +40,59 @@
 
     <!-- Sección lanzamientos -->
     <div class="mx-md-4">
-      <br><h1><b>¡NUEVOS LANZAMIENTOS!</b></h1>
-      <p>Acá aparecen los libros que fueron recientemente añadidos a la pagina desde cualquier libreria, con la intencion de captar
-      la atención del usuario.</p><br>
-    </div>
+      <br><h1><b>¡NUEVOS LANZAMIENTOS!</b></h1></br>
+
+  <!-- Tarjetas lanzamientos -->
+  <div class="card-columns">
+  <div class="card-group"> 
+      <div class="card" class="style1_card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.diariodecultura.com.ar/wp-content/uploads/2020/03/la-peste-albert-camus.jpg" alt="Card image cap">
+         <div class="card-body">
+         <h2><p class="card-text">La peste </p></h2>
+         <p> Albert Camus </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.librosambigu.com/static/img/portadas/la-revolucion-francesa_60812.jpg" alt="Card image cap">
+         <div class="card-body">
+         <h2><p class="card-text">La revolución francesa</p></h2>
+         <p> Albert Soboul </p>
+        </div>
+      </div>
+      <div class="card" class="style1_card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.planetadelibros.com.co/usuaris/libros/fotos/164/m_libros/que-tiene-ella-que-no-tenga-yo_9789584232618.jpg" alt="Card image cap">
+         <div class="card-body">
+         <h2><p class="card-text">¿Qué tiene ella que no tenga yo? </p></h2>
+         <p> Alberto Linero </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://http2.mlstatic.com/cuentos-para-quererte-mejor-alex-rovira-D_NQ_NP_677963-MCO41879997884_052020-O.webp" alt="Card image cap">
+         <div class="card-body">
+         <h2><p class="card-text">Cuentos para quererte mejor</p></h2>
+         <p> Alex Rovira </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://http2.mlstatic.com/la-ultima-escala-del-tramp-steamer-mutis-el-tiempo-D_NQ_NP_825011-MCO25913425027_082017-F.webp" alt="Card image cap">
+         <div class="card-body">
+         <h2><p class="card-text">La última escala del Tramp Steamer </p></h2>
+         <p> Alvaro Mutis </p>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="https://lasillarotarm.blob.core.windows.net/images/2018/03/07/cosasquepiensascuandotemuerdeslasunas.jpg" alt="Card image cap">
+         <div class="card-body">
+         <h2><p class="card-text">Cosas que piensas cuando te muerdes las uñas</p></h2>
+         <p> Amalia Andrade </p>
+        </div>
+      </div>
+      
+  </div>
+  </div>  
+
+      
+     </div>
   </div>
 </main>
 

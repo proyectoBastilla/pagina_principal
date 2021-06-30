@@ -22,9 +22,11 @@
         <a class="navbar-brand" href="01_index.php">La Bastilla</a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" aria-current="page" href="01_index.php">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="01_librerias.php">Librerias</a></li>
+            <li class="nav-item"><a class="nav-link" href="01_libros.php">Libros</a></li>
+            <li class="nav-item"><a class="nav-link" href="01_librerias.php">Librerías</a></li>
             <li class="nav-item"><a class="nav-link" href="01_mapa.php">Mapa</a></li>
             <li class="nav-item"><a class="nav-link" href="01_acerca.php">Acerca de</a></li>
+            
           </ul>
           <form action="01_busqueda.php" method="post" class="d-flex">
             <?php if (!empty($_SESSION["nombre_iniciado"])) { ?>
