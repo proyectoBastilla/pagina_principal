@@ -40,7 +40,7 @@
                   ?>
                 </td>
                 <td>
-                  <a href="03_gestor.php?a=cambio&id=<?= $row["id"] ?>" class="btn btn-secondary">
+                  <a href="funciones.php?a=cambio&id=<?= $row["id"] ?>" class="btn btn-secondary">
                     <i class="fas fa-edit"></i>
                   </a>
                 </td>

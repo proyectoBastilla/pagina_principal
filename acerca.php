@@ -33,7 +33,7 @@
 
   <!-- Form de contacto -->
   <div id="contacto">
-    <form class="" action="02_mail.php?type=contacto" method="post">
+    <form class="" action="mail.php?type=contacto" method="post">
       <div class="row pb-4 pt-4">
         <div class="col-md">
           <div class="form-group">

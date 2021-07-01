@@ -5,7 +5,7 @@
       <div id="footer">
         <!-- Correo -->
         <div id="footer_icon">
-          <a class="btn btn-outline-light btn-floating m-1" href= "01_acerca.php#contacto"  role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href= "acerca.php#contacto"  role="button">
             <i class="far fa-envelope"></i>
           </a>
         </div>
@@ -17,7 +17,7 @@
         </div>
         <!-- Acerca de o info -->
         <div id="footer_icon">
-          <a class="btn btn-outline-light btn-floating m-1" href="01_acerca.php" role="button">
+          <a class="btn btn-outline-light btn-floating m-1" href="acerca.php" role="button">
             <i class="far fa-user"></i>
           </a>
         </div>

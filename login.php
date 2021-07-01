@@ -5,13 +5,14 @@ include("includes/database.php");
 if (isset($_SESSION["sesion"])) {
   session_unset();
 }
+//Incluye LUEGO del if anterior el header
 include("includes/header.php");
 
 //Asigna el nombre del archivo al que irá el form
 if(isset($_GET["id"])) {
-  $ir = '02_'.$_GET['id'].'.php';
+  $ir = "funciones.php?a=".$_GET["id"];
 } else {
-  $ir = "02_login.php";
+  $ir = "funciones.php?a=login";
 }
 
 //Asigna el nombre que tendrá el botón para enviar el form
@@ -96,7 +97,7 @@ if (isset($_GET["id"])) {
     <!-- Botón para restablecer contraseña si es un login normal -->
     <?php if (!isset($_GET["id"])): ?>
       <div class="container pt-4 pb-4">
-        <a id="link_recuperar" href="02_login_page.php?id=edit">¿Olvidaste tu contraseña?</a>
+        <a id="link_recuperar" href="login_page.php?id=edit">¿Olvidaste tu contraseña?</a>
       </div>
     <?php endif; ?>
   </div>
