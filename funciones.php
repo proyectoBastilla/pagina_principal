@@ -137,13 +137,13 @@ function login($mysql, $correo, $contra) {
       } else {
         $_SESSION["mensaje"] = "La cuenta no está verificada";
         $_SESSION["mensaje_color"] = "warning";
-        header("location: login_page.php");
+        header("location: login.php");
       }
 
     } else {
       $_SESSION["mensaje"] = "La contraseña es incorrecta";
       $_SESSION["mensaje_color"] = "danger";
-      header("location: login_page.php");
+      header("location: login.php");
     }
 
   } else {
