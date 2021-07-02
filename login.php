@@ -97,7 +97,7 @@ if (isset($_GET["id"])) {
     <!-- Botón para restablecer contraseña si es un login normal -->
     <?php if (!isset($_GET["id"])): ?>
       <div class="container pt-4 pb-4">
-        <a id="link_recuperar" href="login_page.php?id=edit">¿Olvidaste tu contraseña?</a>
+        <a id="link_recuperar" href="login.php?id=edit">¿Olvidaste tu contraseña?</a>
       </div>
     <?php endif; ?>
   </div>
