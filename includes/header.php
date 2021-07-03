@@ -19,9 +19,9 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="navbar-collapse mx-md-3">
-        <a class="navbar-brand" href="index.php">La Bastilla</a>
+        <a class="navbar-brand" href="index.php"><i class="fas fa-home"></i></a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php"></a></li>
             <li class="nav-item"><a class="nav-link" href="libros.php">Libros</a></li>
             <li class="nav-item"><a class="nav-link" href="librerias.php">Librerías</a></li>
             <li class="nav-item"><a class="nav-link" href="mapa.php">Mapa</a></li>

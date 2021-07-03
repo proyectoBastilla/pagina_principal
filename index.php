@@ -5,7 +5,7 @@
 
 <!-- Aquí va todo el código propio de la página -->
 <div class="mx-md-4">
-<br><h1><b>LOGO</b></h1><br>
+<br><h2><img src="img/favicon.png" width="90" height="90">La Bastilla </h2></br>
 </div>
 
 <main class="main">
