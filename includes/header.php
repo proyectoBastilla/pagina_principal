@@ -30,7 +30,7 @@
               <li class="nav-item"><a class="nav-link" href="gestor.php">Gestión Libros</a></li>
             <?php endif; ?>
           </ul>
-          <form action="busqueda.php" method="post" class="d-flex">
+
             <?php if (!empty($_SESSION["nombre_iniciado"])) { ?>
               <div class="container">
                 <p class="text-white">Hola, <?= $_SESSION["nombre_iniciado"] ?></p>
@@ -66,9 +66,16 @@
             <!-- Fin Modal login -->
 
             <!-- Búsqueda -->
-            <input class="form-control me-2" type="search" placeholder="Búsqueda" style="background-color:#f5f5f5;" aria-label="Search">
-            <input class="btn btn-outline-success" type="submit" value="Buscar">
-          </form>
+            <form action="libros.php?a=buscar" method="post">
+              <div class="input-group">
+                <input class="form-control me-2" type="search" placeholder="Búsqueda" name="buscar" style="background-color:#f5f5f5;" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar btn-secondary" type="submit">
+                    <i class="fas fa-search" style="color: white;"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
         </div>
     </nav>
   </header>
