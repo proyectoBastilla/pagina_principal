@@ -29,7 +29,7 @@
   <div class="container-fluid card mb-3" style="max-width: 1050px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="<?= $datos["imagen"] ?>" class="img-fluid rounded-start" width="95%">
+        <img src="<?= $datos["imagen"] ?>" class="img-fluid rounded-start" width="100%">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -46,6 +46,10 @@
             <tr>
               <td>Año de publicación:</td>
               <td><?= $datos["año"] ?></td>
+            </tr>
+            <tr>
+              <td>Disponibilidad:</td>
+              <td><?= $disponible ?></td>
             </tr>
             <tr>
               <td>Sinopsis:</td>
@@ -78,7 +82,7 @@
           $result = mysqli_query($mysql, $query);
           while ($row = mysqli_fetch_array($result)) {
           ?>
-            <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
+            <a style="text-decoration:none" href="libros.php?a=desc&id=<?= $row["id"] ?>">
               <div id="tarjeta_libro" class="card">
                 <img class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
                 <div class="card-body">

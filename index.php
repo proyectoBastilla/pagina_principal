@@ -16,6 +16,7 @@
         <!-- Botones inferiores Carrusel -->
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 2"></button>
       </div>
       <!-- Imágenes Carrusel -->
       <div class="carousel-inner">
@@ -24,6 +25,9 @@
         </div>
         <div class="carousel-item">
           <img src="img/banner-2.jpg" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="img/banner-3.jpg" class="d-block w-100">
         </div>
       </div>
       <!-- Botones laterales Carrusel -->
@@ -51,7 +55,7 @@
 
         while ($row = mysqli_fetch_array($result)) {
         ?>
-          <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
+          <a style="text-decoration:none" href="libros.php?a=desc&id=<?= $row["id"] ?>">
             <div id="tarjeta_libro" class="card">
               <img class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
               <div class="card-body">
