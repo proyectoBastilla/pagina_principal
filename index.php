@@ -20,10 +20,10 @@
       <!-- Imágenes Carrusel -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/reloj_arena-banner.jpg" class="d-block w-100">
+          <img src="img/banner-1-prueba.jpg" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <img src="img/cuphead-banner.jpg" class="d-block w-100">
+          <img src="img/reloj_arena-banner.jpg" class="d-block w-100">
         </div>
       </div>
       <!-- Botones laterales Carrusel -->
