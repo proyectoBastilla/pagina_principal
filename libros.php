@@ -16,11 +16,10 @@
   https://pasajelabastilla.herokuapp.com/libros.php?a=desc&id=227
   SEGÚN DONDE ESTÉN MODIFICANDO
   <3
-  
-  PD by Anita: la medida para que quede bien la imagen es 475x580 (en mi opinión) bsos
 
-  
+  PD by Anita: la medida para que quede bien la imagen es 475x580 (en mi opinión) bsos
   -->
+  
   <img src= https://www.diariodecultura.com.ar/wp-content/uploads/2020/03/la-peste-albert-camus.jpg width="475" height="580">
   <br></br>
   <h1>La peste</h1>
