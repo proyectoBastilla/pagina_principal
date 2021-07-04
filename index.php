@@ -23,7 +23,7 @@
           <img src="img/banner-1.jpg" class="d-block w-100">
         </div>
         <div class="carousel-item">
-          <img src="img/banner-2.png" class="d-block w-100">
+          <img src="img/banner-2.jpg" class="d-block w-100">
         </div>
       </div>
       <!-- Botones laterales Carrusel -->
