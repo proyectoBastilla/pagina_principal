@@ -67,7 +67,9 @@ if ($_GET["type"]=="contacto") {
   $_SESSION["mensaje_color"] = "success";
   header("location: acerca.php#contacto");
 } else {
-header("location: login.php");
+  header("location: login.php");
+  $_SESSION["mensaje"] = "Revisa tu bandeja de entrada";
+  $_SESSION["mensaje_color"] = "success";
 }
 
 ?>

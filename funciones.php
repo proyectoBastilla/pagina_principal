@@ -34,7 +34,7 @@ if ($_GET["a"]=="cambio") {
   $correo = $_POST["correo"];
   $contra = $_POST["contra"];
   //Función con las variables externas necesarias
-  verfica($mysql, $correo, $contra);
+  verifica($mysql, $correo, $contra);
 
 } elseif ($_GET["a"]=="restablecer") {
 
@@ -43,7 +43,7 @@ if ($_GET["a"]=="cambio") {
   $contra1 = $_POST["contra"];
   $contra2 = $_POST["contra2"];
   //Función con las variables externas necesarias
-  verifica($mysql, $correo, $contra1, $contra2);
+  restablecer($mysql, $correo, $contra1, $contra2);
 
 } elseif ($_GET["a"]=="registro") {
 
@@ -54,7 +54,7 @@ if ($_GET["a"]=="cambio") {
   $contra1 = $_POST["contra1"];
   $contra2= $_POST["contra2"];
   //Función con las variables externas necesarias
-  verifica($mysql, $nombre, $apellido, $correo, $contra1, $contra2);
+  registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2);
 
 }
 
