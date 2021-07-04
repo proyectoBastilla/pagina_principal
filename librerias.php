@@ -4,10 +4,19 @@
 <?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
+<br></br>
+<h2>Librerías disponibles</h2>
+<br></br>
 <div class="mx-md-4">
-  <br><h1><b>AQUÍ VAN LAS LIBRERÍAS</b></h1>
-  <h2>NO DISPONIBLE POR AHORA...</h2><br>
-  <p> Acá se encuentran todas las librerias en formato de perfil, algo parecido a Facebook donde pueden investigar el local, la direccion, redes sociales, horarios y numeros de contacto.</p>
+  <div class="card" style="width: 18rem;">
+    <a href="libros.php" style="text-decoration:none">
+    <img class="card-img-top" src="http://www.edu.gov.co/images/Bastilla.jpg" alt="Card image cap">
+      <div class="card-body">
+      <font color="black">
+       <h3 class="card-text">Librerías Miguel</h3></font>
+      </div>
+      </a>
+  </div>
 </div>
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php"); ?>
