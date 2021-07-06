@@ -20,13 +20,14 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="navbar-collapse mx-md-3">
-        <a class="navbar-brand" href="index.php"><i class="fas fa-home"></i></a>
+        <a class="navbar-brand" href="index.php"><i class="fas fa-bars" ></i></a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php"></a></li>
-            <li class="nav-item"><a class="nav-link" href="libros.php">Libros</a></li>
-            <li class="nav-item"><a class="nav-link" href="librerias.php">Librerías</a></li>
-            <li class="nav-item"><a class="nav-link" href="mapa.php">Mapa</a></li>
-            <li class="nav-item"><a class="nav-link" href="acerca.php">Acerca de</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php"><i class="fas fa-home"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="libros.php"><i class="fas fa-book"></i> Libros</a></li>
+            <li class="nav-item"><a class="nav-link" href="librerias.php"><i class="fas fa-store-alt"></i> Librerías</a></li>
+            <li class="nav-item"><a class="nav-link" href="mapa.php"><i class="fas fa-map-marked-alt"></i> Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="acerca.php"><i class="fas fa-users"></i> Acerca de</a></li>
             <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
               <li class="nav-item"><a class="nav-link" href="gestor.php">Gestión Libros</a></li>
             <?php endif; ?>
