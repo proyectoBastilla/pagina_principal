@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Link a estilo CSS -->
     <link href="css/styles.css" rel="stylesheet">
-  
+
 </head>
 
 <body style="background-color:#f5f5f5;">
@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="navbar-collapse mx-md-3">
         <a class="navbar-brand" href="index.php"><i class="fas fa-bars" ></i></a>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid">
             <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php"></a></li>
             <li class="nav-item"><a class="nav-link" href="index.php"><i class="fas fa-home"></i> Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="libros.php"><i class="fas fa-book"></i> Libros</a></li>
@@ -34,13 +34,13 @@
           </ul>
 
             <?php if (!empty($_SESSION["nombre_iniciado"])) { ?>
-              <div class="container">
+              <div class="">
                 <p class="text-white">Hola, <?= $_SESSION["nombre_iniciado"] ?></p>
               </div>
             <?php } ?>
 
             <!-- Botón login -->
-            <i class="far fa-user color-white me-4 mt-2" style="color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+            <i class="far fa-user color-white me-4 mt-1" style="color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
 
             <!-- Modal login -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -70,12 +70,8 @@
             <!-- Búsqueda -->
             <form action="libros.php?a=buscar" method="post">
               <div class="input-group">
-                <input class="form-control me-2" type="search" placeholder="Búsqueda" name="buscar" style="background-color:#f5f5f5;" aria-label="Search">
-                <div class="input-group-append">
-                  <button class="btn btn-navbar btn-secondary" type="submit">
-                    <i class="fas fa-search" style="color: white;"></i>
-                  </button>
-                </div>
+                <input type="text" class="form-control" placeholder="Búsqueda" type="search" name="buscar" style="background-color:#f5f5f5;">
+                <button class="btn btn-secondary" type="submit"><i class="fas fa-search" style="color: white;"></i></button>
               </div>
             </form>
         </div>

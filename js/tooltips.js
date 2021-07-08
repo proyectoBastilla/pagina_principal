@@ -1,0 +1,8 @@
+
+/*ESTO ES PARA QUE FUNCIONEN CORRECTAMENTE LOS TOOLTIPS,
+ES OBLIGATORIO INICIALIZARLO MANUALMENTE*/
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})

@@ -56,6 +56,19 @@ if ($_GET["a"]=="cambio") {
   //Función con las variables externas necesarias
   registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2);
 
+} elseif ($_GET["a"]=="deseo") {
+
+  //Toma el ID del libro y el usuario para usar la función
+  $id_usuario = $_SESSION["id_iniciado"];
+  $id_libro = $_SESSION["id_libro"];
+
+  if ($_GET["e"]=="agregar") {
+    agregarDeseo($mysql, $id_usuario, $id_libro);
+  } elseif ($_GET["e"]=="quitar") {
+    $id_deseo = $_GET["id"];
+    quitarDeseo($mysql, $id_deseo, $id_libro);
+  }
+
 }
 
 
@@ -117,18 +130,14 @@ function login($mysql, $correo, $contra) {
 
       if ($verificacion["verificación"]!=0) {
 
-        //Si todo está bien hace query para buscar nombre del usuario
-        $query_nombre = "SELECT nombre FROM usuarios WHERE email='$correo'";
+        //Si todo está bien hace query para buscar nombre del usuario y su id
+        $query_nombre = "SELECT nombre, apellido, id FROM usuarios WHERE email='$correo'";
         $result_nombre = mysqli_query($mysql, $query_nombre);
         $nombre = mysqli_fetch_array($result_nombre);
 
-        //Busca el apellido en la base de datos para uso posterior
-        $query_apellido = "SELECT apellido FROM usuarios WHERE email='$correo'";
-        $result_apellido = mysqli_query($mysql, $query_apellido);
-        $apellido = mysqli_fetch_array($result_apellido);
-
         $_SESSION["nombre_iniciado"] = $nombre["nombre"]; //Nombre del usuario para verlo en pantalla
-        $_SESSION["apellido_iniciado"] = $apellido["apellido"]; //Guardar apellido para uso posterior
+        $_SESSION["apellido_iniciado"] = $nombre["apellido"]; //Guardar apellido para uso posterior
+        $_SESSION["id_iniciado"] = $nombre["id"];
         $_SESSION["correo_iniciado"] = $correo; //Guardar el correo para uso posterior
         $_SESSION["correo"] = $correo; //Para leerlo en el mail
         $_SESSION["sesion"] = true; //Indica que hay sesión iniciada
@@ -316,5 +325,29 @@ function registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2) {
     $_SESSION["nombre"] = $nombre;
     header("location: mail.php?type=verifica");
   }
+}
+
+
+function agregarDeseo($mysql, $id_usuario, $id_libro) {
+
+  $query = "INSERT INTO deseos (libro, usuario) VALUES ('$id_libro', '$id_usuario')";
+  $result = mysqli_query($mysql, $query);
+
+  $id = $id_libro;
+  echo "$id";
+  header("location: libros.php?a=desc&id=$id");
+
+}
+
+
+function quitarDeseo($mysql, $id_deseo, $id_libro) {
+
+  $query = "DELETE FROM deseos WHERE id='$id_deseo'";
+  $result = mysqli_query($mysql, $query);
+
+  $id = $id_libro;
+  echo "$id";
+  header("location: libros.php?a=desc&id=$id");
+
 }
 ?>

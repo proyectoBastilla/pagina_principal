@@ -3,29 +3,46 @@
 <!-- Trae todo el código del header a la página principal -->
 <?php include("includes/header.php"); ?>
 
-<div class="mx-md-4">
-  <br><h2><b>LIBROS</b></h2></br>
-</div>
+<?php if (isset($_GET["a"]) && $_GET["a"]=="desc"):
 
-<?php if (isset($_GET["a"]) && $_GET["a"]=="desc"): ?>
-
-  <!--
-  PD by Anita: la medida para que quede bien la imagen es 475x580 (en mi opinión) bsos
-  -->
-
-  <?php
   $id = $_GET["id"];
-
+  $_SESSION["id_libro"] = $id;
   $query = "SELECT * FROM libros WHERE id='$id'";
   $result = mysqli_query($mysql, $query);
   $datos = mysqli_fetch_array($result);
+
+  $id_lib = $datos["libreria"];
+  $query_lib = "SELECT nombre FROM librerias WHERE id='$id_lib'";
+  $result_lib = mysqli_query($mysql, $query_lib);
+  $libreria = mysqli_fetch_array($result_lib);
 
   if ($datos["disponible"]==1) {
     $disponible = "Disponible";
   } else {
     $disponible = "Agotado";
   }
-  ?>
+
+  if ($datos["uso"]==1) {
+    $condicion = "Nuevo";
+  } else {
+    $condicion = "Usado";
+  }
+
+  if (isset($_SESSION["sesion"])) {
+    $id_usuario = $_SESSION["id_iniciado"];
+
+    $query_deseo = "SELECT id FROM deseos WHERE libro='$id' AND usuario='$id_usuario'";
+    $result_deseo = mysqli_query($mysql, $query_deseo);
+    $deseo = mysqli_fetch_array($result_deseo);
+
+    $query_like = "SELECT id FROM likes WHERE libro='$id' AND usuario='$id_usuario'";
+    $result_like = mysqli_query($mysql, $query_like);
+    $like = mysqli_fetch_array($result_like);
+  } ?>
+
+  <div class="container-fluid alert alert-secondary text-center mb-3 mt-3" style="max-width: 1050px;" role="alert">
+    Recuerda que para comprar este libro debes dirigirte físicamente hasta el Pasaje la Bastilla, más información en la sección "Mapa"
+  </div>
   <div class="container-fluid card mb-3" style="max-width: 1050px;">
     <div class="row g-0">
       <div class="col-md-4">
@@ -33,7 +50,26 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h1 class="card-title pb-3"><?= $datos["titulo"] ?></h1>
+          <h1 class="card-title pb-3 float-start"><?= $datos["titulo"] ?></h1>
+          <!-- Botón de la lista de deseos -->
+          <?php if (isset($_SESSION["sesion"]) && !empty($deseo)): ?>
+            <p class="float-end pt-3">
+              <a style="color: black; text-decoration:none" href="funciones.php?a=deseo&e=quitar&id=<?= $deseo["id"] ?>">
+                Quitar de deseos <i class="fas fa-heart"></i>
+              </a>
+            </p>
+          <?php elseif (isset($_SESSION["sesion"])): ?>
+            <p class="float-end pt-3">
+              <a style="color: black; text-decoration:none"href="funciones.php?a=deseo&e=agregar">
+                Agregar a deseos <i class="far fa-heart"></i>
+              </a>
+            </p>
+          <?php else: ?>
+            <span class="float-end pt-3" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Debes iniciar sesión">
+              Agregar a deseos <i class="far fa-heart"></i>
+            </span>
+          <?php endif; ?>
+
           <table class="table table-striped table-hover">
             <tr>
               <td>Autor:</td>
@@ -48,8 +84,16 @@
               <td><?= $datos["año"] ?></td>
             </tr>
             <tr>
+              <td>Librería:</td>
+              <td><?= $libreria["nombre"] ?></td>
+            </tr>
+            <tr>
               <td>Disponibilidad:</td>
               <td><?= $disponible ?></td>
+            </tr>
+            <tr>
+              <td>Condición:</td>
+              <td><?= $condicion ?></td>
             </tr>
             <tr>
               <td>Sinopsis:</td>
@@ -63,7 +107,7 @@
 
 <?php else: ?>
 
-  <div class="mx-md-4">
+  <div class="mx-md-4 mt-4">
     <div class="card" >
       <div class="mx-sm-4 my-sm-4" >
         <h3 class="card-text"><b>Te podría interesar...</b></h3>
