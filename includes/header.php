@@ -20,13 +20,13 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="navbar-collapse mx-md-3">
-        <a class="navbar-brand" href="index.php"><i class="fas fa-bars" ></i></a>
+        <a class="navbar-brand" href="index.php"><i class="fas fa-bars fa-lg" ></i></a>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid">
             <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php"></a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php"><i class="fas fa-home"></i> Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="libros.php"><i class="fas fa-book"></i> Libros</a></li>
-            <li class="nav-item"><a class="nav-link" href="librerias.php"><i class="fas fa-store-alt"></i> Librerías</a></li>
-            <li class="nav-item"><a class="nav-link" href="mapa.php"><i class="fas fa-map-marked-alt"></i> Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php"><i class="fas fa-home fa-lg"></i> Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="libros.php"><i class="fas fa-book fa-lg"></i> Libros</a></li>
+            <li class="nav-item"><a class="nav-link" href="librerias.php"><i class="fas fa-store-alt fa-lg"></i> Librerías</a></li>
+            <li class="nav-item"><a class="nav-link" href="mapa.php"><i class="fas fa-map-marked-alt fa-lg"></i> Mapa</a></li>
             <li class="nav-item"><a class="nav-link" href="acerca.php"><i class="fas fa-users"></i> Acerca de</a></li>
             <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
               <li class="nav-item"><a class="nav-link" href="gestor.php">Gestión Libros</a></li>
@@ -40,7 +40,7 @@
             <?php } ?>
 
             <!-- Botón login -->
-            <i class="far fa-user color-white me-4 mt-1" style="color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+            <i class="far fa-user color-white me-4 mt-1 fa-lg" style="color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
 
             <!-- Modal login -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
