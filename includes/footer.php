@@ -22,6 +22,8 @@
           </a>
         </div>
       </div>
+      <!--botón para ir arriba -->
+      <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button" style="background:#9b9b9b; border:none;" ><i class="fas fa-angle-up fa-2x" style="background:#9b9b9b"></i></a>
     </footer>
 
     <!-- Script BOOTSTRAP 5 -->

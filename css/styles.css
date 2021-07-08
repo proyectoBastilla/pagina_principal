@@ -78,7 +78,7 @@
 }
 */
 
-/*responsive */
+/* responsive */
 #gallery {
   display: grid;
   gap: 1rem;
@@ -87,4 +87,11 @@
 }
 #featured {
   grid-column: span 2;
+}
+/* botón para ir arriba */
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
 }
