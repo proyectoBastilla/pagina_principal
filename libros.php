@@ -3,6 +3,8 @@
 <!-- Trae todo el código del header a la página principal -->
 <?php include("includes/header.php"); ?>
 
+<div id="margen_general">
+
 <?php if (isset($_GET["a"]) && $_GET["a"]=="desc"):
 
   $id = $_GET["id"];
@@ -54,13 +56,13 @@
           <!-- Botón de la lista de deseos -->
           <?php if (isset($_SESSION["sesion"]) && !empty($deseo)): ?>
             <p class="float-end pt-3">
-              <a style="color: black; text-decoration:none" href="funciones.php?a=deseo&e=quitar&id=<?= $deseo["id"] ?>">
+              <a href="funciones.php?a=deseo&e=quitar&id=<?= $deseo["id"] ?>">
                 Quitar de deseos <i class="fas fa-heart"></i>
               </a>
             </p>
           <?php elseif (isset($_SESSION["sesion"])): ?>
             <p class="float-end pt-3">
-              <a style="color: black; text-decoration:none"href="funciones.php?a=deseo&e=agregar">
+              <a href="funciones.php?a=deseo&e=agregar">
                 Agregar a deseos <i class="far fa-heart"></i>
               </a>
             </p>
@@ -107,26 +109,40 @@
 
 <?php else: ?>
 
-  <div class="mx-md-4 mt-4">
-    <div class="card" >
-      <div class="mx-sm-4 my-sm-4" >
-        <h3 class="card-text"><b>Te podría interesar...</b></h3>
-        <div class="card-group">
+  <div class="card" >
+    <div class="mx-sm-4 my-sm-4" >
+      <h3 class="card-text"><b>Te podría interesar...</b></h3>
+      <div class="card-group">
 
-          <?php
+      <?php
+        if (isset($_GET["a"]) && $_GET["a"]=="buscar") {
+          $buscar = $_POST["buscar"];
+          $query = "SELECT id, titulo, autor, imagen FROM libros WHERE titulo LIKE '%$buscar%'";
+          $query2 = "SELECT id, titulo, autor, imagen FROM libros WHERE autor LIKE '%$buscar%'";
+        } else {
+          $query = "SELECT id, titulo, autor, imagen FROM libros";
+        }
 
-          if (isset($_GET["a"]) && $_GET["a"]=="buscar") {
-            $buscar = $_POST["buscar"];
-            $query = "SELECT id, titulo, autor, imagen FROM libros WHERE titulo LIKE '%$buscar%'";
-            $query2 = "SELECT id, titulo, autor, imagen FROM libros WHERE autor LIKE '%$buscar%'";
-          } else {
-            $query = "SELECT id, titulo, autor, imagen FROM libros";
-          }
+        $result = mysqli_query($mysql, $query);
+        while ($row = mysqli_fetch_array($result)) {
+        ?>
 
-          $result = mysqli_query($mysql, $query);
-          while ($row = mysqli_fetch_array($result)) {
-          ?>
-            <a style="text-decoration:none" href="libros.php?a=desc&id=<?= $row["id"] ?>">
+        <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
+          <div id="tarjeta_libro" class="card">
+            <img class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+            <div class="card-body">
+              <h4 class="card-text"><?= $row["titulo"] ?></h4>
+              <p><?= $row["autor"] ?></p>
+            </div>
+          </div>
+        </a>
+
+      <?php }
+        if (isset($query2)) {
+          $result2 = mysqli_query($mysql, $query2);
+          while ($row = mysqli_fetch_array($result2)) {
+      ?>
+            <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
               <div id="tarjeta_libro" class="card">
                 <img class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
                 <div class="card-body">
@@ -135,27 +151,15 @@
                 </div>
               </div>
             </a>
-          <?php }
-          if (isset($query2)) {
-            $result2 = mysqli_query($mysql, $query2);
-            while ($row = mysqli_fetch_array($result2)) {
-          ?>
-              <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
-                <div id="tarjeta_libro" class="card">
-                  <img class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
-                  <div class="card-body">
-                    <h4 class="card-text"><?= $row["titulo"] ?></h4>
-                    <p><?= $row["autor"] ?></p>
-                  </div>
-                </div>
-              </a>
-            <?php }
-          } ?>
-        </div>
+        <?php }
+        } ?>
       </div>
     </div>
   </div>
+
 <?php endif; ?>
+
+</div>
 
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php"); ?>

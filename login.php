@@ -44,19 +44,19 @@ if (isset($_GET["id"])) {
   <div class="card card-body">
     <?php if (isset($_GET["id"]) && $_GET["id"]=="verifica") { ?>
       <div class="container pb-4 pt-4">
-        <p>Inicia sesión para completar la verificación de tu cuenta</p>
+        <p class="text-center">Inicia sesión para completar la verificación de tu cuenta</p>
       </div>
     <?php } elseif (isset($_GET["id"]) && $_GET["id"]=="edit") { ?>
       <div class="container pb-4 pt-4">
-        <p>Ingresa tu correo registrado</p>
+        <p class="text-center">Ingresa tu correo registrado</p>
       </div>
     <?php } elseif (isset($_GET["id"]) && $_GET["id"]=="restablecer") { ?>
       <div class="container pb-4 pt-4">
-        <p>Ingresa tu correo y escribe tu nueva contraseña</p>
+        <p class="text-center">Ingresa tu correo y escribe tu nueva contraseña</p>
       </div>
     <?php } else { ?>
       <div class="container pt-4">
-        <p>Ingresa tus datos</p>
+        <p class="text-center">Ingresa tus datos</p>
       </div>
     <?php } ?>
 

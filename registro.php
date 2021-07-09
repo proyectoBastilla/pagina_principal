@@ -23,7 +23,7 @@ include("includes/header.php");
   <!-- Recuadro específico del registro -->
   <div class="card card-body">
     <div class="container pt-4">
-      <p>Registra tu información personal</p>
+      <p class="text-center">Registra tu información personal</p>
     </div>
     <!-- Form de registro -->
     <form action="funciones.php?a=registro" method="post">

@@ -4,8 +4,7 @@
 <?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
-<div class="mx-md-5">
-  <br>
+<div id="margen_general">
   <h1><b>LA BASTILLA</b></h1>
   <h3><b>Esta es la página web para nuestro proyecto de grado.</b></h3>
   <br>

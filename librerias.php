@@ -4,18 +4,15 @@
 <?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
-<br></br>
-<h2>Librerías disponibles</h2>
-<br></br>
-<div class="mx-md-4">
+<div id="margen_general">
+  <h2>Librerías disponibles</h2>
   <div class="card" style="width: 18rem;">
-    <a href="libros.php" style="text-decoration:none">
-    <img class="card-img-top" src="http://www.edu.gov.co/images/Bastilla.jpg" alt="Card image cap">
+    <a href="libros.php">
+    <img class="card-img-top" src="http://www.edu.gov.co/images/Bastilla.jpg">
       <div class="card-body">
-      <font color="black">
-       <h3 class="card-text">Librerías Miguel</h3></font>
+        <h3 class="card-text">Librería Miguel Ángel</h3>
       </div>
-      </a>
+    </a>
   </div>
 </div>
 <!-- Trae todo el código del footer a la página principal -->

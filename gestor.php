@@ -4,7 +4,7 @@
 <?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
-<div class="mx-md-5 pt-4">
+<div id="margen_general">
   <h3>GESTOR DE LIBROS</h3>
 
   <div class="row pt-2">
