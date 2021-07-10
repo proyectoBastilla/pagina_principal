@@ -6,6 +6,7 @@ include("includes/database.php");
 ESTE IF DEFINE QUE FUNCIÓN SE USARÁ
 LAS FUNCIONES ESTÁN DEFINIDAS DESPUÉS
 EN EL MISMO ORDEN QUE SON NOMBRADAS AQUÍ*/
+
 if ($_GET["a"]=="cambio") {
 
   //Toma el ID del libro para usar la función
@@ -69,10 +70,26 @@ if ($_GET["a"]=="cambio") {
     quitarDeseo($mysql, $id_deseo, $id_libro);
   }
 
+} elseif ($_GET["a"]=="like") {
+
+  //Toma el ID del libro y el usuario para usar la función
+  $id_usuario = $_SESSION["id_iniciado"];
+  $id_libro = $_SESSION["id_libro"];
+  //Función con las variables externas necesarias
+  like($mysql, $id_libro, $id_usuario);
+
+} elseif ($_GET["a"]=="dislike") {
+
+  //Toma el ID del libro y el like para usar la función
+  $id_libro = $_SESSION["id_libro"];
+  $id_like = $_GET["id"];
+  //Función con las variables externas necesarias
+  dislike($mysql, $id_libro, $id_like);
+
 }
 
 
-
+/* DE AQUÍ EN ADELANTE EMPIEZAN LAS FUNCIONES COMO TAL */
 
 function cambio_disponible($id, $mysql) {
 
@@ -332,10 +349,7 @@ function agregarDeseo($mysql, $id_usuario, $id_libro) {
 
   $query = "INSERT INTO deseos (libro, usuario) VALUES ('$id_libro', '$id_usuario')";
   $result = mysqli_query($mysql, $query);
-
-  $id = $id_libro;
-  echo "$id";
-  header("location: libros.php?a=desc&id=$id");
+  header("location: libros.php?a=desc&id=$id_libro");
 
 }
 
@@ -344,10 +358,52 @@ function quitarDeseo($mysql, $id_deseo, $id_libro) {
 
   $query = "DELETE FROM deseos WHERE id='$id_deseo'";
   $result = mysqli_query($mysql, $query);
+  header("location: libros.php?a=desc&id=$id_libro");
 
-  $id = $id_libro;
-  echo "$id";
-  header("location: libros.php?a=desc&id=$id");
+}
+
+
+function like($mysql, $id_libro, $id_usuario) {
+
+  $query = "INSERT INTO likes (libro, usuario) VALUES ('$id_libro', '$id_usuario')";
+  $result = mysqli_query($mysql, $query);
+
+  $query_like = "SELECT likes FROM libros WHERE id='$id_libro'";
+  $result_like = mysqli_query($mysql, $query_like);
+  $likes = mysqli_fetch_array($result_like);
+
+  $contador = $likes["likes"];
+  if (empty($contador)) {
+    $contador = 1;
+  } else {
+    $contador++;
+  }
+  echo "$contador";
+
+  $query_update = "UPDATE libros SET likes='$contador' WHERE id='$id_libro'";
+  $result_update = mysqli_query($mysql, $query_update);
+
+  header("location: libros.php?a=desc&id=$id_libro");
+
+}
+
+
+function dislike($mysql, $id_libro, $id_like) {
+
+  $query = "DELETE FROM likes WHERE id='$id_like'";
+  $result = mysqli_query($mysql, $query);
+
+  $query_like = "SELECT likes FROM libros WHERE id='$id_libro'";
+  $result_like = mysqli_query($mysql, $query_like);
+  $likes = mysqli_fetch_array($result_like);
+
+  $contador = $likes["likes"];
+  $contador--;
+
+  $query_update = "UPDATE libros SET likes='$contador' WHERE id='$id_libro'";
+  $result_update = mysqli_query($mysql, $query_update);
+
+  header("location: libros.php?a=desc&id=$id_libro");
 
 }
 ?>

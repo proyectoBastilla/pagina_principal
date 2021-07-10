@@ -52,24 +52,38 @@
       </div>
       <div class="col-md-8">
         <div class="card-body">
-          <h1 class="card-title pb-3 float-start"><?= $datos["titulo"] ?></h1>
+          <h1 class="card-title pb-2 float-start"><?= $datos["titulo"] ?></h1>
           <!-- Botón de la lista de deseos -->
           <?php if (isset($_SESSION["sesion"]) && !empty($deseo)): ?>
-            <p class="float-end pt-3">
+            <p class="float-end pt-3 pb-3">
               <a href="funciones.php?a=deseo&e=quitar&id=<?= $deseo["id"] ?>">
                 Quitar de deseos <i class="fas fa-heart"></i>
               </a>
             </p>
           <?php elseif (isset($_SESSION["sesion"])): ?>
-            <p class="float-end pt-3">
+            <p class="float-end pt-3 pb-3">
               <a href="funciones.php?a=deseo&e=agregar">
                 Agregar a deseos <i class="far fa-heart"></i>
               </a>
             </p>
           <?php else: ?>
-            <span class="float-end pt-3" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Debes iniciar sesión">
+            <span class="float-end pt-3 pb-3" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Debes iniciar sesión">
               Agregar a deseos <i class="far fa-heart"></i>
             </span>
+          <?php endif; ?>
+
+          <?php if (isset($_SESSION["sesion"]) && !empty($like)): ?>
+            <div class="container-fluid float-start pb-3 px-1 ">
+              <?= $datos["likes"] ?> Me gusta <a href="funciones.php?a=dislike&id=<?= $like["id"] ?>"><i class="fas fa-thumbs-up"></i></a>
+            </div>
+          <?php elseif (isset($_SESSION["sesion"])) : ?>
+            <div class="container-fluid float-start pb-3 px-1 ">
+              <?= $datos["likes"] ?> Me gusta <a href="funciones.php?a=like"><i class="far fa-thumbs-up"></i></a>
+            </div>
+          <?php else: ?>
+            <div class="container-fluid float-start pb-3 px-1">
+              <?= $datos["likes"] ?> Me gusta <i class="far fa-thumbs-up" data-bs-toggle="tooltip" data-bs-placement="top" title="Debes iniciar sesión"></i>
+            </div>
           <?php endif; ?>
 
           <table class="table table-striped table-hover">
