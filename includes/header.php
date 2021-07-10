@@ -20,7 +20,7 @@
   <header id="header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="navbar-collapse mx-md-3">
-        <a class="navbar-brand" href="index.php"><i class="fas fa-bars fa-lg" ></i></a>
+        <a class="navbar-brand" href="index.php"><i class="fab fa-accessible-icon fa-lg"></i></a>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid">
           <li class="nav-item"><a class="nav-link" aria-current="page" href="index.php"></a></li>
           <li class="nav-item"><a class="nav-link" href="index.php"><i class="fas fa-home fa-lg"></i> Inicio</a></li>
@@ -29,7 +29,10 @@
           <li class="nav-item"><a class="nav-link" href="mapa.php"><i class="fas fa-map-marked-alt fa-lg"></i> Mapa</a></li>
           <li class="nav-item"><a class="nav-link" href="acerca.php"><i class="fas fa-users fa-lg"></i> Acerca de</a></li>
           <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
-            <li class="nav-item"><a class="nav-link" href="gestor.php">Gestión Libros</a></li>
+            <li class="nav-item"><a class="nav-link" href="gestor.php"><i class="fas fa-address-book fa-lg"></i> Gestión Libros</a></li>
+          <?php endif; ?>
+          <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
+            <li class="nav-item"><a class="nav-link" href="deseo.php"><i class="fas fa-heart fa-lg"></i> Deseos</a></li>
           <?php endif; ?>
         </ul>
 
