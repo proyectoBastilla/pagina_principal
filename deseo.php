@@ -3,18 +3,65 @@
 <!-- Trae todo el código del header a la página principal -->
 <?php include("includes/header.php"); ?>
 
-<br></br>
-<div class="card mb-3" style="max-width: 540px; margin-left: 50px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="https://www.diariodecultura.com.ar/wp-content/uploads/2020/03/la-peste-albert-camus.jpg" class="card-img" alt="...">
+<?php
+$id_usuario = $_SESSION["id_iniciado"];
+$query_deseos = "SELECT libro FROM deseos WHERE usuario='$id_usuario'";
+$result_deseos = mysqli_query($mysql, $query_deseos);
+$result = mysqli_query($mysql, $query_deseos);
+$deseo = mysqli_fetch_array($result);
+?>
+
+<div id="margen_general">
+
+  <?php if (empty($deseo)): ?>
+
+    <h2>No hay nada por aquí...</h2>
+    <br><br>
+    <h4>Agrega libros a tu lista de deseos para verlos en esta sección</h4>
+    <a href="libros.php"><h4>Click aquí para ir a los libros</h4></a>
+
+  <?php else: ?>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+    <?php while ($libro_array = mysqli_fetch_array($result_deseos)) {
+
+      $libro = $libro_array["libro"];
+      $query_datos = "SELECT titulo, autor, libreria, imagen FROM libros WHERE id='$libro'";
+      $result_datos = mysqli_query($mysql, $query_datos);
+
+      while ($datos = mysqli_fetch_array($result_datos)) {
+
+        $id_lib = $datos["libreria"];
+        $query_lib = "SELECT nombre FROM librerias WHERE id='$id_lib'";
+        $result_lib = mysqli_query($mysql, $query_lib);
+        $libreria = mysqli_fetch_array($result_lib);
+      ?>
+        <div class="col">
+          <div class="card mb-3" style="max-width: 540px;">
+            <a href="libros.php?a=desc&id=<?= $libro ?>">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="<?= $datos["imagen"] ?>" class="img-fluid rounded-start" width="100%">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $datos["titulo"] ?></h5>
+                    <p class="card-text"><?= $datos["autor"] ?></p>
+                    <p class="card-text"><small class="text-muted"><?= $libreria["nombre"] ?></small></p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+    <?php } ?>
+  <?php } ?>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h3 class="card-title">Título</h3>
-        <p class="card-text"> Autor</p>
-        <p class="card-text"><small class="text-muted">Libería</small></p>
-      </div>
-    </div>
-  </div>
+
+  <?php endif; ?>
+
+
 </div>
+
+<?php include("includes/footer.php") ?>

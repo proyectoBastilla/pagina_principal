@@ -28,11 +28,11 @@
           <li class="nav-item"><a class="nav-link" href="librerias.php"><i class="fas fa-store-alt fa-lg"></i> Librerías</a></li>
           <li class="nav-item"><a class="nav-link" href="mapa.php"><i class="fas fa-map-marked-alt fa-lg"></i> Mapa</a></li>
           <li class="nav-item"><a class="nav-link" href="acerca.php"><i class="fas fa-users fa-lg"></i> Acerca de</a></li>
-          <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
-            <li class="nav-item"><a class="nav-link" href="gestor.php"><i class="fas fa-address-book fa-lg"></i> Gestión Libros</a></li>
+          <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
+            <li class="nav-item"><a class="nav-link" href="deseo.php"><i class="fas fa-heart fa-lg"></i> Deseos</a></li>
           <?php endif; ?>
           <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
-            <li class="nav-item"><a class="nav-link" href="deseo.php"><i class="fas fa-heart fa-lg"></i> Deseos</a></li>
+            <li class="nav-item"><a class="nav-link" href="gestor.php"><i class="fas fa-address-book fa-lg"></i> Gestión Libros</a></li>
           <?php endif; ?>
         </ul>
 
