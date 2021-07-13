@@ -4,11 +4,12 @@
 <?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
-<div id="margen_general">
-  <h2><img src="img/favicon.png" width="90" height="90"> La Bastilla</h2>
-</div>
-
 <main class="main">
+
+  <div id="margen_general">
+    <h2><img src="img/favicon.png" width="90" height="90"> La Bastilla</h2>
+  </div>
+
   <!-- Inicio Carrusel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -45,26 +46,30 @@
   <div id="margen_general">
     <h1><b>¡NUEVOS LANZAMIENTOS!</b></h1></br>
     <!-- Tarjetas lanzamientos -->
-    <div class="card-columns">
-      <div class="card-group">
+    <div class="card">
+      <div class="mx-sm-4 my-sm-4" >
+        <center>
+          <div id="grupo_libros">
 
       <?php
-      $query = "SELECT id, titulo, autor, imagen FROM libros";
+      $query = "SELECT id, titulo, autor, imagen FROM libros LIMIT 4";
       $result = mysqli_query($mysql, $query);
 
       while ($row = mysqli_fetch_array($result)) {
       ?>
         <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
           <div id="tarjeta_libro" class="card">
-            <img class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+            <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
             <div class="card-body">
-              <h2 class="card-text"><?= $row["titulo"] ?></h2>
+              <h4><?= $row["titulo"] ?></h4>
               <p><?= $row["autor"] ?></p>
             </div>
           </div>
         </a>
       <?php } ?>
 
+          </div>
+        </center>
       </div>
     </div>
   </div>

@@ -123,51 +123,52 @@
 
 <?php else: ?>
 
-  <div class="card" >
+  <div class="card">
     <div class="mx-sm-4 my-sm-4" >
-      <h3 class="card-text"><b>Te podría interesar...</b></h3>
-      <div class="card-group">
+      <h3 id="libros_titulo">Te podría interesar...</h3>
+      <center>
+        <div id="grupo_libros">
 
-      <?php
-        if (isset($_GET["a"]) && $_GET["a"]=="buscar") {
+          <?php
+          if (isset($_GET["a"]) && $_GET["a"]=="buscar") {
           $buscar = $_POST["buscar"];
           $query = "SELECT id, titulo, autor, imagen FROM libros WHERE titulo LIKE '%$buscar%'";
           $query2 = "SELECT id, titulo, autor, imagen FROM libros WHERE autor LIKE '%$buscar%'";
         } else {
           $query = "SELECT id, titulo, autor, imagen FROM libros";
         }
+          $result = mysqli_query($mysql, $query);
+          while ($row = mysqli_fetch_array($result)) {
+          ?>
 
-        $result = mysqli_query($mysql, $query);
-        while ($row = mysqli_fetch_array($result)) {
+          <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
+            <div id="tarjeta_libro" class="card">
+              <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+              <div class="card-body">
+                <h4><?= $row["titulo"] ?></h4>
+                <p><?= $row["autor"] ?></p>
+              </div>
+            </div>
+          </a>
+
+        <?php }
+        if (isset($query2)) {
+          $result2 = mysqli_query($mysql, $query2);
+          while ($row = mysqli_fetch_array($result2)) {
         ?>
-
         <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
           <div id="tarjeta_libro" class="card">
-            <img class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+            <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
             <div class="card-body">
-              <h4 class="card-text"><?= $row["titulo"] ?></h4>
+              <h4><?= $row["titulo"] ?></h4>
               <p><?= $row["autor"] ?></p>
             </div>
           </div>
         </a>
-
       <?php }
-        if (isset($query2)) {
-          $result2 = mysqli_query($mysql, $query2);
-          while ($row = mysqli_fetch_array($result2)) {
-      ?>
-            <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
-              <div id="tarjeta_libro" class="card">
-                <img class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
-                <div class="card-body">
-                  <h4 class="card-text"><?= $row["titulo"] ?></h4>
-                  <p><?= $row["autor"] ?></p>
-                </div>
-              </div>
-            </a>
-        <?php }
         } ?>
-      </div>
+        </div>
+      </center>
     </div>
   </div>
 
