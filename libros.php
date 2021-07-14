@@ -173,8 +173,33 @@
   </div>
 
 <?php endif; ?>
-
 </div>
+<!-- Pasar de página -->
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-double-left"></i></a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#" style="color: #757575;">1</a></li>
+    <li class="page-item"><a class="page-link" href="#" style="color: #757575;">2</a></li>
+    <li class="page-item"><a class="page-link" href="#" style="color: #757575;">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#"><i class="fas fa-angle-double-right" style="color: #424242;";></i></a>
+    </li>
+  </ul>
+</nav>
+<a class="gotopbtn" href="#"><i class="fas fa-arrow-up" style="position: fixed; width: 50px;
+  height: 50px;
+  background: #424242;
+  bottom: 40px;
+  right: 50px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 50px;
+  color:white ;
+  font-size: 22px;
+  border-radius: 10px"
+  ></i></a>
 
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php"); ?>
