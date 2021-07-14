@@ -15,17 +15,6 @@
     </a>
   </div>
 </div>
-<a class="gotopbtn" href="#"><i class="fas fa-arrow-up" style="position: fixed; width: 50px;
-  height: 50px;
-  background: #424242;
-  bottom: 40px;
-  right: 50px;
-  text-decoration: none;
-  text-align: center;
-  line-height: 50px;
-  color:white ;
-  font-size: 22px;
-  border-radius: 10px"
-  ></i></a>
+
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php"); ?>
