@@ -96,7 +96,7 @@
               <td><?= $datos["genero"] ?></td>
             </tr>
             <tr>
-              <td>Año de publicación:</td>
+              <td>Fecha de publicación:</td>
               <td><?= $datos["año"] ?></td>
             </tr>
             <tr>
@@ -132,10 +132,10 @@
           <?php
           if (isset($_GET["a"]) && $_GET["a"]=="buscar") {
           $buscar = $_POST["buscar"];
-          $query = "SELECT id, titulo, autor, imagen FROM libros WHERE titulo LIKE '%$buscar%'";
-          $query2 = "SELECT id, titulo, autor, imagen FROM libros WHERE autor LIKE '%$buscar%'";
+          $query = "SELECT id, titulo, autor, imagen FROM libros WHERE titulo LIKE '%$buscar%' LIMIT 8";
+          $query2 = "SELECT id, titulo, autor, imagen FROM libros WHERE autor LIKE '%$buscar%' LIMIT 8";
         } else {
-          $query = "SELECT id, titulo, autor, imagen FROM libros";
+          $query = "SELECT id, titulo, autor, imagen FROM libros LIMIT 8";
         }
           $result = mysqli_query($mysql, $query);
           while ($row = mysqli_fetch_array($result)) {
