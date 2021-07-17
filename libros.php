@@ -141,7 +141,7 @@
           while ($row = mysqli_fetch_array($result)) {
           ?>
 
-          <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
+          <a href="libros?a=desc&id=<?= $row["id"] ?>">
             <div id="tarjeta_libro" class="card">
               <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
               <div class="card-body">
@@ -156,7 +156,7 @@
           $result2 = mysqli_query($mysql, $query2);
           while ($row = mysqli_fetch_array($result2)) {
         ?>
-        <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
+        <a href="libros?a=desc&id=<?= $row["id"] ?>">
           <div id="tarjeta_libro" class="card">
             <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
             <div class="card-body">
@@ -171,23 +171,24 @@
       </center>
     </div>
   </div>
+  <!-- Pasar de página -->
+  <nav class="mt-4" aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-double-left"></i></a>
+      </li>
+      <li class="page-item"><a class="page-link" href="#" style="color: #757575;">1</a></li>
+      <li class="page-item"><a class="page-link" href="#" style="color: #757575;">2</a></li>
+      <li class="page-item"><a class="page-link" href="#" style="color: #757575;">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#"><i class="fas fa-angle-double-right" style="color: #424242;";></i></a>
+      </li>
+    </ul>
+  </nav>
 
 <?php endif; ?>
 </div>
-<!-- Pasar de página -->
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-double-left"></i></a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#" style="color: #757575;">1</a></li>
-    <li class="page-item"><a class="page-link" href="#" style="color: #757575;">2</a></li>
-    <li class="page-item"><a class="page-link" href="#" style="color: #757575;">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#"><i class="fas fa-angle-double-right" style="color: #424242;";></i></a>
-    </li>
-  </ul>
-</nav>
+
 
 <!-- Trae todo el código del footer a la página principal -->
 <?php include("includes/footer.php"); ?>

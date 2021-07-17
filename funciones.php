@@ -105,13 +105,13 @@ function cambio_disponible($id, $mysql) {
     $result_disp = mysqli_query($mysql, $query_disp);
   }
   $id_back = $id - 3;
-  header("location: gestor.php#libro-$id_back");
+  header("location: gestor#libro-$id_back");
 }
 
 
 function logout() {
   session_unset();
-  header("location: index.php");
+  header("location: index");
 }
 
 
@@ -120,7 +120,7 @@ function edit() {
   $_SESSION["correo"] = $_POST["correo"];
 
   //Va a "mail.php" con el correo definido en cambio de contraseña
-  header("location: mail.php?type=restablecer");
+  header("location: mail?type=restablecer");
 }
 
 
@@ -158,18 +158,18 @@ function login($mysql, $correo, $contra) {
         $_SESSION["correo_iniciado"] = $correo; //Guardar el correo para uso posterior
         $_SESSION["correo"] = $correo; //Para leerlo en el mail
         $_SESSION["sesion"] = true; //Indica que hay sesión iniciada
-        header("location: index.php"); //Vuelve al inicio con la sesión iniciada
+        header("location: index"); //Vuelve al inicio con la sesión iniciada
 
       } else {
         $_SESSION["mensaje"] = "La cuenta no está verificada";
         $_SESSION["mensaje_color"] = "warning";
-        header("location: login.php");
+        header("location: login");
       }
 
     } else {
       $_SESSION["mensaje"] = "La contraseña es incorrecta";
       $_SESSION["mensaje_color"] = "danger";
-      header("location: login.php");
+      header("location: login");
     }
 
   } else {
@@ -204,17 +204,17 @@ function login($mysql, $correo, $contra) {
         $_SESSION["nombre_lib"] = $nombre["nombre"];
         $_SESSION["correo_lib"] = $correo;
         $_SESSION["id_lib"] = $id["id"];
-        header("location: index.php");
+        header("location: index");
 
       } else {
         $_SESSION["mensaje"] = "La contraseña es incorrecta";
         $_SESSION["mensaje_color"] = "danger";
-        header("location: login.php");
+        header("location: login");
       }
     } else {
       $_SESSION["mensaje"] = "El correo no está registrado";
       $_SESSION["mensaje_color"] = "danger";
-      header("location: login.php");
+      header("location: login");
     }
   }
 }
@@ -253,13 +253,13 @@ function verifica($mysql, $correo, $contra) {
     $_SESSION["apellido_iniciado"] = $apellido["apellido"]; //Guardar apellido para uso posterior
     $_SESSION["correo_iniciado"] = $correo; //Guardar el correo para uso posterior
     $_SESSION["sesion"] = true; //Indica que la sesión está iniciada
-    header("location: index.php");
+    header("location: index");
 
   } else {
     //Si hay algo mal, manda de nuevo a verificar con el error
     $_SESSION["mensaje"] = "Error de verificación";
     $_SESSION["mensaje_color"] = "danger";
-    header("location: login.php?id=verifica");
+    header("location: login?id=verifica");
   }
 }
 
@@ -276,19 +276,19 @@ function restablecer($mysql, $correo, $contra1, $contra2) {
     //Vuelve al login con el error respectivo
     $_SESSION["mensaje"] = "Por favor, llena todos los campos correctamente";
     $_SESSION["mensaje_color"] = "danger";
-    header("location: login.php?id=restablecer");
+    header("location: login?id=restablecer");
 
   } elseif ($contra1 != $contra2) {
     //Verifica que las contraseñas coincidan y manda el error si no
     $_SESSION["mensaje"] = "Las contraseñas no coinciden";
     $_SESSION["mensaje_color"] = "danger";
-    header("location: login.php?id=restablecer");
+    header("location: login?id=restablecer");
 
   } elseif (empty($correo_db)) {
     //Si el correo no existe manda el error
     $_SESSION["mensaje"] = "El correo no está registrado";
     $_SESSION["mensaje_color"] = "warning";
-    header("location: login.php?id=restablecer");
+    header("location: login?id=restablecer");
 
   } else {
     //Si todo funciona bien, actualiza la contraseña en base de datos
@@ -298,7 +298,7 @@ function restablecer($mysql, $correo, $contra1, $contra2) {
     //Va al login normal con el mensaje exitoso
     $_SESSION["mensaje"] = "La contraseña fue restablecida correctamente";
     $_SESSION["mensaje_color"] = "success";
-    header("location: login.php");
+    header("location: login");
   }
 }
 
@@ -314,21 +314,21 @@ function registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2) {
     //Vuelve al registro con el error respectivo
     $_SESSION["mensaje"] = "El correo ya está registrado";
     $_SESSION["mensaje_color"] = "warning";
-    header("location: registro.php");
+    header("location: registro");
 
     //Revisa si se llenaron todos los campos del formulario
   } elseif(empty($nombre) || empty($apellido) || empty($correo) || empty($contra1) || empty($contra2)) {
     //Vuelve al registro con el error respectivo
     $_SESSION["mensaje"] = "Por favor, llena todos los campos correctamente";
     $_SESSION["mensaje_color"] = "danger";
-    header("location: registro.php");
+    header("location: registro");
 
     //Revisa si las contraseñas coinciden
   } elseif ($contra1 != $contra2) {
     //Vuelve al registro con el error respectivo
     $_SESSION["mensaje"] = "Las contraseñas no coinciden";
     $_SESSION["mensaje_color"] = "danger";
-    header("location: registro.php");
+    header("location: registro");
 
   } else {
     //Si todo está bien, se registra en la base de datos
@@ -340,7 +340,7 @@ function registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2) {
 
     $_SESSION["correo"] = $correo;
     $_SESSION["nombre"] = $nombre;
-    header("location: mail.php?type=verifica");
+    header("location: mail?type=verifica");
   }
 }
 
@@ -349,7 +349,7 @@ function agregarDeseo($mysql, $id_usuario, $id_libro) {
 
   $query = "INSERT INTO deseos (libro, usuario) VALUES ('$id_libro', '$id_usuario')";
   $result = mysqli_query($mysql, $query);
-  header("location: libros.php?a=desc&id=$id_libro");
+  header("location: libros?a=desc&id=$id_libro");
 
 }
 
@@ -358,7 +358,7 @@ function quitarDeseo($mysql, $id_deseo, $id_libro) {
 
   $query = "DELETE FROM deseos WHERE id='$id_deseo'";
   $result = mysqli_query($mysql, $query);
-  header("location: libros.php?a=desc&id=$id_libro");
+  header("location: libros?a=desc&id=$id_libro");
 
 }
 
@@ -383,7 +383,7 @@ function like($mysql, $id_libro, $id_usuario) {
   $query_update = "UPDATE libros SET likes='$contador' WHERE id='$id_libro'";
   $result_update = mysqli_query($mysql, $query_update);
 
-  header("location: libros.php?a=desc&id=$id_libro");
+  header("location: libros?a=desc&id=$id_libro");
 
 }
 
@@ -403,7 +403,7 @@ function dislike($mysql, $id_libro, $id_like) {
   $query_update = "UPDATE libros SET likes='$contador' WHERE id='$id_libro'";
   $result_update = mysqli_query($mysql, $query_update);
 
-  header("location: libros.php?a=desc&id=$id_libro");
+  header("location: libros?a=desc&id=$id_libro");
 
 }
 ?>

@@ -13,7 +13,7 @@
          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.764716496399!2d-75.5665046!3d6.2482134!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44285620849f25%3A0xb81bd00a721b3e1!2sCentro%20Comercial%20del%20Libro%20y%20la%20Cultura!5e0!3m2!1ses-419!2sco!4v1626363860754!5m2!1ses-419!2sco" height="77%" width="70%" style="border:0; margin-top: 25px;" allowfullscreen="" loading="lazy"></iframe>
           </iframe>
           <br></br>
-          <a href="acerca.php#contacto">
+          <a href="acerca#contacto">
           <button type="button" class="btn btn-secondary btn-lg btn-block" style="align:center;">Contáctanos</button></a>
         </div>
         </div>

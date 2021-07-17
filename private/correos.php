@@ -78,7 +78,7 @@ $cuerpo_verifica =
         <h3>El pasaje de librerías La Bastilla te da la bienvenida, este es el lugar donde podrás encontrar la disponibilidad de libros de tus tiendas favoritas a tan solo unos clicks de distancia.<br><br>Para poder usar todas nuestras funcionalidades verifica tu cuenta en el enlace de abajo:</h3>
       </div>
       <div id="boton">
-        <a href="https://pasajelabastilla.herokuapp.com/login.php?id=verifica">Verifica tu cuenta</a>
+        <a href="https://pasajelabastilla.herokuapp.com/login?id=verifica">Verifica tu cuenta</a>
       </div>
     </div>
     <div id="pie">
@@ -160,7 +160,7 @@ $cuerpo_cambio =
         <h3>Haz clic en el botón de abajo para ir a cambiar tu contraseña, asegúrate de recordarla luego:</h3>
       </div>
       <div id="boton">
-        <a href="https://pasajelabastilla.herokuapp.com/login.php?id=restablecer">Cambio contraseña</a>
+        <a href="https://pasajelabastilla.herokuapp.com/login?id=restablecer">Cambio contraseña</a>
       </div>
     </div>
     <div id="pie">

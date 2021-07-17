@@ -57,7 +57,7 @@
 
       while ($row = mysqli_fetch_array($result)) {
       ?>
-        <a href="libros.php?a=desc&id=<?= $row["id"] ?>">
+        <a href="libros?a=desc&id=<?= $row["id"] ?>">
           <div id="tarjeta_libro" class="card">
             <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
             <div class="card-body">
