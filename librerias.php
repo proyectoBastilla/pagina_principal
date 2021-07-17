@@ -4,7 +4,7 @@
 <?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
-<div id="margen_general">
+<div class="margen-general">
   <h2>Librerías disponibles</h2>
   <div class="card" style="width: 18rem;">
     <a href="libros">

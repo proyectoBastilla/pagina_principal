@@ -6,21 +6,21 @@
     <!-- FOOTER -->
     <footer class="bg-dark text-center text-white">
       <!-- Container footer -->
-      <div id="footer">
+      <div class="footer">
         <!-- Correo -->
-        <div id="footer_icon">
+        <div class="footer__icon">
           <a class="btn btn-outline-light btn-floating m-1 float-center" href= "acerca.php#contacto"  role="button">
             <i class="far fa-envelope"></i>
           </a>
         </div>
         <!-- Instagram -->
-        <div id="footer_icon">
+        <div class="footer__icon">
           <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/la_bastilla_proyecto/" target="_blank" role="button">
             <i class="fab fa-instagram"></i>
           </a>
         </div>
         <!-- Acerca de o info -->
-        <div id="footer_icon">
+        <div class="footer__icon">
           <a class="btn btn-outline-light btn-floating m-1" href="acerca.php" role="button">
             <i class="far fa-user"></i>
           </a>

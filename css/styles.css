@@ -24,7 +24,7 @@ a:hover {
 }
 
 /* Modifica la barra completa del footer */
-#footer {
+.footer {
   padding-top: 2.5em;
   padding-bottom: 2.5em;
   margin-top: 1.5em;
@@ -32,7 +32,7 @@ a:hover {
 }
 
 /* Modifica los íconos(links) del footer */
-#footer_icon {
+.footer__icon {
   display: inline;
   padding: 0.3em;
 }
@@ -42,8 +42,15 @@ a:hover {
   font-size: 16px;
 }
 
-/* estilo de las cartas */
-#tarjeta_libro {
+/* Grupo que engloba los libros */
+.libros {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+/* estilo de las tarjetas */
+.libros__tarjetas {
   max-width: 250px;
   max-height: 400px;
   border-radius: 10px;
@@ -53,16 +60,9 @@ a:hover {
 }
 
 /* asd */
-#imagen_libro {
+.libros__tarjetas-imagen {
   object-fit: cover;
   height: 280px;
-}
-
-/* asdad*/
-#grupo_libros {
-  margin-top: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
 /*  */
@@ -83,7 +83,7 @@ a:hover {
 @media screen and (max-width: 650px) {
 
   /* Genera una margen externa para todas las secciones */
-  #margen_general {
+  .margen-general {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 2rem;
@@ -103,7 +103,7 @@ a:hover {
   }
 
   /* Márgenes del registro/login para la tarjeta */
-  #margenes_login {
+  .margenes-login {
     text-align: center;
     margin-right: 2em;
     margin-left: 2em;
@@ -130,7 +130,7 @@ a:hover {
 @media screen and (min-width: 650px) {
 
   /* Genera una margen externa para todas las secciones */
-  #margen_general {
+  .margen-general {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 3rem;
@@ -150,7 +150,7 @@ a:hover {
   }
 
   /* Márgenes del registro/login para la tarjeta */
-  #margenes_login {
+  .margenes-login {
     text-align: center;
     margin-right: 6em;
     margin-left: 6em;
@@ -172,7 +172,7 @@ a:hover {
 @media screen and (min-width: 900px) {
 
   /* Genera una margen externa para todas las secciones */
-  #margen_general {
+  .margen-general {
     margin-left: 3rem;
     margin-right: 3rem;
     margin-bottom: 3rem;
@@ -187,7 +187,7 @@ a:hover {
   }
 
   /* Márgenes del registro/login para la tarjeta */
-  #margenes_login {
+  .margenes-login {
     text-align: center;
     margin-right: 10em;
     margin-left: 10em;
@@ -209,7 +209,7 @@ a:hover {
 @media screen and (min-width: 1150px) {
 
   /* Genera una margen externa para todas las secciones */
-  #margen_general {
+  .margen-general {
     margin-left: 3rem;
     margin-right: 3rem;
     margin-bottom: 3rem;
@@ -224,7 +224,7 @@ a:hover {
   }
 
   /* Márgenes del registro/login para la tarjeta */
-  #margenes_login {
+  .margenes-login {
     text-align: center;
     margin-right: 16em;
     margin-left: 16em;

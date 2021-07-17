@@ -11,7 +11,7 @@ $result = mysqli_query($mysql, $query_deseos);
 $deseo = mysqli_fetch_array($result);
 ?>
 
-<div id="margen_general">
+<div class="margen-general">
 
   <?php if (empty($deseo)): ?>
 

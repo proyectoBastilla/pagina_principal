@@ -17,7 +17,7 @@
 </head>
 
 <body style="background-color:#f5f5f5;">
-  <header id="header">
+  <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="navbar-collapse mx-md-3">
         <a class="navbar-brand" href="index"><i class="fas fa-bars fa-lg"></i></a>

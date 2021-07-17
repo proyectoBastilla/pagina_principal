@@ -9,7 +9,7 @@ include("includes/header.php");
 ?>
 
 <!-- Aquí comienza la página como tal -->
-<div id="margenes_login">
+<div class="margenes-login">
 
   <!-- Mensaje emergente sobre un posible error de registro (opcional) -->
   <?php if (isset($_SESSION["mensaje"])) { ?>

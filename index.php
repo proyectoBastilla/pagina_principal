@@ -6,7 +6,7 @@
 <!-- Aquí va todo el código propio de la página -->
 <main class="main">
 
-  <div id="margen_general">
+  <div class="margen-general">
     <h2><img src="img/favicon.png" width="90" height="90"> La Bastilla</h2>
   </div>
 
@@ -43,13 +43,13 @@
   <!-- Fin Carrusel -->
 
   <!-- Sección lanzamientos -->
-  <div id="margen_general">
+  <div class="margen-general">
     <h1><b>¡NUEVOS LANZAMIENTOS!</b></h1></br>
     <!-- Tarjetas lanzamientos -->
     <div class="card">
       <div class="mx-sm-4 my-sm-4" >
         <center>
-          <div id="grupo_libros">
+          <div class="libros">
 
       <?php
       $query = "SELECT id, titulo, autor, imagen FROM libros LIMIT 4";
@@ -58,8 +58,8 @@
       while ($row = mysqli_fetch_array($result)) {
       ?>
         <a href="libros?a=desc&id=<?= $row["id"] ?>">
-          <div id="tarjeta_libro" class="card">
-            <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+          <div class="libros__tarjetas card">
+            <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
             <div class="card-body">
               <h4><?= $row["titulo"] ?></h4>
               <p><?= $row["autor"] ?></p>

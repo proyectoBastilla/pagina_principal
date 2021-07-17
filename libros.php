@@ -3,7 +3,7 @@
 <!-- Trae todo el código del header a la página principal -->
 <?php include("includes/header.php"); ?>
 
-<div id="margen_general">
+<div class="margen-general">
 
 <?php if (isset($_GET["a"]) && $_GET["a"]=="desc"):
 
@@ -127,7 +127,7 @@
     <div class="mx-sm-4 my-sm-4" >
       <h3 id="libros_titulo">Te podría interesar...</h3>
       <center>
-        <div id="grupo_libros">
+        <div class="libros">
 
           <?php
           if (isset($_GET["a"]) && $_GET["a"]=="buscar") {
@@ -142,8 +142,8 @@
           ?>
 
           <a href="libros?a=desc&id=<?= $row["id"] ?>">
-            <div id="tarjeta_libro" class="card">
-              <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+            <div class="libros__tarjetas card">
+              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
               <div class="card-body">
                 <h4><?= $row["titulo"] ?></h4>
                 <p><?= $row["autor"] ?></p>
@@ -157,8 +157,8 @@
           while ($row = mysqli_fetch_array($result2)) {
         ?>
         <a href="libros?a=desc&id=<?= $row["id"] ?>">
-          <div id="tarjeta_libro" class="card">
-            <img id="imagen_libro" class="card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+          <div class="libros__tarjetas card">
+            <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
             <div class="card-body">
               <h4><?= $row["titulo"] ?></h4>
               <p><?= $row["autor"] ?></p>

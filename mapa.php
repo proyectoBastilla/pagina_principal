@@ -4,7 +4,7 @@
 <?php include("includes/header.php"); ?>
 
 <!-- Aquí va todo el código propio de la página -->
-<div id="margen_general">
+<div class="margen-general">
     <h1><b>El Pasaje La Bastilla</b></h1><br>
     <div align="center">
       <!--Google map-->
