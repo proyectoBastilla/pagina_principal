@@ -42,7 +42,7 @@ $deseo = mysqli_fetch_array($result);
             <a href="libros?a=desc&id=<?= $libro ?>">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="<?= $datos["imagen"] ?>" class="img-fluid rounded-start" width="100%">
+                  <img src="<?= $datos["imagen"] ?>" class="img-fluid rounded-start" width="100%" alt="Portada libro">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">

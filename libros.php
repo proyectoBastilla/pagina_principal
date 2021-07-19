@@ -48,7 +48,7 @@
   <div class="container-fluid card mb-3" style="max-width: 1050px;">
     <div class="row g-0">
       <div class="col-md-4">
-        <img src="<?= $datos["imagen"] ?>" class="img-fluid rounded-start" width="100%">
+        <img src="<?= $datos["imagen"] ?>" class="img-fluid rounded-start" width="100%" alt="Portada libro">
       </div>
       <div class="col-md-8">
         <div class="card-body">
@@ -143,7 +143,7 @@
 
           <a href="libros?a=desc&id=<?= $row["id"] ?>">
             <div class="libros__tarjetas card">
-              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
               <div class="card-body">
                 <h4><?= $row["titulo"] ?></h4>
                 <p><?= $row["autor"] ?></p>
@@ -158,7 +158,7 @@
         ?>
         <a href="libros?a=desc&id=<?= $row["id"] ?>">
           <div class="libros__tarjetas card">
-            <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+            <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
             <div class="card-body">
               <h4><?= $row["titulo"] ?></h4>
               <p><?= $row["autor"] ?></p>

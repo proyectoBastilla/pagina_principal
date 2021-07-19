@@ -7,7 +7,7 @@
 <main class="main">
 
   <div class="margen-general">
-    <h2><img src="img/favicon.png" width="90" height="90"> La Bastilla</h2>
+    <h2><img src="img/favicon.png" width="90" height="90" alt="Logo principal"> La Bastilla</h2>
   </div>
 
   <!-- Inicio Carrusel -->
@@ -21,13 +21,13 @@
     <!-- Imágenes Carrusel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/banner-1.jpg" class="d-block w-100">
+        <img src="img/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
       </div>
       <div class="carousel-item">
-        <img src="img/banner-2.jpg" class="d-block w-100">
+        <img src="img/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
       </div>
       <div class="carousel-item">
-        <img src="img/banner-3.jpg" class="d-block w-100">
+        <img src="img/banner-3.jpg" class="d-block w-100" alt="Banner número 3">
       </div>
     </div>
     <!-- Botones laterales Carrusel -->
@@ -59,7 +59,7 @@
       ?>
         <a href="libros?a=desc&id=<?= $row["id"] ?>">
           <div class="libros__tarjetas card">
-            <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Card image cap">
+            <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
             <div class="card-body">
               <h4><?= $row["titulo"] ?></h4>
               <p><?= $row["autor"] ?></p>
