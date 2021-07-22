@@ -18,7 +18,7 @@ $deseo = mysqli_fetch_array($result);
     <h2>No hay nada por aquí...</h2>
     <br><br>
     <h4>Agrega libros a tu lista de deseos para verlos en esta sección</h4>
-    <a href="libros"><h4>Click aquí para ir a los libros</h4></a>
+    <a href="libros?pag=1"><h4>Click aquí para ir a los libros</h4></a>
 
   <?php else: ?>
 

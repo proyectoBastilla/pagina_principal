@@ -71,7 +71,7 @@
       <div class="row pb-4">
         <div class="col-md">
           <div class="form-group text-center">
-            <input class="btn btn" style="background: #292b29; color:white;" type="submit" name="enviar" value="Enviar">
+            <input class="btn btn-dark" type="submit" name="enviar" value="Enviar">
           </div>
         </div>
       </div>

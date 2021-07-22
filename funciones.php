@@ -86,6 +86,15 @@ if ($_GET["a"]=="cambio") {
   //Función con las variables externas necesarias
   dislike($mysql, $id_libro, $id_like);
 
+} elseif (isset($_GET["buscar"])) {
+
+  $infoBuscar = $_GET["buscar"];
+  if (empty($infoBuscar)) {
+    header("location: libros?pag=1");
+  } else {
+    header("location: libros?buscar=$infoBuscar&pag=1");
+  }
+
 }
 
 

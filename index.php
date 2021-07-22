@@ -61,8 +61,7 @@
           <div class="libros__tarjetas card">
             <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
             <div class="card-body">
-              <h4><?= $row["titulo"] ?></h4>
-              <p><?= $row["autor"] ?></p>
+              <h5><?= $row["titulo"] ?></h5>
             </div>
           </div>
         </a>

@@ -3,12 +3,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #bfbfbf;
   color: black;
-  line-height: 1.2em;
 }
 
 /* Cambia todos los párrafos de la página */
 p {
-  font-size: 18px;
+  font-size: 16px;
   text-align: justify;
 }
 
@@ -51,21 +50,21 @@ a:hover {
 
 /* estilo de las tarjetas */
 .libros__tarjetas {
-  max-width: 250px;
-  max-height: 400px;
+  max-width: 230px;
+  max-height: 350px;
   border-radius: 10px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   margin: 10px;
 }
 
-/* asd */
+/* Estilo de la imagen-portada del libro */
 .libros__tarjetas-imagen {
   object-fit: cover;
-  height: 280px;
+  height: 250px;
 }
 
-/*  */
+/* Botón para ir arriba */
 #irArriba {
   position: fixed;
   width: 50px;
@@ -78,6 +77,13 @@ a:hover {
   color:white;
   font-size: 22px;
   border-radius: 10px;
+}
+
+/* Estilo del iframe del mapa de Google Maps */
+#map-google {
+  height: 77%;
+  width: 85%;
+  margin-top: 25px;
 }
 
 @media screen and (max-width: 650px) {

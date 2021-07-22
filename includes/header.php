@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasaje La Bastilla</title>
-    <meta name="description" content="Encuentra tus libros y librerías favoritas en un solo lugar, con los mejores precios que te ofrece El Pasaje la Bastilla.">
+    <title>Pasaje La Bastilla. Todos tus libros, un solo sitio.</title>
+    <meta name="description" content="Encuentra tus libros y librerías favoritas en un solo lugar, con los mejores precios que te ofrece El Pasaje la Bastilla. Visítanos y dale paso a tu amor por la lectura.">
     <link rel="shortcut icon" href="img/favicon.png">
     <!-- Link con BOOTSTRAP 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -25,12 +25,12 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid">
           <li class="nav-item"><a class="nav-link" aria-current="page" href="index"></a></li>
           <li class="nav-item"><a class="nav-link" href="index"><i class="fas fa-home fa-lg"></i> Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="libros"><i class="fas fa-book fa-lg"></i> Libros</a></li>
+          <li class="nav-item"><a class="nav-link" href="libros?pag=1"><i class="fas fa-book fa-lg"></i> Libros</a></li>
           <li class="nav-item"><a class="nav-link" href="librerias"><i class="fas fa-store-alt fa-lg"></i> Librerías</a></li>
           <li class="nav-item"><a class="nav-link" href="mapa"><i class="fas fa-map-marked-alt fa-lg"></i> Mapa</a></li>
           <li class="nav-item"><a class="nav-link" href="acerca"><i class="fas fa-users fa-lg"></i> Acerca de</a></li>
           <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
-            <li class="nav-item"><a class="nav-link" href="deseo"><i class="fas fa-heart fa-lg"></i> Deseos</a></li>
+            <li class="nav-item"><a class="nav-link" href="deseo?pag=1"><i class="fas fa-heart fa-lg"></i> Deseos</a></li>
           <?php endif; ?>
           <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
             <li class="nav-item"><a class="nav-link" href="gestor"><i class="fas fa-address-book fa-lg"></i> Gestión Libros</a></li>
@@ -72,7 +72,7 @@
         <!-- Fin Modal login -->
 
         <!-- Búsqueda -->
-        <form action="libros?a=buscar" method="post">
+        <form action="funciones.php" method="get">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Búsqueda" type="search" name="buscar" style="background-color:#f5f5f5;">
             <button class="btn btn-secondary" type="submit"><i class="fas fa-search" style="color: white;"></i></button>
