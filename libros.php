@@ -188,7 +188,7 @@ if (isset($_GET["a"]) && $_GET["a"]=="desc"):
     <nav class="mt-4" aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
         <li class="page-item <?php if ($pag==1) {echo "disabled";} ?>">
-          <a class="page-link text-dark" href="libros?pag=<?=($pag-1)?>"><i class="fas fa-angle-double-left"></i></a>
+          <a class="page-link text-dark" href="libros?<?php if (isset($_GET["buscar"])) {echo "buscar=$buscar";} ?>&pag=<?=($pag-1)?>"><i class="fas fa-angle-double-left"></i></a>
         </li>
         <?php $i = 1; ?>
         <?php while ($i <= $numPags) { ?>
@@ -196,7 +196,7 @@ if (isset($_GET["a"]) && $_GET["a"]=="desc"):
           <?php $i++; ?>
         <?php } ?>
         <li class="page-item <?php if (($i-1)==$pag) {echo "disabled";} ?>">
-          <a class="page-link text-dark" href="libros?pag=<?=($pag+1)?>"><i class="fas fa-angle-double-right"></i></a>
+          <a class="page-link text-dark" href="libros?<?php if (isset($_GET["buscar"])) {echo "buscar=$buscar";} ?>&pag=<?=($pag+1)?>"><i class="fas fa-angle-double-right"></i></a>
         </li>
       </ul>
     </nav>
