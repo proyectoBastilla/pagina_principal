@@ -4,7 +4,7 @@
     <a id="irArriba" href="#"><i class="fas fa-arrow-up"></i></a>
 
     <!-- FOOTER -->
-    <footer class="bg-dark text-center text-white">
+    <footer>
       <!-- Container footer -->
       <div class="footer">
         <!-- Correo -->
@@ -34,6 +34,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <!-- Script para los Tooltips -->
     <script src="js/tooltips.js" charset="utf-8"></script>
+    <!-- Script para el menú desplegable -->
+    <script src="js/menuLateral.js" charset="utf-8"></script>
 
   </body>
 </html>

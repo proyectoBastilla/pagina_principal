@@ -2,82 +2,71 @@
 <!-- Pongo "es" para que la página sea tratada en español -->
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasaje La Bastilla. Todos tus libros, un solo sitio.</title>
-    <meta name="description" content="Encuentra tus libros y librerías favoritas en un solo lugar, con los mejores precios que te ofrece El Pasaje la Bastilla. Visítanos y dale paso a tu amor por la lectura.">
-    <link rel="shortcut icon" href="img/favicon.png">
-    <!-- Link con BOOTSTRAP 5 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <!-- Link con Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Link a estilo CSS -->
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasaje La Bastilla. Todos tus libros, un solo sitio.</title>
+  <meta name="description" content="Encuentra tus libros y librerías favoritas en un solo lugar, con los mejores precios que te ofrece El Pasaje la Bastilla. Visítanos y dale paso a tu amor por la lectura.">
 
+  <link rel="shortcut icon" href="img/favicon.png">
+  <!-- Link con BOOTSTRAP 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- Link con Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Link a estilo CSS -->
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body style="background-color:#f5f5f5;">
+<body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="navbar-collapse mx-md-3">
-        <a class="navbar-brand" href="index"><i class="fas fa-bars fa-lg"></i></a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 container-fluid">
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="index"></a></li>
-          <li class="nav-item"><a class="nav-link" href="index"><i class="fas fa-home fa-lg"></i> Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="libros?pag=1"><i class="fas fa-book fa-lg"></i> Libros</a></li>
-          <li class="nav-item"><a class="nav-link" href="librerias"><i class="fas fa-store-alt fa-lg"></i> Librerías</a></li>
-          <li class="nav-item"><a class="nav-link" href="mapa"><i class="fas fa-map-marked-alt fa-lg"></i> Mapa</a></li>
-          <li class="nav-item"><a class="nav-link" href="acerca"><i class="fas fa-users fa-lg"></i> Acerca de</a></li>
-          <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
-            <li class="nav-item"><a class="nav-link" href="deseo?pag=1"><i class="fas fa-heart fa-lg"></i> Deseos</a></li>
-          <?php endif; ?>
-          <?php if (isset($_SESSION["libreria"]) && $_SESSION["libreria"]==true): ?>
-            <li class="nav-item"><a class="nav-link" href="gestor"><i class="fas fa-address-book fa-lg"></i> Gestión Libros</a></li>
-          <?php endif; ?>
-        </ul>
+    <nav class="header">
+      <ul class="header__nav">
+        <li class="header__nav-item"><a href="libros?pag=1">Libros</a></li>
+        <li class="header__nav-item"><a href="librerias">Librerías</a></li>
+        <li class="header__nav-item"><a href="mapa">Mapa</a></li>
+        <li class="header__nav-item"><a href="acerca">Acerca de</a></li>
 
         <?php if (!empty($_SESSION["nombre_iniciado"])) { ?>
-          <div class="">
-            <p class="text-white">Hola, <?= $_SESSION["nombre_iniciado"] ?></p>
+          <div class="header__nav-item saludo">
+            <p class="">Hola, <?= $_SESSION["nombre_iniciado"] ?></p>
           </div>
         <?php } ?>
 
-        <!-- Botón login -->
-        <i class="far fa-user color-white me-4 mt-1 fa-lg" style="color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-
-        <!-- Modal login -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">¿Qué quieres hacer?</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body text-center">
-                <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true): ?>
-                  <a href="funciones.php?a=logout"><button type="button" class="btn btn-outline-secondary">Cerrar sesión</button></a>
-                <?php else: ?>
-                  <a href="registro"><button type="button" class="btn btn-outline-secondary">Regístrate</button></a>
-                    o
-                  <a href="login"><button type="button" class="btn btn-outline-secondary">Inicia Sesión</button></a>
-                <?php endif; ?>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Fin Modal login -->
-
         <!-- Búsqueda -->
-        <form action="funciones.php" method="get">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Búsqueda" type="search" name="buscar" style="background-color:#f5f5f5;">
-            <button class="btn btn-secondary" type="submit"><i class="fas fa-search" style="color: white;"></i></button>
+        <div class="header__nav-item search">
+          <form action="funciones.php?a=buscar" method="get">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Búsqueda" type="search" name="buscar">
+              <button id="buscar-btn" class="btn" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Botón deseos -->
+        <?php if (isset($_SESSION["sesion"])): ?>
+          <div class="header__nav-item deseos-btn">
+            <a href="deseos?pag=1">
+              <i class="far fa-heart"></i>
+              <p>Deseos</p>
+            </a>
           </div>
-        </form>
-      </div>
+        <?php else: ?>
+          <div class="header__nav-item deseos-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Debes iniciar sesión">
+            <i class="far fa-heart"></i>
+            <p>Deseos</p>
+          </div>
+        <?php endif; ?>
+
+        <div class="header__nav-item login-btn">
+          <i class="far fa-user"></i>
+          <p>Login</p>
+          <ul class="login-btn__desp">
+            <a href="login"><p>Inicia sesión</p></a>
+            <hr>
+            <a href="registro"><p>Regístrate</p></a> 
+          </ul>
+        </div>
+
+      </ul>
     </nav>
   </header>

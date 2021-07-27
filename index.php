@@ -21,13 +21,13 @@
     <!-- Imágenes Carrusel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="img/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
+        <img src="https://i.ibb.co/dPmQvm1/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
       </div>
       <div class="carousel-item">
-        <img src="img/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
+        <img src="https://i.ibb.co/j4HN3JD/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
       </div>
       <div class="carousel-item">
-        <img src="img/banner-3.jpg" class="d-block w-100" alt="Banner número 3">
+        <img src="https://i.ibb.co/qWHf3hq/banner-3.jpg" class="d-block w-100" alt="Banner número 3">
       </div>
     </div>
     <!-- Botones laterales Carrusel -->
@@ -57,14 +57,14 @@
 
       while ($row = mysqli_fetch_array($result)) {
       ?>
-        <a href="libros?a=desc&id=<?= $row["id"] ?>">
           <div class="libros__tarjetas card">
-            <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-            <div class="card-body">
-              <h5><?= $row["titulo"] ?></h5>
-            </div>
+            <a href="libros?a=desc&id=<?= $row["id"] ?>">
+              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+              <div class="card-body">
+                <h5 class="text-start"><?= $row["titulo"] ?></h5>
+              </div>
+            </a>
           </div>
-        </a>
       <?php } ?>
 
           </div>

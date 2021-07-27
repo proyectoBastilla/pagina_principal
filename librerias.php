@@ -8,7 +8,7 @@
   <h2>Librerías disponibles</h2>
   <div class="card" style="width: 18rem;">
     <a href="libros?pag=1">
-    <img class="card-img-top" src="img/libreriamiguel.jpg" alt="Librería Miguel Ángel">
+    <img class="card-img-top" src="https://i.ibb.co/2S3qqqz/libreriamiguel.jpg" alt="Librería Miguel Ángel">
       <div class="card-body">
         <h3 class="card-text">Librería Miguel Ángel</h3>
       </div>
