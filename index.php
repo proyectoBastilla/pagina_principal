@@ -6,10 +6,6 @@
 <!-- Aquí va todo el código propio de la página -->
 <main class="main">
 
-  <div class="margen-general">
-    <h2><img src="img/favicon.png" width="90" height="90" alt="Logo principal"> La Bastilla</h2>
-  </div>
-
   <!-- Inicio Carrusel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">

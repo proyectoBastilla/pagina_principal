@@ -8,7 +8,7 @@
   <title>Pasaje La Bastilla. Todos tus libros, un solo sitio.</title>
   <meta name="description" content="Encuentra tus libros y librerías favoritas en un solo lugar, con los mejores precios que te ofrece El Pasaje la Bastilla. Visítanos y dale paso a tu amor por la lectura.">
 
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="https://i.ibb.co/yYJTtQS/favicon.png">
   <!-- Link con BOOTSTRAP 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <!-- Link con Font Awesome -->
@@ -16,21 +16,15 @@
   <!-- Link a estilo CSS -->
   <link href="css/styles.css" rel="stylesheet">
 </head>
-
 <body>
   <header>
     <nav class="header">
       <ul class="header__nav">
+        <li class="header__nav-item"><a href="index">Inicio</a></li>
         <li class="header__nav-item"><a href="libros?pag=1">Libros</a></li>
         <li class="header__nav-item"><a href="librerias">Librerías</a></li>
         <li class="header__nav-item"><a href="mapa">Mapa</a></li>
         <li class="header__nav-item"><a href="acerca">Acerca de</a></li>
-
-        <?php if (!empty($_SESSION["nombre_iniciado"])) { ?>
-          <div class="header__nav-item saludo">
-            <p class="">Hola, <?= $_SESSION["nombre_iniciado"] ?></p>
-          </div>
-        <?php } ?>
 
         <!-- Búsqueda -->
         <div class="header__nav-item search">
@@ -63,7 +57,7 @@
           <ul class="login-btn__desp">
             <a href="login"><p>Inicia sesión</p></a>
             <hr>
-            <a href="registro"><p>Regístrate</p></a> 
+            <a href="registro"><p>Regístrate</p></a>
           </ul>
         </div>
 
