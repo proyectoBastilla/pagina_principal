@@ -2,6 +2,8 @@
 
     <!-- Botón para subir -->
     <a id="irArriba" href="#"><i class="fas fa-arrow-up"></i></a>
+    
+
 
     <!-- FOOTER -->
     <footer>
@@ -36,6 +38,8 @@
     <script src="js/tooltips.js" charset="utf-8"></script>
     <!-- Script para el menú desplegable -->
     <script src="js/menuLateral.js" charset="utf-8"></script>
+    <!-- Script para el botón ir arriba -->
+    <script src="js/irArriba.js" charset="utf-8"></script>
 
   </body>
 </html>
