@@ -177,7 +177,7 @@ a:hover {
   height: 250px;
 }
 .libros__tarjetas-imagen:hover {
-  filter: blur(1.1px);
+  filter: blur(2px);
 }
 
 /* Botón para ir arriba */
@@ -193,7 +193,8 @@ a:hover {
   line-height: 50px;
   color:white;
   font-size: 22px;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
 }
 
 /* Estilo del iframe del mapa de Google Maps */

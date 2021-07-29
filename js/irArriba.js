@@ -5,7 +5,7 @@ var mybutton = document.getElementById("irArriba");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 200) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 400) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
