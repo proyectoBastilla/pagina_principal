@@ -39,7 +39,7 @@
         <!-- Botón deseos -->
         <?php if (isset($_SESSION["sesion"])): ?>
           <div class="header__nav-item deseos-btn">
-            <a href="deseos?pag=1">
+            <a href="deseo?pag=1">
               <i class="far fa-heart"></i>
               <p>Deseos</p>
             </a>
@@ -55,9 +55,15 @@
           <i class="far fa-user"></i>
           <p>Login</p>
           <ul class="login-btn__desp">
-            <a href="login"><p>Inicia sesión</p></a>
-            <hr>
-            <a href="registro"><p>Regístrate</p></a>
+            <?php if (isset($_SESSION["sesion"])): ?>
+              <a href="cuenta"><p>Mi Cuenta</p></a>
+              <hr>
+              <a href="funciones.php?a=logout"><p>Cerrar sesión</p></a>
+            <?php else: ?>
+              <a href="login"><p>Inicia Sesión</p></a>
+              <hr>
+              <a href="registro"><p>Regístrate</p></a>
+            <?php endif; ?>
           </ul>
         </div>
 

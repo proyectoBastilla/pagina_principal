@@ -3,14 +3,14 @@
 <!-- Trae todo el código del header a la página principal -->
 <?php include("includes/header.php"); ?>
 
-<!-- Aquí va todo el código propio de la página -->
-<!--Alerta avisando que la página no es para la compra de libros-->
-<div class="container-fluid alert alert-secondary text-center mb-3" style="max-width: 1050px;" role="alert">
-    Recuerda que puedes contactar con la librería para más información
-  </div>
+<?php //Aquí va todo el código propio de la página ?>
 
 <!--Libros -->
 <div class="margen-general">
+  <!--Alerta avisando que la página no es para la compra de libros-->
+  <div class="container-fluid alert alert-secondary text-center mb-3" style="max-width: 1050px;" role="alert">
+    Recuerda que puedes contactar con la librería para más información
+  </div>
   <h2>Librerías disponibles</h2>
   <div class="card" style="width: 18rem;">
     <a href="apalibreria">
