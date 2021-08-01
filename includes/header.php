@@ -7,20 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pasaje La Bastilla. Todos tus libros, un solo sitio.</title>
   <meta name="description" content="Encuentra tus libros y librerías favoritas en un solo lugar, con los mejores precios que te ofrece El Pasaje la Bastilla. Visítanos y dale paso a tu amor por la lectura.">
-
+  <!-- Link del favicon -->
   <link rel="shortcut icon" href="https://i.ibb.co/yYJTtQS/favicon.png">
   <!-- Link con BOOTSTRAP 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <!-- Link con Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Link a estilo CSS -->
-  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <header>
     <nav class="header">
       <ul class="header__nav">
-        <li class="header__nav-item"><a href="index">Inicio</a></li>
+        <li class="header__nav-item"><a href="index"><img src="https://i.ibb.co/NpvGk3C/Ilustraci-njggj.png" alt="logo" border="0" height="50"></a></li>
         <li class="header__nav-item"><a href="libros?pag=1">Libros</a></li>
         <li class="header__nav-item"><a href="librerias">Librerías</a></li>
         <li class="header__nav-item"><a href="mapa">Mapa</a></li>

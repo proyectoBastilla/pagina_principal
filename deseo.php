@@ -1,7 +1,7 @@
-<!-- Incluye la sesión y la base de datos -->
-<?php include("includes/database.php"); ?>
-<!-- Trae todo el código del header a la página principal -->
-<?php include("includes/header.php"); ?>
+<?php //Incluye la sesión y la base de datos
+include("./includes/database.php") ?>
+<?php //Trae todo el código del header a la página principal
+include("./includes/header.php") ?>
 
 <?php
 $id_usuario = $_SESSION["id_iniciado"];

@@ -1,7 +1,7 @@
-<!-- Incluye la sesión y la base de datos -->
-<?php include("includes/database.php"); ?>
-<!-- Trae todo el código del header a la página principal -->
-<?php include("includes/header.php"); ?>
+<?php //Incluye la sesión y la base de datos
+include("./includes/database.php") ?>
+<?php //Trae todo el código del header a la página principal
+include("./includes/header.php") ?>
 <!--Alerta avisando que la página no es para la compra de libros-->
 <div class="container-fluid alert alert-secondary text-center mb-3" style="max-width: 1050px;" role="alert">
     Recuerda que puedes contactar con la librería para más información
@@ -38,8 +38,8 @@
                     </tr>
                     <tr>
                 </table>
-            </div>  
-        </div>      
+            </div>
+        </div>
     </div>
 </div>
 

@@ -1,7 +1,7 @@
-<!-- Incluye la sesión y la base de datos -->
-<?php include("includes/database.php"); ?>
-<!-- Trae todo el código del header a la página principal -->
-<?php include("includes/header.php"); ?>
+<?php //Incluye la sesión y la base de datos
+include("./includes/database.php") ?>
+<?php //Trae todo el código del header a la página principal
+include("./includes/header.php") ?>
 
 <!-- Aquí va todo el código propio de la página -->
 <main class="main">
@@ -17,15 +17,16 @@
     <!-- Imágenes Carrusel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://i.ibb.co/dPmQvm1/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
+        <img src="https://i.ibb.co/LRd6XmT/banner-1.png" class="d-block w-100" alt="Banner número 1">
       </div>
       <div class="carousel-item">
-        <img src="https://i.ibb.co/j4HN3JD/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
+        <img src="https://i.ibb.co/MMqmhDj/banner-2.png" class="d-block w-100" alt="Banner número 2">
       </div>
       <div class="carousel-item">
-        <img src="https://i.ibb.co/qWHf3hq/banner-3.jpg" class="d-block w-100" alt="Banner número 3">
+        <img src="https://i.ibb.co/jbJT7Nk/banner-3.png" class="d-block w-100" alt="Banner número 3">
       </div>
     </div>
+
     <!-- Botones laterales Carrusel -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
