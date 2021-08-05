@@ -150,9 +150,16 @@ a:hover {
   padding: 0.3em;
 }
 
-/* Texto que hace link para recuperar la contraseña */
-#link_recuperar {
-  font-size: 16px;
+.index-bajar {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#index__section-2 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 3rem;
 }
 
 /* Grupo que engloba los libros */
@@ -173,7 +180,7 @@ a:hover {
 }
 .libros__tarjetas:hover {
   transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-
+  
 }
 
 /* Estilo de la imagen-portada del libro */
@@ -207,6 +214,10 @@ a:hover {
   margin-top: 25px;
 }
 
+/* Texto que hace link para recuperar la contraseña */
+#link_recuperar {
+  font-size: 16px;
+}
 
 @media screen and (max-width: 650px) {
 
@@ -235,7 +246,7 @@ a:hover {
     text-align: center;
     margin-right: 2em;
     margin-left: 2em;
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 2em;
     font-size: 20px;
   }
@@ -282,7 +293,7 @@ a:hover {
     text-align: center;
     margin-right: 6em;
     margin-left: 6em;
-    margin-top: 2em;
+    margin-top: 4em;
     margin-bottom: 2em;
     font-size: 20px;
   }
@@ -319,7 +330,7 @@ a:hover {
     text-align: center;
     margin-right: 10em;
     margin-left: 10em;
-    margin-top: 3em;
+    margin-top: 5em;
     margin-bottom: 3em;
     font-size: 20px;
   }
@@ -356,7 +367,7 @@ a:hover {
     text-align: center;
     margin-right: 16em;
     margin-left: 16em;
-    margin-top: 3em;
+    margin-top: 6em;
     margin-bottom: 3em;
     font-size: 20px;
   }

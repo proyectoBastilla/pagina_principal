@@ -31,7 +31,7 @@ if (isset($_GET["id"])) {
 ?>
 
 <div class="margenes-login">
-  <!-- Mensaje emergente sobre un posible error de login (opcional) -->
+<!-- Mensaje emergente sobre un posible error de login (opcional) -->
   <?php if (isset($_SESSION["mensaje"])) { ?>
     <div class="container alert alert-<?= $_SESSION["mensaje_color"] ?> alert-dismissible fade show" role="alert">
       <?= $_SESSION["mensaje"] ?>

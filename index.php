@@ -39,30 +39,34 @@ include("./includes/header.php") ?>
   </div>
   <!-- Fin Carrusel -->
 
+  <div class="index-bajar">
+    <a href="#section-2"> <i class="fas fa-chevron-down fa-2x fa-lg "></i></a>
+  </div>
+
   <!-- Sección lanzamientos -->
-  <div class="margen-general">
-    <h1><b>¡NUEVOS LANZAMIENTOS!</b></h1></br>
+  <div id="index__section-2">
+    <h1><b>¡MÁS GUSTADOS!</b></h1></br>
     <!-- Tarjetas lanzamientos -->
     <div class="card">
-      <div class="mx-sm-4 my-sm-4" >
+      <div class="mx-sm-4 my-sm-4">
         <center>
           <div class="libros">
 
-      <?php
-      $query = "SELECT id, titulo, autor, imagen FROM libros LIMIT 4";
-      $result = mysqli_query($mysql, $query);
+            <?php
+            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 4";
+            $result = mysqli_query($mysql, $query);
 
-      while ($row = mysqli_fetch_array($result)) {
-      ?>
-          <div class="libros__tarjetas card">
-            <a href="libros?a=desc&id=<?= $row["id"] ?>">
-              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-              <div class="card-body">
-                <h5 class="text-start"><?= $row["titulo"] ?></h5>
+            while ($row = mysqli_fetch_array($result)) {
+            ?>
+              <div class="libros__tarjetas card">
+                <a href="libros?a=desc&id=<?= $row["id"] ?>">
+                  <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+                  <div class="card-body">
+                    <h5 class="text-start"><?= $row["titulo"] ?></h5>
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-      <?php } ?>
+            <?php } ?>
 
           </div>
         </center>
