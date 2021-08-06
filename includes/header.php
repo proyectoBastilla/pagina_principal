@@ -18,16 +18,14 @@
 </head>
 <body>
   <header>
-    <nav class="header">
-      <ul class="header__nav">
-        <li class="header__nav-item"><a href="index"><img src="https://i.ibb.co/NpvGk3C/Ilustraci-njggj.png" alt="logo" border="0" height="50"></a></li>
-        <li class="header__nav-item"><a href="libros?pag=1">Libros</a></li>
-        <li class="header__nav-item"><a href="librerias">Librerías</a></li>
-        <li class="header__nav-item"><a href="mapa">Mapa</a></li>
-        <li class="header__nav-item"><a href="acerca">Acerca de</a></li>
-
-        <!-- Búsqueda -->
-        <div class="header__nav-item search">
+<div class="topnav" id="myTopnav">
+  <a href="index" class="active" ><img src="https://i.ibb.co/NpvGk3C/Ilustraci-njggj.png" alt="logo" border="0" height="50" ></a>
+  <a href="libros?pag=1" class="header__nav-item" style="padding-top: 1.5rem; padding-left: 0.5rem; padding-right: 0.8rem;">Libros</a>
+  <a href="librerias"class="header__nav-item" style="padding-top: 1.5rem; padding-left: 0.5rem; padding-right: 0.8rem;">Librerías</a>
+  <a href="mapa"class="header__nav-item" style="padding-top: 1.5rem; padding-left: 0.5rem; padding-right: 0.8rem;">Mapa</a>
+  <a href="acerca"class="header__nav-item" style="padding-top: 1.5rem; padding-left: 0.5rem; padding-right: 0.8rem;">Acerca de</a>
+  <!-- Búsqueda -->
+  <div class="header__nav-item search" style="padding-top: 1rem; padding-left 0.5rem; padding-right: 0.8rem;">
           <form action="funciones.php?a=buscar" method="get">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Búsqueda" type="search" name="buscar">
@@ -35,9 +33,8 @@
             </div>
           </form>
         </div>
-
-        <!-- Botón deseos -->
-        <?php if (isset($_SESSION["sesion"])): ?>
+  <!-- Botón deseos -->
+  <?php if (isset($_SESSION["sesion"])): ?>
           <div class="header__nav-item deseos-btn">
             <a href="deseo?pag=1">
               <i class="far fa-heart"></i>
@@ -50,7 +47,6 @@
             <p>Deseos</p>
           </div>
         <?php endif; ?>
-
         <div class="header__nav-item login-btn">
           <i class="far fa-user"></i>
           <p>Login</p>
@@ -66,7 +62,19 @@
             <?php endif; ?>
           </ul>
         </div>
-
-      </ul>
-    </nav>
-  </header>
+        
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars fa-lg" ></i>
+  </a>
+  <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</div>
+</header>
