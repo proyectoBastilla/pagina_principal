@@ -52,15 +52,17 @@ a:hover {
 
 /*  */
 .header__nav-item {
+  display: inline;
   padding-top: 1.2rem; 
   padding-left: 0.5rem;
-   padding-right: 0.8rem;
+  padding-right: 0.8rem;
+
 }
 
 /*  */
 .header__nav-item a {
   color: #C4C4C4;
-  
+
 }
 
 .header__nav-item a:hover {
@@ -381,6 +383,10 @@ a:hover {
     margin-right: 20em;
   }
 }
+
+ 
+/* inicio del header */
+
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -391,7 +397,6 @@ a:hover {
   opacity: 0.9;
   background-color: #000000;
   color: #f5f5f5;
- 
 }
   
 
@@ -439,5 +444,10 @@ a:hover {
     float: none;
     display: block;
     text-align: left;
+  }
+  .search {
+    float: right;
+    width: 460px;
+    margin-right: 0.3em;
   }
 }
