@@ -20,10 +20,10 @@ include("./includes/header.php") ?>
         <img src="https://i.ibb.co/LRd6XmT/banner-1.png" class="d-block w-100" alt="Banner número 1">
       </div>
       <div class="carousel-item">
-        <img src="https://i.ibb.co/MMqmhDj/banner-2.png" class="d-block w-100" alt="Banner número 2">
+        <img src="https://i.ibb.co/cr4SKLY/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
       </div>
       <div class="carousel-item">
-        <img src="https://i.ibb.co/jbJT7Nk/banner-3.png" class="d-block w-100" alt="Banner número 3">
+        <img src="https://i.ibb.co/y4SHVCN/banner-3.jpg" class="d-block w-100" alt="Banner número 3">
       </div>
     </div>
 
