@@ -24,7 +24,7 @@
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-2x"></i></a>
       <?php //Esto es mientras sale el nuevo logo 
       ?>
-      <a href="index" class="header__nav-item">Inicio</a>
+      <a href="index" class="header__nav-item navLogo"><img src="https://i.ibb.co/7bZqw4P/logo-corte.jpg" alt="logo-brand"></a>
       <a href="libros?pag=1" class="header__nav-item">Libros</a>
       <a href="librerias" class="header__nav-item">Librerías</a>
       <a href="mapa" class="header__nav-item">Mapa</a>
@@ -54,7 +54,7 @@
             <p>Deseos</p>
           </div>
         <?php endif; ?>
-  
+
         <div class="header__nav-item login-btn">
           <i class="far fa-user"></i>
           <p>Login</p>

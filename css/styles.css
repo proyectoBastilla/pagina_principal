@@ -41,7 +41,11 @@ a:hover {
   padding-bottom: 1rem;
   padding-left: 5rem;
   padding-right: 5rem;
-  margin: 0;
+}
+
+.navLogo img {
+  height: 2rem;
+  width: 5rem;
 }
 
 .header__nav-item {
@@ -56,6 +60,7 @@ a:hover {
 }
 
 .header .icon {
+  margin: 0;
   display: none;
   color: #FFF;
 }
@@ -134,9 +139,7 @@ a:hover {
   position: relative;
   top: 0;
   right: 0;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem;
   display: flexbox;
   align-items: center;
   flex-wrap: wrap;
@@ -175,7 +178,7 @@ a:hover {
   padding-inline: 0.4rem;
 }
 
-/* */
+/* Clase para que el header se mantenga arriba */
 .sticky {
   position: fixed !important;
 }
