@@ -20,7 +20,7 @@
 
 <body>
   <header>
-    <div class="header" id="myTopnav">
+    <div class="header" id="header">
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-2x"></i></a>
       <?php //Esto es mientras sale el nuevo logo 
       ?>

@@ -175,6 +175,11 @@ a:hover {
   padding-inline: 0.4rem;
 }
 
+/* */
+.sticky {
+  position: fixed !important;
+}
+
 /* Modifica la barra completa del footer */
 .footer {
   padding-top: 2.5em;

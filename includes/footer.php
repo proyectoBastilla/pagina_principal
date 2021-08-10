@@ -37,7 +37,7 @@
 <!-- Script para los Tooltips -->
 <script src="js/tooltips.js" charset="utf-8"></script>
 <!-- Script para el botón ir arriba -->
-<script src="js/irArriba.js" charset="utf-8"></script>
+<script src="js/scrollDown.js" charset="utf-8"></script>
 <!-- Script para el menú -->
 <script src="js/menu.js" charset="utf-8"></script>
 
