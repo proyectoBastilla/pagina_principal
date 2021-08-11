@@ -140,17 +140,17 @@ if (isset($_GET["a"]) && $_GET["a"]=="desc"):
   <?php
   //Se obtiene el la página del paginador
   $pag = $_GET["pag"];
-  $pagina = ($pag-1)*16;
+  $pagina = ($pag-1)*30;
 
   if (isset($_GET["buscar"])) {
     //Se hace query con búsqueda específica si cumple condición
     $buscar = $_GET["buscar"];
-    $query = "SELECT id, titulo, autor, imagen FROM libros WHERE titulo LIKE '%$buscar%' LIMIT $pagina,16";
+    $query = "SELECT id, titulo, autor, imagen FROM libros WHERE titulo LIKE '%$buscar%' LIMIT $pagina,30";
     $queryCont = "SELECT COUNT(*) AS contador FROM libros WHERE titulo LIKE '%$buscar%'";
 
   } else {
     //Se hace query de todos los libros si no hay búsqueda
-    $query = "SELECT id, titulo, autor, imagen FROM libros LIMIT $pagina,16";
+    $query = "SELECT id, titulo, autor, imagen FROM libros LIMIT $pagina,30";
     $queryCont = "SELECT COUNT(*) AS contador FROM libros";
   }
   $result = mysqli_query($mysql, $query);
@@ -181,7 +181,7 @@ if (isset($_GET["a"]) && $_GET["a"]=="desc"):
   $libros1 = mysqli_fetch_array($resultCont);
   $totalLibros = $libros1["contador"];
   //Define cuantas páginas mostrará el paginador
-  $numPags = ceil($totalLibros/16);
+  $numPags = ceil($totalLibros/30);
   ?>
 
   <!-- Paginador -->

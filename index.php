@@ -39,12 +39,8 @@ include("./includes/header.php") ?>
   </div>
   <!-- Fin Carrusel -->
 
-  <div class="index-bajar">
-    <a href="#section-2"> <i class="fas fa-chevron-down fa-2x fa-lg "></i></a>
-  </div>
-
   <!-- Sección lanzamientos -->
-  <div id="section-2">
+  <div class="index-section-2">
     <h1><b>¡MÁS GUSTADOS!</b></h1></br>
     <!-- Tarjetas lanzamientos -->
     <div class="card">
@@ -53,7 +49,7 @@ include("./includes/header.php") ?>
           <div class="libros">
 
             <?php
-            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 8";
+            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 10";
             $result = mysqli_query($mysql, $query);
 
             while ($row = mysqli_fetch_array($result)) {

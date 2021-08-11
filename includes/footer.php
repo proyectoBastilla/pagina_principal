@@ -3,8 +3,6 @@
 <!-- Botón para subir -->
 <a id="irArriba" href="#"><i class="fas fa-arrow-up"></i></a>
 
-
-
 <!-- FOOTER -->
 <footer>
   <!-- Container footer -->

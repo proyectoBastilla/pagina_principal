@@ -20,10 +20,70 @@
 
 <body>
   <header>
-    <div class="header" id="header">
+    <div class="header">
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-2x"></i></a>
-      <?php //Esto es mientras sale el nuevo logo 
-      ?>
+      <a href="index" class="header__nav-item navLogo"><img src="https://i.ibb.co/7bZqw4P/logo-corte.jpg" alt="logo-brand"></a>
+      <a href="libros?pag=1" class="header__nav-item">Libros</a>
+      <a href="librerias" class="header__nav-item">Librerías</a>
+      <a href="mapa" class="header__nav-item">Mapa</a>
+      <a href="acerca" class="header__nav-item">Acerca de</a>
+
+      <div class="header__right">
+        <!-- Búsqueda -->
+        <div class="header__nav-item search">
+          <form action="funciones.php?a=buscar" method="get">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Búsqueda" type="search" name="buscar">
+              <button id="buscar-btn" class="btn" type="submit"><i class="fas fa-search"></i></button>
+            </div>
+          </form>
+        </div>
+        <!-- Botón deseos -->
+        <?php if (isset($_SESSION["sesion"])) : ?>
+          <div class="header__nav-item deseos-btn">
+            <a href="deseo?pag=1">
+              <i class="far fa-heart"></i>
+              <p>Deseos</p>
+            </a>
+          </div>
+        <?php else : ?>
+          <div class="header__nav-item deseos-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Debes iniciar sesión">
+            <i class="far fa-heart"></i>
+            <p>Deseos</p>
+          </div>
+        <?php endif; ?>
+
+        <div class="header__nav-item login-btn">
+          <i class="far fa-user"></i>
+          <p>Login</p>
+          <ul class="login-btn__desp">
+            <?php if (isset($_SESSION["sesion"])) : ?>
+              <a href="cuenta">
+                <p>Mi Cuenta</p>
+              </a>
+              <hr>
+              <a href="funciones.php?a=logout">
+                <p>Cerrar sesión</p>
+              </a>
+            <?php else : ?>
+              <a href="login">
+                <p>Inicia Sesión</p>
+              </a>
+              <hr>
+              <a href="registro">
+                <p>Regístrate</p>
+              </a>
+            <?php endif; ?>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    
+    <!-- Header únicamente sticky -->
+    <div class="header-frente" id="header">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-2x"></i></a>
       <a href="index" class="header__nav-item navLogo"><img src="https://i.ibb.co/7bZqw4P/logo-corte.jpg" alt="logo-brand"></a>
       <a href="libros?pag=1" class="header__nav-item">Libros</a>
       <a href="librerias" class="header__nav-item">Librerías</a>
