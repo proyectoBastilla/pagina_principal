@@ -1,5 +1,5 @@
 function myFunction() {
-  const x = document.getElementById("header");
+  const x = document.getElementById("header-back");
   if (x.className === "header") {
     x.className = "responsive";
   } else {

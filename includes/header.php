@@ -20,7 +20,7 @@
 
 <body>
   <header>
-    <div class="header">
+    <div class="header" id="header-back">
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-2x"></i></a>
       <a href="index" class="header__nav-item navLogo"><img src="https://i.ibb.co/7bZqw4P/logo-corte.jpg" alt="logo-brand"></a>
       <a href="libros?pag=1" class="header__nav-item">Libros</a>
