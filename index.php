@@ -17,7 +17,7 @@ include("./includes/header.php") ?>
     <!-- Imágenes Carrusel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://i.ibb.co/LRd6XmT/banner-1.png" class="d-block w-100" alt="Banner número 1">
+        <img src="https://i.ibb.co/PWkH6zD/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
       </div>
       <div class="carousel-item">
         <img src="https://i.ibb.co/FgWYNT0/banner-2.jpg" class="d-block w-100" alt="Banner número 2">

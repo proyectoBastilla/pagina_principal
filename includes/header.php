@@ -34,7 +34,7 @@
           <form action="funciones.php?a=buscar" method="get">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Búsqueda" type="search" name="buscar">
-              <button id="buscar-btn" class="btn" type="submit"><i class="fas fa-search"></i></button>
+              <button class="buscar-btn btn" type="submit"><i class="fas fa-search"></i></button>
             </div>
           </form>
         </div>
@@ -80,7 +80,7 @@
       </div>
 
     </div>
-    
+
     <!-- Header únicamente sticky -->
     <div class="header-frente" id="header">
       <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars fa-2x"></i></a>
@@ -96,7 +96,7 @@
           <form action="funciones.php?a=buscar" method="get">
             <div class="input-group">
               <input class="form-control" type="text" placeholder="Búsqueda" type="search" name="buscar">
-              <button id="buscar-btn" class="btn" type="submit"><i class="fas fa-search"></i></button>
+              <button class="buscar-btn btn" type="submit"><i class="fas fa-search"></i></button>
             </div>
           </form>
         </div>
