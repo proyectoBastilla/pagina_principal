@@ -3,31 +3,58 @@
 <!-- Botón para subir -->
 <a id="irArriba" href="#"><i class="fas fa-arrow-up"></i></a>
 
-<!-- FOOTER -->
-<footer>
-  <!-- Container footer -->
-  <div class="footer">
-    <!-- Correo -->
+<!-- Footer -->
+<footer class="footer">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- correo -->
     <div class="footer__icon">
-      <a class="btn btn-outline-light btn-floating m-1 float-center" href="acerca.php#contacto" role="button">
-        <i class="far fa-envelope"></i>
-      </a>
-    </div>
-    <!-- Instagram -->
-    <div class="footer__icon">
-      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/la_bastilla_proyecto/" target="_blank" role="button">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-    <!-- Acerca de o info -->
-    <div class="footer__icon">
-      <a class="btn btn-outline-light btn-floating m-1" href="acerca.php" role="button">
-        <i class="far fa-user"></i>
-      </a>
-    </div>
+        <a class="btn btn-outline-light btn-floating m-1 float-center" href= "acerca.php#contacto" style="border-radius: 10px;"role="button">
+            <i class="far fa-envelope"></i>
+          </a>
+        </div>
+        <!-- Instagram -->
+        <div class="footer__icon">
+          <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/la_bastilla_proyecto/" style="border-radius: 10px;" target="_blank" role="button">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <!-- Acerca de o info -->
+        <div class="footer__icon">
+          <a class="btn btn-outline-light btn-floating m-1" href="acerca" style="border-radius: 10px;" role="button">
+            <i class="far fa-user"></i>
+          </a>
+<br></br>
+    <!-- Section: Form -->
+    <section class="">
+      <form action="">
+      
+          <!--Grid column-->
+          <div class="col-auto">
+            <!-- Submit button -->
+            <a class="btn btn-outline-light btn-floating m-1" href="registro" style="border-radius: 10px;" role="button">
+              Regístrate
+            </a>    
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </form>
+    </section>
+    <!-- Section: Form -->
 
-  </div>
-</footer>
+    <!-- Section: Text -->
+    <section class="mb-4">
+      <p style="text-align:center; color:white">
+      Dar a conocer los diferentes libros y librerías que se encuentran en el pasaje La Bastiila de una forma virtual y segura
+      <br></br>
+      Aclaramos que no pertenecemos ni representamos a ninguna librería en particular, somos un grupo de estudiantes que, por el contrario, queremos generar un espacio para reunir las diferentes librerías que componen el conocido Pasaje la Bastilla ubicado en la ciudad de Medellín, Colombia.
+      </p>
+    </section>
+    <!-- Section: Text -->
+
 
 <!-- SCRIPTS -->
 <!-- Script BOOTSTRAP 5 -->

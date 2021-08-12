@@ -207,6 +207,7 @@ a:hover {
 .footer__icon {
   display: inline;
   padding: 0.3em;
+  border-radius: 15px;
 }
 
 .index-section-2 {
