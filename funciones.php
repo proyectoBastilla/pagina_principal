@@ -52,10 +52,14 @@ if ($_GET["a"]=="cambio") {
   $nombre = $_POST["nombre"];
   $apellido = $_POST["apellido"];
   $correo = $_POST["correo"];
+  $sexo = $_POST["sexo"];
+  $edad = $_POST["edad"];
+  $ocupacion = $_POST["ocupacion"];
+  $interes = $_POST["interes"];
   $contra1 = $_POST["contra1"];
   $contra2= $_POST["contra2"];
   //Función con las variables externas necesarias
-  registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2);
+  registro($mysql, $nombre, $apellido, $correo, $sexo, $edad, $ocupacion, $interes, $contra1, $contra2);
 
 } elseif ($_GET["a"]=="deseo") {
 
@@ -312,7 +316,7 @@ function restablecer($mysql, $correo, $contra1, $contra2) {
 }
 
 
-function registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2) {
+function registro($mysql, $nombre, $apellido, $correo, $sexo, $edad, $ocupacion, $interes, $contra1, $contra2) {
 
   //Reviso si el correo ya existe
   $query_correo = "SELECT email FROM usuarios WHERE email='$correo'";
@@ -326,7 +330,7 @@ function registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2) {
     header("location: registro");
 
     //Revisa si se llenaron todos los campos del formulario
-  } elseif(empty($nombre) || empty($apellido) || empty($correo) || empty($contra1) || empty($contra2)) {
+  } elseif(empty($nombre)||empty($apellido)||empty($correo)||empty($contra1)||empty($contra2)||empty($sexo)||empty($edad)||empty($ocupacion)||empty($interes)) {
     //Vuelve al registro con el error respectivo
     $_SESSION["mensaje"] = "Por favor, llena todos los campos correctamente";
     $_SESSION["mensaje_color"] = "danger";
@@ -343,6 +347,14 @@ function registro($mysql, $nombre, $apellido, $correo, $contra1, $contra2) {
     //Si todo está bien, se registra en la base de datos
     $query = "INSERT INTO usuarios (nombre, apellido, email, contraseña) VALUES ('$nombre', '$apellido', '$correo', '$contra1')";
     $result = mysqli_query($mysql, $query);
+    //Se busca el id que adquirió el usuario
+    $query_id = "SELECT id FROM usuarios WHERE email='$correo'";
+    $result_id = mysqli_query($mysql, $query_id);
+    $infoUsuario = mysqli_fetch_array($result_id); 
+    $id = $infoUsuario["id"];
+    //Registra la info adicional
+    $query_info = "INSERT INTO usuarios_info (id, sexo, edad, ocupacion, intereses) VALUES ('$id', '$sexo', '$edad', '$ocupacion', '$interes')";
+    $result_info = mysqli_query($mysql, $query_info);
 
     $_SESSION["mensaje"] = "Registro exitoso, revisa tu correo";
     $_SESSION["mensaje_color"] = "success";
