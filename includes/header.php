@@ -25,7 +25,6 @@
       <a href="index" class="header__nav-item navLogo"><img src="https://i.ibb.co/7bZqw4P/logo-corte.jpg" alt="logo-brand"></a>
       <a href="libros?pag=1" class="header__nav-item">Libros</a>
       <a href="librerias" class="header__nav-item">Librerías</a>
-      <a href="mapa" class="header__nav-item">Mapa</a>
       <a href="acerca" class="header__nav-item">Acerca de</a>
 
       <div class="header__right">
@@ -58,7 +57,7 @@
           <p>Login</p>
           <ul class="login-btn__desp">
             <?php if (isset($_SESSION["sesion"])) : ?>
-              <a href="cuenta">
+              <a href="cuenta.php">
                 <p>Mi Cuenta</p>
               </a>
               <hr>
@@ -87,7 +86,6 @@
       <a href="index" class="header__nav-item navLogo"><img src="https://i.ibb.co/7bZqw4P/logo-corte.jpg" alt="logo-brand"></a>
       <a href="libros?pag=1" class="header__nav-item">Libros</a>
       <a href="librerias" class="header__nav-item">Librerías</a>
-      <a href="mapa" class="header__nav-item">Mapa</a>
       <a href="acerca" class="header__nav-item">Acerca de</a>
 
       <div class="header__right">
@@ -120,7 +118,7 @@
           <p>Login</p>
           <ul class="login-btn__desp">
             <?php if (isset($_SESSION["sesion"])) : ?>
-              <a href="cuenta">
+              <a href="cuenta.php">
                 <p>Mi Cuenta</p>
               </a>
               <hr>

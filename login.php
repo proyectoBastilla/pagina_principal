@@ -89,7 +89,7 @@ if (isset($_GET["id"])) {
         <?php } ?>
 
         <div class="form-group pt-5">
-          <input class="btn btn-primary" type="submit" name="enviar" value="<?= $enviar ?>" >
+          <input class="btn btn-dark" type="submit" name="enviar" value="<?= $enviar ?>" >
         </div>
       </form>
       <?php endif; ?>
