@@ -12,11 +12,11 @@ $pagina = ($pag - 1) * 16;
 if (isset($_GET["buscar"])) {
   //Se hace query con búsqueda específica si cumple condición
   $buscar = $_GET["buscar"];
-  $query = "SELECT id, nombre FROM librerias WHERE titulo LIKE '%$buscar%' LIMIT $pagina,16";
+  $query = "SELECT id, nombre, imagen FROM librerias WHERE titulo LIKE '%$buscar%' LIMIT $pagina,25";
   $queryCont = "SELECT COUNT(*) AS contador FROM librerias WHERE titulo LIKE '%$buscar%'";
 } else {
   //Se hace query de todos los libros si no hay búsqueda
-  $query = "SELECT id, nombre FROM librerias LIMIT $pagina,16";
+  $query = "SELECT id, nombre, imagen FROM librerias LIMIT $pagina,25";
   $queryCont = "SELECT COUNT(*) AS contador FROM libros";
 }
 $result = mysqli_query($mysql, $query);
@@ -32,10 +32,10 @@ $result = mysqli_query($mysql, $query);
         <!-- Tarjetas de cada una de las librerías -->
         <?php while ($row = mysqli_fetch_array($result)) { ?>
           <div class="libros__tarjetas card">
-            <a href="libros?a=desc&id=<?= $row["id"] ?>">
-              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+            <a href="apalibreria?id=<?= $row["id"] ?>">
+              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Foto de <?= $row["nombre"] ?>">
               <div class="card-body">
-                <h5 class="text-start"><?= $row["titulo"] ?></h5>
+                <h5 class="text-start"><?= $row["nombre"] ?></h5>
               </div>
             </a>
           </div>
