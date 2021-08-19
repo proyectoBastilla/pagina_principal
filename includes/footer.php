@@ -8,7 +8,7 @@
   <div class="container p-4">
     <!-- texto -->
   <section class="mb-4">
-      <p style="text-align:center; color:white">
+      <p style="text-align:center; color:white; font-family: 'Quicksand';">
       Daremos a conocer los diferentes libros y librerías que se encuentran en el pasaje La Bastiila de una forma virtual y segura
       <br></br>
       Aclaramos que no pertenecemos ni representamos a ninguna librería en particular, somos un grupo de estudiantes que, por el contrario, queremos generar un espacio para reunir las diferentes librerías que componen el conocido Pasaje la Bastilla ubicado en la ciudad de Medellín, Colombia.
@@ -24,22 +24,19 @@
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
           <h4 class="text-white">Redes Sociales</h4>
            <!-- Redes -->
-          <ul class="list-unstyled mb-0" style="text-align:left; color:white; padding-left: 7.5rem; font-size: 21px;">
+          <ul class="list-unstyled mb-0" style="text-align:center; color:white; font-size: 21px; ">
             <!-- Correo -->
-            
-            <li style="padding-bottom:0.5rem;"><a class="btn btn-outline-light btn-floating m-1 float-center" href="acerca.php#contacto" role="button">
-              <i class="far fa-envelope fa-lg"></i>
-            </a>Contáctanos</li>
+           
+            <li style="padding-bottom:0.6rem;"><a class="btn btn-outline-light btn-floating m-1 float-center" href="acerca.php#contacto" role="button">
+              <i class="far fa-envelope fa-lg"></i> Contáctanos</a></li>
 
             <!-- Instagram -->
             <li style="padding-bottom:0.5rem; "><a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/la_bastilla_proyecto/" target="_blank" role="button">
-              <i class="fab fa-instagram fa-lg"></i>
-            </a>Instagram</li>
+              <i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
 
             <!-- Acerca de o info -->
             <li style="padding-bottom:1.8rem; "><a class="btn btn-outline-light btn-floating m-1" href="acerca.php" role="button">
-              <i class="far fa-user fa-lg"></i>
-            </a>Nosotros</li>
+              <i class="far fa-user fa-lg"></i> Nosotros</a></li>
 
             <!-- registro -->
             <li><a class="btn btn-outline-light btn-floating m-1" href="registro.php" role="button"><h5>Regístrate</h5>
