@@ -27,7 +27,7 @@
           <ul class="footer__col1 list-unstyled">
 
             <!-- Correo -->
-            <li><a class="footer__icon mb-2" href="acerca.php#contacto" role="button">
+            <li><a class="footer__icon mb-2" href="acerca#sec-cont" role="button">
                 <i class="far fa-envelope fa-lg"></i> Contáctanos</a></li>
 
             <!-- Instagram -->
@@ -35,11 +35,11 @@
                 <i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
 
             <!-- Acerca de o info -->
-            <li><a class="footer__icon" href="acerca.php" role="button">
+            <li><a class="footer__icon" href="acerca" role="button">
                 <i class="far fa-user fa-lg"></i> Nosotros</a></li>
 
             <!-- registro -->
-            <li><a class="footer__icon" href="registro.php" role="button">Regístrate gratis</a></li>
+            <li><a class="footer__icon" href="registro" role="button">Regístrate gratis</a></li>
 
           </ul>
         </div>
@@ -60,7 +60,7 @@
             <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 167px">
               <iframe id="map-google" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.764716496399!2d-75.5665046!3d6.2482134!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44285620849f25%3A0xb81bd00a721b3e1!2sCentro%20Comercial%20del%20Libro%20y%20la%20Cultura!5e0!3m2!1ses-419!2sco!4v1626363860754!5m2!1ses-419!2sco" allow="fullscreen" loading="eager"></iframe>
               <br></br>
-              <a href="mapa.php">
+              <a href="mapa">
                 <button class="footer__icon">
                   <h5>Ver más</h5>
                 </button></a>

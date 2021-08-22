@@ -37,7 +37,6 @@ $mail->setSubject($asunto);
 $mail->addContent("text/html",$cuerpo);
 
 //Apikey de SendGrid
-$key = "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";
 $sendgrid = new \SendGrid($key);
 
 try {
@@ -53,10 +52,10 @@ try {
 if ($_GET["type"]=="contacto") {
   $_SESSION["mensaje"] = "Tu comentario se ha registrado";
   $_SESSION["mensaje_color"] = "success";
-  header("location: acerca#contacto");
+  header("location: acerca#sec-cont");
 } else {
   header("location: login");
-  $_SESSION["mensaje"] = "Revisa tu bandeja de entrada";
+  $_SESSION["mensaje"] = "Revisa tu bandeja de entrada, también spam ;)";
   $_SESSION["mensaje_color"] = "success";
 }
 

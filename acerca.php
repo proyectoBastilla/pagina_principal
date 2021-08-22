@@ -11,7 +11,7 @@ include("./includes/header.php") ?>
   <h3>Sobre nosotros:</h3>
   <p>Somos una pagina web desarrollada por los estudiantes:<br>Ana Sofía Álvarez Giraldo <br>Juan Pablo Atehortúa Orozco
   <br>Daniel Correa Botero<br>Cristian David Hoyos Rodríguez<br>Santiago Villada Ortiz</p><br>
-  <p>Aclaramos que no pertenecemos ni representamos a ninguna librería en particular, somos un grupo de estudiantes que, por el contrario, queremos generar un espacio para reunir las diferentes librerías que componen el conocido Pasaje la Bastilla ubicado en la ciudad de Medellín, Colombia. A través de este medio, tenemos el propósito de incentivar la lectura de todo tipo de libros, apoyando a su vez, los emprendimientos de este lugar, para que tengan más visibilidad en la web y brinden mayor facilidad a sus clientes al momento de buscar los textos que deseen.</p>
+  <p id="sec-cont">Aclaramos que no pertenecemos ni representamos a ninguna librería en particular, somos un grupo de estudiantes que, por el contrario, queremos generar un espacio para reunir las diferentes librerías que componen el conocido Pasaje la Bastilla ubicado en la ciudad de Medellín, Colombia. A través de este medio, tenemos el propósito de incentivar la lectura de todo tipo de libros, apoyando a su vez, los emprendimientos de este lugar, para que tengan más visibilidad en la web y brinden mayor facilidad a sus clientes al momento de buscar los textos que deseen.</p>
   <br><br>
   <p>Puedes contactarnos en caso de tener algún problema, sugerencia o duda con el funcionamiento o contenido de la página no dudes en dejarla en el formulario de abajo, trataremos de responderte y solucionar el problema a la mayor brevedad.</p>
 

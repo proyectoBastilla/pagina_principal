@@ -352,6 +352,7 @@ a:hover {
   #mensaje_emergente {
     text-align: center;
     font-size: 18px;
+    margin-top: 2rem;
     margin-left: 2em;
     margin-right: 2em;
   }
