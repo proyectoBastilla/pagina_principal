@@ -43,14 +43,13 @@ $sendgrid = new \SendGrid($key);
 try {
   
   $enviar = $sendgrid->send($mail);
-  echo $enviar;
 
 } catch (Exception $e) {
   
   echo "Algo salió mal:".$e->getMessage();
 
 }
-/*
+
 if ($_GET["type"]=="contacto") {
   $_SESSION["mensaje"] = "Tu comentario se ha registrado";
   $_SESSION["mensaje_color"] = "success";
@@ -59,6 +58,6 @@ if ($_GET["type"]=="contacto") {
   header("location: login");
   $_SESSION["mensaje"] = "Revisa tu bandeja de entrada";
   $_SESSION["mensaje_color"] = "success";
-}*/
+}
 
 ?>
