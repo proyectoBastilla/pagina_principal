@@ -10,9 +10,12 @@ include("./includes/header.php") ?>
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <!-- Botones inferiores Carrusel -->
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 2"></button>
     </div>
     <!-- Imágenes Carrusel -->
     <div class="carousel-inner">
@@ -28,11 +31,13 @@ include("./includes/header.php") ?>
     </div>
 
     <!-- Botones laterales Carrusel -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -45,27 +50,27 @@ include("./includes/header.php") ?>
     <!-- Tarjetas lanzamientos -->
     <div class="card">
       <div class="mx-sm-4 my-sm-4">
-        <center>
-          <div class="libros">
+        <div class="libros">
 
-            <?php
-            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 10";
+          <?php
+            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 3";
             $result = mysqli_query($mysql, $query);
-
+            $i = 1;
             while ($row = mysqli_fetch_array($result)) {
             ?>
-              <div class="libros__tarjetas card">
-                <a href="libros?a=desc&id=<?= $row["id"] ?>">
-                  <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-                  <div class="card-body">
-                    <h5 class="text-start"><?= $row["titulo"] ?></h5>
-                  </div>
-                </a>
+          <div class="libros__tarjetas card">
+            <a href="libros?a=desc&id=<?= $row["id"] ?>">
+              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+              <div class="card-body">
+                <h5 class="text-start"><?= $row["titulo"] ?></h5>
               </div>
-            <?php } ?>
-
+            </a>
           </div>
-        </center>
+          <?php 
+              $i++;
+            } ?>
+
+        </div>
       </div>
     </div>
   </div>

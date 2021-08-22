@@ -3,7 +3,6 @@ body {
   font-family: 'Quicksand';
   background-color: #f5f5f5;
   color: #000;
-  
 }
 
 /* Cambia todos los párrafos de la página */
@@ -31,7 +30,8 @@ a:hover {
   color: #3d3d3d;
 }
 
-.header, .header-frente {
+.header,
+.header-frente {
   overflow: hidden;
   background-color: #333;
   display: flexbox;
@@ -64,7 +64,8 @@ a:hover {
   line-height: 40px;
 }
 
-.header__nav-item:hover, .header__nav-item a:hover {
+.header__nav-item:hover,
+.header__nav-item a:hover {
   color: #FFF;
 }
 
@@ -80,9 +81,10 @@ a:hover {
   float: right;
 }
 
-.login-btn, .deseos-btn {
+.login-btn,
+.deseos-btn {
   cursor: pointer;
-  float:right;
+  float: right;
   text-align: center;
   line-height: normal !important;
 }
@@ -95,18 +97,19 @@ a:hover {
   background-color: #3d3d3d;
 }
 
-.login-btn p, .deseos-btn p {
+.login-btn p,
+.deseos-btn p {
   font-size: 12px;
 }
 
 .login-btn__desp {
-  display:none;
-  position:absolute;
+  display: none;
+  position: absolute;
   top: 8%;
   left: 70%;
-  background:#3d3d3d;
-  padding-left:1rem;
-  padding-right:1rem;
+  background: #3d3d3d;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-bottom: 1rem;
   padding-top: 1rem;
   float: none;
@@ -121,6 +124,7 @@ a:hover {
   border-radius: 2px;
   border-bottom: none;
 }
+
 .login-btn__desp a {
   color: #f5f5f5;
   font-size: 14px;
@@ -130,8 +134,8 @@ a:hover {
   color: white;
 }
 
-.login-btn:hover > .login-btn__desp {
-  display:block;
+.login-btn:hover>.login-btn__desp {
+  display: block;
   z-index: 200;
 }
 
@@ -141,7 +145,7 @@ a:hover {
 }
 
 .search input {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .buscar-btn {
@@ -188,11 +192,13 @@ a:hover {
   float: none;
 }
 
-.responsive .login-btn, .responsive .deseos-btn {
+.responsive .login-btn,
+.responsive .deseos-btn {
   text-align: center;
 }
 
-.responsive .login-btn p, .responsive .deseos-btn p {
+.responsive .login-btn p,
+.responsive .deseos-btn p {
   font-size: 16px;
   padding-inline: 0.4rem;
 }
@@ -213,11 +219,31 @@ a:hover {
   bottom: 0;
 }
 
+.footer__col1 {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  padding-top: 1.5rem;
+  text-indent: 0;
+}
+
+.footer__col1 li {
+  padding-bottom: 2rem;
+}
+
 /* Modifica los íconos(links) del footer */
 .footer__icon {
-  display: inline;
-  padding: 0.3em;
-  border-radius: 15px;
+  border: 2px solid #FFF;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #FFF;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.footer__icon:hover {
+  background-color: #FFF;
+  color: #000;
 }
 
 .index-section-2 {
@@ -267,12 +293,12 @@ a:hover {
   z-index: 95;
   width: 50px;
   height: 50px;
-  background: #000 ;
+  background: #000;
   bottom: 40px;
   right: 50px;
   text-align: center;
   line-height: 50px;
-  color:white;
+  color: white;
   font-size: 22px;
   border-radius: 15px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
@@ -451,7 +477,8 @@ a:hover {
     margin-right: 20em;
   }
 }
- /* Media query para hacer el menú responsive */
+
+/* Media query para hacer el menú responsive */
 @media screen and (max-width: 900px) {
 
   .header {
