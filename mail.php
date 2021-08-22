@@ -37,7 +37,7 @@ try {
   $mail->Port = 465; //Puerto usado para la encriptación SSL
 
   //Asignar emisor y receptor del correo
-  $mail->setFrom("$miCorreo", "Pasaje La Bastilla");
+  $mail->setFrom("apikey", "Pasaje La Bastilla");
   //Si es un correo de formulario de contacto, se enviará a sí mismo
   if ($_GET["type"]=="contacto") {
     $mail->addAddress("$miCorreo");
