@@ -28,12 +28,13 @@ $mail = new PHPMailer();
 try {
   //Configuración servidor
   $mail->isSMTP();
-  $mail->Host = "smtp.gmail.com"; //Servidor de gmail (solo manda correos a gmail o institucional soportado en gmail)
+  $mail->Mailer = "smtp";
+  $mail->Host = "smtp.sendgrid.net"; //Servidor de gmail (solo manda correos a gmail o institucional soportado en gmail)
   $mail->SMTPAuth = true;
-  $mail->Username = "$miCorreo";
-  $mail->Password = "$miContra";
-  $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Encriptación TLS
-  $mail->Port = 587; //Puerto usado para la encriptación TLS
+  $mail->Username = "apikey";
+  $mail->Password = "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";
+  $mail->SMTPSecure = "ssl"; //Encriptación SSL
+  $mail->Port = 465; //Puerto usado para la encriptación SSL
 
   //Asignar emisor y receptor del correo
   $mail->setFrom("$miCorreo", "Pasaje La Bastilla");
@@ -61,7 +62,7 @@ try {
 } catch (Exception $e) {
   echo "Algo salió mal:".$e->getMessage();
 }
-
+/*
 if ($_GET["type"]=="contacto") {
   $_SESSION["mensaje"] = "Tu comentario se ha registrado";
   $_SESSION["mensaje_color"] = "success";
@@ -70,6 +71,6 @@ if ($_GET["type"]=="contacto") {
   header("location: login");
   $_SESSION["mensaje"] = "Revisa tu bandeja de entrada";
   $_SESSION["mensaje_color"] = "success";
-}
+}*/
 
 ?>
