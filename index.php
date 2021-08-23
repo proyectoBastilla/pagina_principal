@@ -46,33 +46,259 @@ include("./includes/header.php") ?>
 
   <!-- Sección lanzamientos -->
   <div class="index-section-2">
-    <h1><b>¡MÁS GUSTADOS!</b></h1></br>
-    <!-- Tarjetas lanzamientos -->
-    <div class="card">
-      <div class="mx-sm-4 my-sm-4">
-        <div class="libros">
-
-          <?php
-            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 3";
+  <div class="contenedorgrande">
+    <h1><b>TOP DE LOS MÁS LIKEADOS</b></h1>
+    <div class="contenedor">
+      <div class="contenedor1">
+        <?php
+            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 2";
             $result = mysqli_query($mysql, $query);
             $i = 1;
             while ($row = mysqli_fetch_array($result)) {
             ?>
-          <div class="libros__tarjetas card">
+          <div class="imagen">
             <a href="libros?a=desc&id=<?= $row["id"] ?>">
               <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-              <div class="card-body">
-                <h5 class="text-start"><?= $row["titulo"] ?></h5>
-              </div>
             </a>
           </div>
           <?php 
               $i++;
             } ?>
 
+        <div class="caja"><h3>Puesto 2</h3>
         </div>
       </div>
+
+      <div class="contenedor2">
+      <?php
+            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
+            $result = mysqli_query($mysql, $query);
+            $i = 1;
+            while ($row = mysqli_fetch_array($result)) {
+            ?>
+          <div class="imagen2">
+            <a href="libros?a=desc&id=<?= $row["id"] ?>">
+              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+            </a>
+          </div>
+          <?php 
+              $i++;
+            } ?>
+
+        <div class="caja2"><h2>Puesto 1</h2>
+        </div>
+      </div>
+
+      <div class="contenedor3">
+      <?php
+            $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 3";
+            $result = mysqli_query($mysql, $query);
+            $i = 1;
+            while ($row = mysqli_fetch_array($result)) {
+            ?>
+          <div class="imagen3">
+            <a href="libros?a=desc&id=<?= $row["id"] ?>">
+              <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+            </a>
+          </div>
+          <?php 
+              $i++;
+            } ?>
+
+        <div class="caja3"><h3>Puesto 3</h3>
+        </div>
+      </div>
+      <style>
+          .contenedorgrande {
+            width: 100%;
+            height: 450px;
+            margin: 0 auto;
+            font-family: 'Quicksand';
+            text-align: left;
+            
+        }
+
+        .contenedor {
+            width: 650px;
+            height: 380px;
+            bottom: 0px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+
+        .contenedor1 {
+            position: absolute;
+            bottom: 0px;
+            width: 150px; 
+            height: 340px;
+            left: 95px;
+        }
+        .contenedor1:hover {
+            transform: translateY(-15px);;
+        }
+        .caja {
+            width: 150px; 
+            height: 50px;
+            bottom: 0;
+            background: #8c9a9b;
+            float: left;
+            position: absolute;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px #aaaaaa;
+            font-family: 'Quicksand';
+            text-align: center;
+            line-height: 13px;
+            color: white;
+        }
+        .imagen {
+            left: 17px;
+            top: 20px;
+            width: 120px;
+            position: absolute;
+            box-shadow: 5px 5px 5px  #9b9b9b;
+        }
+
+        .contenedor2{
+            position: absolute;
+            bottom: 0px;
+            width: 150px; 
+            height: 380px;
+            left: 250px;
+        }
+        .contenedor2:hover {
+            transform: translateY(-15px);;
+        }
+
+        .caja2 {
+            width: 150px;
+            height: 70px;
+            bottom: 0px;
+            background: #f1b62a;
+            float: left;
+            position: absolute;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px #aaaaaa;
+            font-family: 'Quicksand';
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+
+        .imagen2 {
+            width: 125px;
+            position: absolute;
+            bottom: 90px;
+            left: 10px;
+            box-shadow: 5px 5px 5px #9b9b9b;
+        }
+
+        .contenedor3{
+            position: absolute;
+            bottom: 0px;
+            width: 150px; 
+            height: 330px;
+            right: 90px;
+        }
+        .contenedor3:hover {
+            transform: translateY(-15px);;
+        }
+        .caja3 {
+            width: 150px;
+            height: 35px;
+            bottom: 0px;
+            background: #e88a4a;
+            float: left;
+            position: absolute;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px #aaaaaa;
+            font-family: 'Quicksand';
+            text-align: center;
+            line-height: 1px;
+            color: white;
+        }
+
+        .imagen3 {
+            width: 115px;
+            bottom: 60px;
+            right:20px;
+            position: absolute;
+            box-shadow: 5px 5px 5px #9b9b9b;
+        }
+        @media screen and (max-width: 650px) {
+          .contenedor {
+            width: 350px;
+            height: 380px;
+        }
+        
+        .contenedor1 {
+            position: absolute;
+            bottom: 0px;
+            width: 150px; 
+            height: 340px;
+            left: 0px;
+        }
+        .caja {
+            width: 110px; 
+            height: 50px;
+            bottom: 0;
+        }
+        .imagen {
+            left: 7px;
+            top: 20px;
+            width: 95px;
+            position: absolute;
+            box-shadow: 5px 5px 5px  #9b9b9b;
+        }
+        .contenedor2{
+            position: absolute;
+            bottom: 0px;
+            width: 150px; 
+            height: 380px;
+            left: 100px;
+        }
+        .caja2 {
+          width: 115px; 
+            height: 70px;
+            bottom: 0px;
+            left: 14px;
+        }
+        .imagen2 {
+            width: 105px;
+            position: absolute;
+            bottom: 90px;
+            left: 20px;
+            box-shadow: 5px 5px 5px #9b9b9b;
+        }
+        
+        .contenedor3{
+            position: absolute;
+            bottom: 0px;
+            width: 150px; 
+            height: 330px;
+            right: 0px;
+        }
+        .caja3 {
+          width: 110px; 
+            height: 35px;
+            bottom: 0px;
+            right:0px;
+        }
+        .imagen3 {
+            width: 90px;
+            bottom: 60px;
+            right: 7px;
+            position: absolute;
+            box-shadow: 5px 5px 5px #9b9b9b;
+        }
+        }
+
+
+      </style>
+  
     </div>
+  </div>
+</div>
   </div>
   <!-- Fin de sección lanzamientos -->
 </main>
