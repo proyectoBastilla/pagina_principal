@@ -257,7 +257,7 @@ a:hover {
 .libros {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
 }
 
 /* estilo de las tarjetas */
@@ -265,19 +265,12 @@ a:hover {
   justify-self: center;
   max-width: 230px;
   max-height: 350px;
-  border-radius: 10px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   margin: 10px;
 }
 
 .libros__tarjetas:hover {
-  transform: scale(1.1);
   z-index: 70;
-}
-
-.libros__tarjetas:hover h5 {
-  font-size: 16px;
 }
 
 /* Estilo de la imagen-portada del libro */
@@ -314,6 +307,204 @@ a:hover {
 /* Texto que hace link para recuperar la contraseña */
 #link_recuperar {
   font-size: 16px;
+}
+
+.contenedorgrande {
+  width: 100%;
+  height: 450px;
+  margin: 0 auto;
+  font-family: 'Quicksand';
+  text-align: left;
+
+}
+
+.contenedor {
+  width: 800px;
+  height: 380px;
+  bottom: 0px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.contenedor1 {
+  position: absolute;
+  bottom: 0px;
+  width: 200px;
+  height: 340px;
+  left: 95px;
+}
+
+.contenedor1:hover {
+  transform: translateY(-15px);
+}
+
+.caja {
+  width: 200px;
+  height: 50px;
+  bottom: 0;
+  background: #8c9a9b;
+  float: left;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  font-family: 'Quicksand';
+  text-align: center;
+  line-height: 13px;
+  color: white;
+}
+
+.imagen {
+  left: 17px;
+  top: 20px;
+  width: 180px;
+  position: absolute;
+  box-shadow: 5px 5px 5px #9b9b9b;
+}
+
+.contenedor2 {
+  position: absolute;
+  bottom: 0px;
+  width: 200px;
+  height: 380px;
+  left: 302px;
+}
+
+.contenedor2:hover {
+  transform: translateY(-15px);
+}
+
+.caja2 {
+  width: 200px;
+  height: 70px;
+  bottom: 0px;
+  background: #f1b62a;
+  float: left;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  font-family: 'Quicksand';
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.imagen2 {
+  width: 190px;
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+  box-shadow: 5px 5px 5px #9b9b9b;
+}
+
+.contenedor3 {
+  position: absolute;
+  bottom: 0px;
+  width: 200px;
+  height: 330px;
+  right: 90px;
+}
+
+.contenedor3:hover {
+  transform: translateY(-15px);
+}
+
+.caja3 {
+  width: 200px;
+  height: 35px;
+  bottom: 0px;
+  background: #e88a4a;
+  float: left;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  font-family: 'Quicksand';
+  text-align: center;
+  line-height: 1px;
+  color: white;
+}
+
+.imagen3 {
+  width: 170px;
+  bottom: 60px;
+  right: 20px;
+  position: absolute;
+  box-shadow: 5px 5px 5px #9b9b9b;
+}
+
+@media screen and (max-width: 650px) {
+  .contenedor {
+    width: 350px;
+    height: 380px;
+  }
+
+  .contenedor1 {
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    height: 340px;
+    left: 0px;
+  }
+
+  .caja {
+    width: 110px;
+    height: 50px;
+    bottom: 0;
+  }
+
+  .imagen {
+    left: 7px;
+    top: 20px;
+    width: 95px;
+    position: absolute;
+    box-shadow: 5px 5px 5px #9b9b9b;
+  }
+
+  .contenedor2 {
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    height: 380px;
+    left: 100px;
+  }
+
+  .caja2 {
+    width: 115px;
+    height: 70px;
+    bottom: 0px;
+    left: 14px;
+  }
+
+  .imagen2 {
+    width: 105px;
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
+    box-shadow: 5px 5px 5px #9b9b9b;
+  }
+
+  .contenedor3 {
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    height: 330px;
+    right: 0px;
+  }
+
+  .caja3 {
+    width: 110px;
+    height: 35px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .imagen3 {
+    width: 90px;
+    bottom: 60px;
+    right: 7px;
+    position: absolute;
+    box-shadow: 5px 5px 5px #9b9b9b;
+  }
 }
 
 @media screen and (max-width: 650px) {
