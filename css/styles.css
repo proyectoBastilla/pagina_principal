@@ -27,7 +27,7 @@ a {
 }
 
 a:hover {
-  color: #3d3d3d;
+  color: #000;
 }
 
 .header,
@@ -261,7 +261,7 @@ a:hover {
 }
 
 /* estilo de las tarjetas */
-.libros__tarjetas {
+.libros__tarjeta {
   justify-self: center;
   max-width: 230px;
   max-height: 350px;
@@ -269,14 +269,74 @@ a:hover {
   margin: 10px;
 }
 
-.libros__tarjetas:hover {
+.libros__tarjeta:hover {
   z-index: 70;
 }
 
+.libros__tarjeta-container {
+  position: relative;
+  overflow: hidden;
+}
+
 /* Estilo de la imagen-portada del libro */
-.libros__tarjetas-imagen {
+.libros__tarjeta-imagen {
   object-fit: cover;
   height: 250px;
+}
+
+.libros__tarjeta-cartel {
+  position: absolute;
+  top: 0.5rem;
+  left: 0rem;
+  font-size: 18px;
+  background: white;
+  padding: 10px;
+  border-color: #bbbbbb;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0 10px 10px 0;
+  transition: all 0.5s;
+}
+
+.libros__tarjeta:hover .libros__tarjeta-cartel {
+  left: -100%;
+}
+
+.libros__tarjeta-blur {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 90;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.libros__tarjeta:hover .libros__tarjeta-blur {
+  opacity: 0.7;
+}
+
+.libros__tarjeta-info {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.libros__tarjeta-info h5 {
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.libros__tarjeta:hover .libros__tarjeta-info {
+  opacity: 1;
 }
 
 /* Botón para ir arriba */
@@ -594,6 +654,11 @@ a:hover {
     margin-left: 6em;
     margin-right: 6em;
   }
+
+  /* Titulo "Te podría interesar..." */
+  #libros_titulo {
+    margin: 1rem;
+  }
 }
 
 
@@ -631,6 +696,11 @@ a:hover {
     margin-left: 12em;
     margin-right: 12em;
   }
+
+  /* Titulo "Te podría interesar..." */
+  #libros_titulo {
+    margin: 1.5rem;
+  }
 }
 
 
@@ -667,6 +737,11 @@ a:hover {
     font-size: 18px;
     margin-left: 20em;
     margin-right: 20em;
+  }
+
+  /* Titulo "Te podría interesar..." */
+  #libros_titulo {
+    margin: 2rem;
   }
 }
 
