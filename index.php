@@ -53,7 +53,6 @@ include("./includes/header.php") ?>
         <?php
             $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 2";
             $result = mysqli_query($mysql, $query);
-            $i = 1;
             while ($row = mysqli_fetch_array($result)) {
             ?>
           <div class="imagen">
@@ -62,7 +61,6 @@ include("./includes/header.php") ?>
             </a>
           </div>
           <?php 
-              $i++;
             } ?>
 
         <div class="caja"><h3>Puesto 2</h3>
@@ -73,7 +71,6 @@ include("./includes/header.php") ?>
       <?php
             $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
             $result = mysqli_query($mysql, $query);
-            $i = 1;
             while ($row = mysqli_fetch_array($result)) {
             ?>
           <div class="imagen2">
@@ -82,7 +79,6 @@ include("./includes/header.php") ?>
             </a>
           </div>
           <?php 
-              $i++;
             } ?>
 
         <div class="caja2"><h2>Puesto 1</h2>
@@ -93,7 +89,6 @@ include("./includes/header.php") ?>
       <?php
             $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 3";
             $result = mysqli_query($mysql, $query);
-            $i = 1;
             while ($row = mysqli_fetch_array($result)) {
             ?>
           <div class="imagen3">
@@ -102,7 +97,6 @@ include("./includes/header.php") ?>
             </a>
           </div>
           <?php 
-              $i++;
             } ?>
 
         <div class="caja3"><h3>Puesto 3</h3>

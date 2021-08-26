@@ -151,7 +151,7 @@ include("./includes/header.php") ?>
       $queryCont = "SELECT COUNT(*) AS contador FROM libros WHERE titulo LIKE '%$buscar%'";
     } else {
       //Se hace query de todos los libros si no hay búsqueda
-      $query = "SELECT libros.id, libros.titulo, libros.autor, libros.imagen, libros.likes, librerias.nombre FROM libros INNER JOIN librerias ON libros.libreria = librerias.id LIMIT $pagina,30";
+      $query = "SELECT libros.id, libros.titulo, libros.autor, libros.imagen, libros.likes, libros.disponible, librerias.nombre FROM libros INNER JOIN librerias ON libros.libreria = librerias.id LIMIT $pagina,30";
       $queryCont = "SELECT COUNT(*) AS contador FROM libros";
     }
     $result = mysqli_query($mysql, $query);
@@ -173,7 +173,13 @@ include("./includes/header.php") ?>
                     <h5><i class="far fa-thumbs-up"></i> <?= $row["likes"] ?> Likes</h5>
                   </div>
                   <img class="libros__tarjeta-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-                  <span class="libros__tarjeta-cartel">Disponible</span>
+                  <span class="libros__tarjeta-cartel">
+                    <?php if($row["disponible"]==1) {
+                      echo "Disponible";
+                    } else {
+                      echo "Agotado";
+                    } ?>
+                  </span>
                 </div>
                 <div class="card-body">
                   <h6 class="text-start"><?= $row["titulo"] ?></h6>
@@ -197,26 +203,18 @@ include("./includes/header.php") ?>
     <!-- Paginador -->
     <nav class="mt-4" aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
-        <li class="page-item <?php if ($pag == 1) {
-                                echo "disabled";
-                              } ?>">
-          <a class="page-link text-dark" href="libros?<?php if (isset($_GET["buscar"])) {
-                                                        echo "buscar=$buscar";
-                                                      } ?>&pag=<?= ($pag - 1) ?>"><i class="fas fa-angle-double-left"></i></a>
+        <li class="page-item <?php if ($pag == 1) {echo "disabled";} ?>">
+          <a class="page-link text-dark" href="libros?<?php if (isset($_GET["buscar"])) {echo "buscar=$buscar";} ?>&pag=<?= ($pag - 1) ?>"><i class="fas fa-angle-double-left"></i></a>
         </li>
         <?php $i = 1; ?>
         <?php while ($i <= $numPags) { ?>
-          <li class="page-item"><a class="page-link text-dark" href="libros?<?php if (isset($_GET["buscar"])) {
-                                                                              echo "buscar=$buscar";
-                                                                            } ?>&pag=<?= $i ?>"><?= $i ?></a></li>
+          <li class="page-item">
+            <a class="page-link text-dark" href="libros?<?php if (isset($_GET["buscar"])) {echo "buscar=$buscar";} ?>&pag=<?= $i ?>"><?= $i ?></a>
+          </li>
           <?php $i++; ?>
         <?php } ?>
-        <li class="page-item <?php if (($i - 1) == $pag) {
-                                echo "disabled";
-                              } ?>">
-          <a class="page-link text-dark" href="libros?<?php if (isset($_GET["buscar"])) {
-                                                        echo "buscar=$buscar";
-                                                      } ?>&pag=<?= ($pag + 1) ?>"><i class="fas fa-angle-double-right"></i></a>
+        <li class="page-item <?php if (($i - 1) == $pag) {echo "disabled";} ?>">
+          <a class="page-link text-dark" href="libros?<?php if (isset($_GET["buscar"])) {echo "buscar=$buscar";} ?>&pag=<?= ($pag + 1) ?>"><i class="fas fa-angle-double-right"></i></a>
         </li>
       </ul>
     </nav>

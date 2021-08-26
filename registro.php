@@ -58,7 +58,7 @@ include("includes/header.php");
       <div class="form-group row pt-4">
         <div class="col">
           <select class="form-select" name="ocupacion" aria-label="Default select example">
-            <option selected>¿Qué haces?</option>
+            <option selected>Ocupacion</option>
             <option value="1">Estudio</option>
             <option value="2">Trabajo</option>
             <option value="3">Otro</option>
@@ -66,7 +66,7 @@ include("includes/header.php");
         </div>
         <div class="col">
           <select class="form-select" name="interes" aria-label="Default select example">
-            <option selected>¿Qué contenido te interesa?</option>
+            <option selected>¿Qué te gusta más?</option>
             <option value="1">Textos educativos o afines</option>
             <option value="2">Literatura en general</option>
             <option value="3">Literatura antigua</option>
