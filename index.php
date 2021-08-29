@@ -23,10 +23,10 @@ include("./includes/header.php") ?>
         <img src="https://i.ibb.co/PWkH6zD/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
       </div>
       <div class="carousel-item">
-        <img src="https://i.ibb.co/FgWYNT0/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
+        <img src="https://i.ibb.co/SR4R0YP/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
       </div>
       <div class="carousel-item">
-        <img src="https://i.ibb.co/Lz7wgWb/banner-3.jpg" class="d-block w-100" alt="Banner número 3">
+        <img src="https://i.ibb.co/Rv6vZc3/banner-3.jpg" class="d-block w-100" alt="Banner número 3">
       </div>
     </div>
 
@@ -105,6 +105,94 @@ include("./includes/header.php") ?>
     </div>
   </div>
 </div>
+<style>
+  .contenedorgrande {
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    font-family: 'Quicksand';
+    text-align: left;
+
+  }
+  .contenedor{
+    width: 52%;
+    height: 380px;
+    bottom: 0px;
+    margin: 0 auto;
+    position: relative;
+} 
+  .contenedor1 {
+    position: absolute;
+    bottom: 0px;
+    width: 200px;
+    height: 340px;
+    left: 0px;
+  }
+  .contenedor1:hover {
+  transform: translateY(-15px);
+  }
+  
+  .contenedor2 {
+    position: absolute;
+    text-align:center;
+    bottom: 0px;
+    width: 210px;
+    height: 370px;
+    left: 215px;
+  }
+  .contenedor3 {
+    position: absolute;
+    bottom: 0px;
+    width: 200px;
+    height: 330px;
+    right: 0px;
+  }
+  @media screen and (max-width: 650px) {
+    .contenedorgrande {
+      height: 300px;
+    }
+    .contenedor {
+      height: 250px;
+      width: 350px;
+    }
+    .contenedor1 {
+      height: 230px;
+      width: 116px;
+      position: absolute;
+    }
+    .imagen {
+      left: 7px;
+      width: 95px;
+      position: absolute;
+      box-shadow: 5px 5px 5px #9b9b9b;
+    }
+  
+    .contenedor2 {
+      height: 245px;
+      width: 118px;
+      left: 117px;
+      position: absolute;
+    }
+    .imagen2 {
+      left:3px;
+    }
+    .caja2{
+      left:0px;
+    }
+
+    .contenedor3 {
+      height: 230px;
+      width: 111px;
+      right:0px;
+    }
+  }
+ 
+
+ 
+  
+
+  
+</style>
   </div>
   <!-- Fin de sección lanzamientos -->
 </main>
