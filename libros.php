@@ -49,7 +49,7 @@ include("./includes/header.php") ?>
 
     <!-- Alerta avisando que la página no es para la compra de libros -->
     <div class="container-fluid alert alert-secondary text-center mb-3" style="max-width: 1050px;" role="alert">
-      Recuerda que para comprar este libro debes dirigirte físicamente hasta el Pasaje la Bastilla, más información en la sección "Mapa"
+      Recuerda que para comprar este libro debes dirigirte físicamente hasta el Pasaje la Bastilla, más información "<a id="link-libro" href="mapa">aquí</a>"
     </div>
 
     <!-- Tarjeta general libro -->

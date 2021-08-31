@@ -67,6 +67,7 @@ a:hover {
 .header__nav-item:hover,
 .header__nav-item a:hover {
   color: #FFF;
+  text-decoration: underline;
 }
 
 .header .icon {
@@ -337,6 +338,15 @@ a:hover {
 
 .libros__tarjeta:hover .libros__tarjeta-info {
   opacity: 1;
+}
+
+#link-libro {
+  color: #4e4e4e;
+}
+
+#link-libro:hover {
+  text-decoration: underline;
+  color: #000;
 }
 
 /* Botón para ir arriba */
