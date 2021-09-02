@@ -388,26 +388,26 @@ a:hover {
 
 }
 
-.contenedor {
-  width: 800px;
-  height: 380px;
-  bottom: 0px;
-  margin: 0 auto;
-  position: relative;
-}
+  .contenedor {
+    width: 52%;
+    height: 380px;
+    bottom: 0px;
+    margin: 0 auto;
+    position: relative;
+  }
 
 
-.contenedor1 {
-  position: absolute;
-  bottom: 0px;
-  width: 200px;
-  height: 340px;
-  left: 95px;
-}
+ .contenedor1 {
+   position: absolute;
+   bottom: 0px;
+   width: 200px;
+   height: 340px;
+   left: 0px;
+ }
 
-.contenedor1:hover {
-  transform: translateY(-15px);
-}
+ .contenedor1:hover {
+   transform: translateY(-15px);
+ }
 
 .caja {
   width: 200px;
@@ -432,13 +432,14 @@ a:hover {
   box-shadow: 5px 5px 5px #9b9b9b;
 }
 
-.contenedor2 {
-  position: absolute;
-  bottom: 0px;
-  width: 200px;
-  height: 400px;
-  left: 302px;
-}
+ .contenedor2 {
+   position: absolute;
+   text-align: center;
+   bottom: 0px;
+   width: 210px;
+   height: 370px;
+   left: 205px;
+ }
 
 .contenedor2:hover {
   transform: translateY(-15px);
@@ -471,8 +472,8 @@ a:hover {
   position: absolute;
   bottom: 0px;
   width: 200px;
-  height: 300px;
-  right: 90px;
+  height: 330px;
+  right: 0px;
 }
 
 .contenedor3:hover {
@@ -503,17 +504,20 @@ a:hover {
 }
 
 @media screen and (max-width: 650px) {
+  .contenedorgrande {
+    
+    height: 300px;
+  }
+
   .contenedor {
+    height: 250px;
     width: 350px;
-    height: 380px;
   }
 
   .contenedor1 {
+    height: 230px;
+    width: 116px;
     position: absolute;
-    bottom: 0px;
-    width: 150px;
-    height: 340px;
-    left: 0px;
   }
 
   .caja {
@@ -524,40 +528,38 @@ a:hover {
 
   .imagen {
     left: 7px;
-    top: 20px;
     width: 95px;
     position: absolute;
     box-shadow: 5px 5px 5px #9b9b9b;
   }
 
   .contenedor2 {
+    height: 245px;
+    width: 118px;
+    left: 117px;
     position: absolute;
-    bottom: 0px;
-    width: 150px;
-    height: 380px;
-    left: 100px;
   }
 
   .caja2 {
     width: 115px;
     height: 70px;
     bottom: 0px;
-    left: 14px;
+    left: 0px;
   }
 
   .imagen2 {
     width: 105px;
     position: absolute;
     bottom: 90px;
-    left: 20px;
+    left: 3px;
     box-shadow: 5px 5px 5px #9b9b9b;
   }
 
   .contenedor3 {
     position: absolute;
     bottom: 0px;
-    width: 150px;
-    height: 330px;
+    width: 111px;
+    height: 230px;
     right: 0px;
   }
 
