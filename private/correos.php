@@ -16,13 +16,14 @@ $cuerpo_verifica =
       border-width: 1px;
       border-radius: 10px;
       border-color: #D1D1D1;
-      margin-top: 1em;
-      margin-left: 20em;
-      margin-right: 20em;
+      margin-top: 1em;            
+      margin-left: 1em;
+      margin-right: 1em;
       padding: 2em;
+      text-align: justify;
       background-color: white;
       font-family: Verdana;
-      color: black;
+      color: #000;
     }
     #principal h1{
       text-align: center;
@@ -48,13 +49,16 @@ $cuerpo_verifica =
       text-decoration:none;
       font-weight: 500;
       font-size: 18px;
-      color:  black;
+      color:#FFF;
       padding-top:15px;
       padding-bottom:15px;
       padding-left:40px;
       padding-right:40px;
-      background-color:#00D423;
-      border-radius:25px;
+      background-color:#000;
+      border-radius:15px;
+    }
+    #boton a:hover{
+        background-color: #3d3d3d;
     }
     #pie{
       font-size: 12px;
@@ -65,6 +69,24 @@ $cuerpo_verifica =
       margin-top: 2em;
       margin-bottom: 4em;
       display: block;
+    }
+    @media screen and (min-width:200px) {
+        #general {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
+    @media screen and (min-width:800px) {
+        #general {
+            margin-left: 10em !important;
+            margin-right: 10em !important;
+        }
+    }
+    @media screen and (min-width:1300px) {
+        #general {
+            margin-left: 20em;
+            margin-right: 20em;
+        }
     }
   </style>
   </head>
@@ -102,9 +124,10 @@ $cuerpo_cambio =
       margin-left: 20em;
       margin-right: 20em;
       padding: 2em;
-      background-color: white;
+      background-color: #FFF;
       font-family: Verdana;
-      color: black;
+      color: #000;
+      text-align:justify;
     }
     #principal h1{
       text-align: center;
@@ -130,13 +153,16 @@ $cuerpo_cambio =
       text-decoration:none;
       font-weight: 500;
       font-size: 18px;
-      color: black;
+      color: #FFF;
       padding-top:15px;
       padding-bottom:15px;
       padding-left:40px;
       padding-right:40px;
-      background-color:#00D423;
-      border-radius:25px;
+      background-color:#000;
+      border-radius:10px;
+    }
+    #boton a:hover{
+        background-color: #3d3d3d;
     }
     #pie{
       font-size: 12px;
@@ -147,6 +173,24 @@ $cuerpo_cambio =
       margin-top: 2em;
       margin-bottom: 4em;
       display: block;
+    }
+    @media screen and (min-width:200px) {
+        #general {
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
+    @media screen and (min-width:800px) {
+        #general {
+            margin-left: 10em !important;
+            margin-right: 10em !important;
+        }
+    }
+    @media screen and (min-width:1300px) {
+        #general {
+            margin-left: 20em;
+            margin-right: 20em;
+        }
     }
   </style>
   </head>
