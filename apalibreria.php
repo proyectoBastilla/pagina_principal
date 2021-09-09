@@ -17,8 +17,8 @@ $libreria = mysqli_fetch_array($result);
 
 <div class="container-fluid card mb-3" style="max-width: 1050px;">
   <div class="row g-0">
-    <div class="col-md-4">
-      <img src="#" class="img-fluid rounded-start" width="100%" alt="Foto librería">
+    <div class="col-md-4 mt-3 mb-3">
+      <img src="<?= $libreria["foto"] ?>" class="img-fluid rounded-start" width="100%" alt="Foto librería">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -30,20 +30,26 @@ $libreria = mysqli_fetch_array($result);
           </tr>
           <tr>
             <td>Descripción:</td>
-            <td><?= $libreria["numLocal"] ?></td>
+            <td><?= $libreria["descripcion"] ?></td>
           </tr>
           <tr>
             <td>Local:</td>
-            <td><?= $libreria["descripcion"] ?></td>
+            <td><?= $libreria["numLocal"] ?></td>
           </tr>
           <tr>
             <td>Teléfono:</td>
             <td><?= $libreria["telefono"] ?></td>
           </tr>
-          <?php if (!empty($libreria["instagram"]) && !empty($libreria["facebook"])) : ?>
+          <?php if (!empty($libreria["instagram"])) : ?>
             <tr>
-              <td>Redes sociales:</td>
-              <td><?= $libreria["instagram"] ?> <?= $libreria["facebook"] ?></td>
+              <td>Instagram:</td>
+              <td><?= $libreria["instagram"] ?></td>
+            </tr>
+          <?php endif; ?>
+          <?php if (!empty($libreria["facebook"])) : ?>
+            <tr>
+              <td>Facebook:</td>
+              <td><?= $libreria["facebook"] ?></td>
             </tr>
           <?php endif; ?>
           <tr>

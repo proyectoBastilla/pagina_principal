@@ -55,7 +55,7 @@ include("./includes/header.php") ?>
     <!-- Tarjeta general libro -->
     <div class="container-fluid card mb-3" style="max-width: 1050px;">
       <div class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-4 mt-3 mb-3">
           <img src="<?= $datos["imagen"] ?>" class="img-fluid rounded-start" width="100%" alt="Portada libro">
         </div>
         <div class="col-md-8">
@@ -147,7 +147,7 @@ include("./includes/header.php") ?>
     if (isset($_GET["buscar"])) {
       //Se hace query con búsqueda específica si cumple condición
       $buscar = $_GET["buscar"];
-      $query = "SELECT id, titulo, autor, imagen FROM libros WHERE titulo LIKE '%$buscar%' LIMIT $pagina,30";
+      $query = "SELECT libros.id, libros.titulo, libros.autor, libros.imagen, libros.likes, libros.disponible, librerias.nombre FROM libros INNER JOIN librerias ON libros.libreria = librerias.id WHERE libros.titulo LIKE '%$buscar%' LIMIT $pagina,30";
       $queryCont = "SELECT COUNT(*) AS contador FROM libros WHERE titulo LIKE '%$buscar%'";
     } else {
       //Se hace query de todos los libros si no hay búsqueda
@@ -158,7 +158,6 @@ include("./includes/header.php") ?>
     ?>
     <!-- Tarjeta general de los libros -->
     <div class="card">
-      <div class="">
         <h3 id="libros_titulo">Te podría interesar...</h3>
         <div class="libros">
           <!-- Tarjetas de cada uno de los libros -->
@@ -188,7 +187,6 @@ include("./includes/header.php") ?>
             </div>
           <?php } ?>
         </div>
-      </div>
     </div>
 
     <?php

@@ -256,7 +256,7 @@ a:hover {
 
 /* Grupo que engloba los libros */
 .libros {
-  margin-top: 1rem;
+  margin-inline: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
 }
@@ -653,6 +653,12 @@ a:hover {
   #libros_titulo {
     margin: 1rem;
   }
+
+  .textoIndex {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-inline: 1rem;
+  }
 }
 
 
@@ -700,6 +706,12 @@ a:hover {
   #libros_titulo {
     margin: 1rem;
   }
+
+  .textoIndex {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-inline: 6rem;
+  }
 }
 
 
@@ -742,6 +754,12 @@ a:hover {
   #libros_titulo {
     margin: 1.5rem;
   }
+
+  .textoIndex {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-inline: 10rem;
+  }
 }
 
 
@@ -783,6 +801,12 @@ a:hover {
   /* Titulo "Te podría interesar..." */
   #libros_titulo {
     margin: 2rem;
+  }
+
+  .textoIndex {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-inline: 18rem;
   }
 }
 
