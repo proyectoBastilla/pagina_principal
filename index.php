@@ -8,13 +8,8 @@ include("./includes/header.php") ?>
 
   <img src="https://i.ibb.co/PWkH6zD/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
 
-  <!-- Sección podio -->
-  <div class="index-section-2">
-    <div class="contenedorgrande">
-      <h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1>
-      <div class="contenedor">
-        <div class="contenedor1">
-          <?php
+  <!-- Sección podio 
+  <?php
           $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 2";
           $result = mysqli_query($mysql, $query);
           while ($row = mysqli_fetch_array($result)) {
@@ -27,53 +22,135 @@ include("./includes/header.php") ?>
           <?php
           } ?>
 
-          <div class="caja">
-            <h3>Puesto 2</h3>
-          </div>
-        </div>
-
-        <div class="contenedor2">
+-->
+  <div class="index-section-2">
+    <div class="contenedorgrande">
+      <h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1>
+      <br></br>
+        <div class="grid-container">
+          <div class="elemento1"></div>
+          <div class="elemento2">
           <?php
           $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
           $result = mysqli_query($mysql, $query);
           while ($row = mysqli_fetch_array($result)) {
           ?>
-            <div class="imagen2">
+            <div class="elemento2">
               <a href="libros?a=desc&id=<?= $row["id"] ?>">
                 <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
               </a>
             </div>
           <?php
           } ?>
-
-          <div class="caja2">
-            <h2>Puesto 1</h2>
           </div>
-        </div>
-
-        <div class="contenedor3">
+          <div class="elemento3">
           <?php
-          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 3";
+          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
           $result = mysqli_query($mysql, $query);
           while ($row = mysqli_fetch_array($result)) {
           ?>
-            <div class="imagen3">
+            <div class="elemento3">
               <a href="libros?a=desc&id=<?= $row["id"] ?>">
                 <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
               </a>
             </div>
           <?php
           } ?>
-
-          <div class="caja3">
-            <h3>Puesto 3</h3>
+          </div>  
+          <div class="elemento4">
+          <?php
+          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
+          $result = mysqli_query($mysql, $query);
+          while ($row = mysqli_fetch_array($result)) {
+          ?>
+            <div class="elemento4">
+              <a href="libros?a=desc&id=<?= $row["id"] ?>">
+                <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+              </a>
+            </div>
+          <?php
+          } ?>
           </div>
+          <div class="elemento5"></div>
+          <div class="elemento6"></div>
+          <div class="elemento7"><b>2° PUESTO</b></div>  
+          <div class="elemento8"><b>1° PUESTO</b></div>  
+          <div class="elemento9"><b>3° PUESTO</b></div>  
+          <div class="elemento10"></div>  
         </div>
-      </div>
     </div>
+    <style>
+      .grid-container {
+    display: grid;
+    height: 300px;
+    align-content: center;
+    grid-template-columns: 20%  20%  20%  20%  20%;
+    grid-template-rows: 320px 60px;
+    grid-gap: 15px;     
+    padding-top: 20px;
+  }
+  
+  .elemento2:hover{
+      transform: translateY(-15px);;
+  }
+  .elemento3:hover{
+    transform: translateY(-15px);;
+}
+.elemento4:hover{
+    transform: translateY(-15px);;
+}
+ 
+  .elemento2{
+    border-radius: 7%;
+    height: 270px;
+    margin-top: 9px;
+  }
+  .elemento3{
+  
+    border-radius: 7%;
+  }
+  .elemento4{
+   
+    border-radius: 7%;
+    height: 290px;
+    margin-top: 15px;
+  }
+  .elemento7{
+    font-family: 'Quicksand';
+    background: rgb(140,154,155);
+    text-align: center;
+    font-size: 25px;
+    border-radius: 7%;
+    margin-top: 60px;
+    height: 60px;
+  }
+  .elemento8{
+    font-family: 'Quicksand';
+    background: rgb(241,182,42);
+    text-align: center;
+    font-size: 25px;
+    border-radius: 7%;
+    height: 80px;
+    margin-top: 40px;
+    
+  }
+  .elemento9{
+    font-family: 'Quicksand';
+    background: rgb(232,138,74);
+    text-align: center;
+    font-size: 25px;
+    border-radius: 7%;
+    height: 46px;
+    margin-top: 73px;
+  }
+ 
+    </style>
   </div>
   <!-- Fin de sección podio -->
-
+<br></br>
+<br></br>
+<br></br>
+<br></br>
   <!-- Inicio Carrusel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
