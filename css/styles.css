@@ -83,14 +83,16 @@ a:hover {
 }
 
 .login-btn,
-.deseos-btn {
+.deseos-btn,
+.gestor-btn {
   cursor: pointer;
   float: right;
   text-align: center;
   line-height: normal !important;
 }
 
-.deseos-btn a {
+.deseos-btn a,
+.gestor-btn a {
   color: #C4C4C4;
 }
 
@@ -99,7 +101,8 @@ a:hover {
 }
 
 .login-btn p,
-.deseos-btn p {
+.deseos-btn p,
+.gestor-btn p {
   font-size: 12px;
 }
 
@@ -120,10 +123,7 @@ a:hover {
 }
 
 .btn {
-  background: black;
-  color: white;
   border-radius: 2px;
-  border-bottom: none;
 }
 
 .login-btn__desp a {

@@ -55,28 +55,42 @@
         <?php endif; ?>
 
         <div class="header__nav-item login-btn">
-          <i class="far fa-user"></i>
+          <!-- Button trigger modal -->
+          <i class="far fa-user" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
           <p>Login</p>
-          <ul class="login-btn__desp">
-            <?php if (isset($_SESSION["sesion"])) : ?>
-              <a href="cuenta.php">
-                <p>Mi Cuenta</p>
-              </a>
-              <hr>
-              <a href="funciones.php?a=logout">
-                <p>Cerrar sesión</p>
-              </a>
-            <?php else : ?>
-              <a href="login">
-                <p>Inicia Sesión</p>
-              </a>
-              <hr>
-              <a href="registro">
-                <p>Regístrate</p>
-              </a>
-            <?php endif; ?>
-          </ul>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-dark" id="exampleModalLabel">¿Qué quieres hacer?</h5>
+              </div>
+              <div class="modal-body  text-center">
+                <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"] == true) : ?>
+                  <a href="funciones.php?a=logout"><button type="button" class="btn btn-outline-primary">Cerrar sesión</button></a>
+                <?php else : ?>
+                  <a href="registro"><button type="button" class="btn btn-outline-primary">Regístrate</button></a>
+                  o
+                  <a href="login"><button type="button" class="btn btn-outline-success">Inicia Sesión</button></a>
+                <?php endif; ?>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <?php if (isset($_SESSION["libreria"])) : ?>
+          <div class="header__nav-item gestor-btn">
+            <a href="gestor">
+              <i class="fas fa-tools"></i>
+              <p>Gestor</p>
+            </a>
+          </div>
+        <?php endif; ?>
 
       </div>
 
@@ -116,28 +130,40 @@
         <?php endif; ?>
 
         <div class="header__nav-item login-btn">
-          <i class="far fa-user"></i>
+          <!-- Button trigger modal -->
+          <i class="far fa-user" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
           <p>Login</p>
-          <ul class="login-btn__desp">
-            <?php if (isset($_SESSION["sesion"])) : ?>
-              <a href="cuenta.php">
-                <p>Mi Cuenta</p>
-              </a>
-              <hr>
-              <a href="funciones.php?a=logout">
-                <p>Cerrar sesión</p>
-              </a>
-            <?php else : ?>
-              <a href="login">
-                <p>Inicia Sesión</p>
-              </a>
-              <hr>
-              <a href="registro">
-                <p>Regístrate</p>
-              </a>
-            <?php endif; ?>
-          </ul>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title text-dark" id="exampleModalLabel">¿Qué quieres hacer?</h5>
+              </div>
+              <div class="modal-body  text-center">
+                <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"] == true) : ?>
+                  <a href="funciones.php?a=logout"><button type="button" class="btn btn-outline-primary">Cerrar sesión</button></a>
+                <?php else : ?>
+                  <a href="registro"><button type="button" class="btn btn-outline-primary">Regístrate</button></a>
+                  o
+                  <a href="login"><button type="button" class="btn btn-outline-success">Inicia Sesión</button></a>
+                <?php endif; ?>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <?php if (isset($_SESSION["libreria"])) : ?>
+          <div class="header__nav-item gestor-btn">
+            <i class="fas fa-tools"></i>
+            <p>Gestor</p>
+          </div>
+        <?php endif; ?>
 
       </div>
 
