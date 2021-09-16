@@ -26,7 +26,8 @@ include("./includes/header.php") ?>
   <div class="index-section-2">
     <div class="contenedorgrande">
       <h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1>
-      <br></br>
+      
+     
         <div class="grid-container">
           <div class="elemento1"></div>
           <div class="elemento2">
@@ -82,14 +83,13 @@ include("./includes/header.php") ?>
     <style>
       .grid-container {
     display: grid;
-    height: 300px;
+    height: 350px;
     align-content: center;
-    grid-template-columns: 20%  20%  20%  20%  20%;
-    grid-template-rows: 320px 60px;
+    grid-template-columns: 15%  22%  22%  22% 17%;
+    grid-template-rows: 400px 60px;
     grid-gap: 15px;     
-    padding-top: 20px;
+    margin-top:100px;
   }
-  
   .elemento2:hover{
       transform: translateY(-15px);;
   }
@@ -101,49 +101,64 @@ include("./includes/header.php") ?>
 }
  
   .elemento2{
+    display:flex;
     border-radius: 7%;
     height: 270px;
     margin-top: 9px;
   }
   .elemento3{
-  
+    display:flex;
     border-radius: 7%;
   }
   .elemento4{
-   
+    display:flex;
     border-radius: 7%;
     height: 290px;
     margin-top: 15px;
   }
   .elemento7{
+    color:#f5f5f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     font-family: 'Quicksand';
     background: rgb(140,154,155);
     text-align: center;
     font-size: 25px;
     border-radius: 7%;
-    margin-top: 60px;
     height: 60px;
+    margin-top:20px;
   }
-  .elemento8{
+  .elemento8 {
+    color:#f5f5f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     font-family: 'Quicksand';
+    margin-bottom: 0px;
     background: rgb(241,182,42);
     text-align: center;
     font-size: 25px;
     border-radius: 7%;
     height: 80px;
-    margin-top: 40px;
+
     
   }
   .elemento9{
+    color:#f5f5f5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     font-family: 'Quicksand';
     background: rgb(232,138,74);
     text-align: center;
     font-size: 25px;
     border-radius: 7%;
     height: 46px;
-    margin-top: 73px;
+    margin-top:33px
   }
- 
+  
+  
     </style>
   </div>
   <!-- Fin de sección podio -->
