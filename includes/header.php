@@ -160,8 +160,10 @@
 
         <?php if (isset($_SESSION["libreria"])) : ?>
           <div class="header__nav-item gestor-btn">
-            <i class="fas fa-tools"></i>
-            <p>Gestor</p>
+            <a href="gestor">
+              <i class="fas fa-tools"></i>
+              <p>Gestor</p>
+            </a>
           </div>
         <?php endif; ?>
 

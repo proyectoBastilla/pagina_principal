@@ -32,9 +32,10 @@ include("./includes/header.php") ?>
           <div class="elemento1"></div>
           <div class="elemento2">
           <?php
-          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
+          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 2";
           $result = mysqli_query($mysql, $query);
-          while ($row = mysqli_fetch_array($result)) {
+          for ($i=0; $i < 1; $i++) {
+            $row = mysqli_fetch_array($result);
           ?>
             <div class="elemento2">
               <a href="libros?a=desc&id=<?= $row["id"] ?>">
@@ -48,7 +49,8 @@ include("./includes/header.php") ?>
           <?php
           $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
           $result = mysqli_query($mysql, $query);
-          while ($row = mysqli_fetch_array($result)) {
+          for ($i = 0; $i < 1; $i++) {
+            $row = mysqli_fetch_array($result);
           ?>
             <div class="elemento3">
               <a href="libros?a=desc&id=<?= $row["id"] ?>">
@@ -60,9 +62,10 @@ include("./includes/header.php") ?>
           </div>  
           <div class="elemento4">
           <?php
-          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
+          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 3";
           $result = mysqli_query($mysql, $query);
-          while ($row = mysqli_fetch_array($result)) {
+          for ($i = 0; $i < 1; $i++) {
+            $row = mysqli_fetch_array($result);
           ?>
             <div class="elemento4">
               <a href="libros?a=desc&id=<?= $row["id"] ?>">

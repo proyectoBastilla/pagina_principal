@@ -39,7 +39,7 @@ include("./includes/header.php") ?>
             <?php if (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true && isset($_SESSION["nombre_iniciado"])) : ?>
               <input class="form-control" type="text" value="<?= $_SESSION["nombre_iniciado"]." ".$_SESSION["apellido_iniciado"] ?>" aria-label="readonly input example" disabled>
             <?php elseif (isset($_SESSION["sesion"]) && $_SESSION["sesion"]==true && isset($_SESSION["nombre_lib"])) : ?>
-              <input class="form-control" type="text" value="<?= "Librería ".$_SESSION["nombre_lib"] ?>" aria-label="readonly input example" disabled>
+              <input class="form-control" type="text" value="<?= $_SESSION["nombre_lib"] ?>" aria-label="readonly input example" disabled>
             <?php else: ?>
               <input type="text" class="form-control" placeholder="Nombre" name="nombre">
             <?php endif; ?>
