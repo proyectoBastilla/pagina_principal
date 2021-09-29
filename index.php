@@ -24,29 +24,29 @@ include("./includes/header.php") ?>
 
 -->
   <div class="index-section-2">
-    <div class="contenedorgrande">
-      <h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1>
-      
-     
-        <div class="grid-container">
-          <div class="elemento1"></div>
-          <div class="elemento2">
-          <?php
-          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 2";
-          $result = mysqli_query($mysql, $query);
-          for ($i=0; $i < 1; $i++) {
-            $row = mysqli_fetch_array($result);
-          ?>
-            <div class="elemento2">
-              <a href="libros?a=desc&id=<?= $row["id"] ?>">
-                <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-              </a>
-            </div>
-          <?php
-          } ?>
-          </div>
-          <div class="elemento3">
-          <?php
+  <div class="containerpodio">
+    <div class="dos">
+      <div class="podiodos"><h1>2° PUESTO</h1></div>
+        <div class="imagendos">
+                <?php
+                    $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 2";
+                $result = mysqli_query($mysql, $query);
+                for ($i=0; $i < 1; $i++) {
+                    $row = mysqli_fetch_array($result);
+                ?>
+                    <div class="elemento2">
+                    <a href="libros?a=desc&id=<?= $row["id"] ?>">
+                        <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+                    </a>
+                    </div>
+                <?php
+                } ?>
+         </div>    
+    </div>
+    <div class="uno-">
+      <div class="podiouno"><h1>1° PUESTO</h1></div>
+      <div class="imagenuno">
+      <?php
           $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
           $result = mysqli_query($mysql, $query);
           for ($i = 0; $i < 1; $i++) {
@@ -59,9 +59,12 @@ include("./includes/header.php") ?>
             </div>
           <?php
           } ?>
-          </div>  
-          <div class="elemento4">
-          <?php
+      </div>
+    </div>
+    <div class="tres">
+      <div class="podiotres"><H1>3° PUESTO</H1></div>
+      <div class="imagentres">
+      <?php
           $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 3";
           $result = mysqli_query($mysql, $query);
           for ($i = 0; $i < 1; $i++) {
@@ -74,94 +77,190 @@ include("./includes/header.php") ?>
             </div>
           <?php
           } ?>
-          </div>
-          <div class="elemento5"></div>
-          <div class="elemento6"></div>
-          <div class="elemento7"><b>2° PUESTO</b></div>  
-          <div class="elemento8"><b>1° PUESTO</b></div>  
-          <div class="elemento9"><b>3° PUESTO</b></div>  
-          <div class="elemento10"></div>  
-        </div>
+      </div>
     </div>
-    <style>
-      .grid-container {
-    display: grid;
-    height: 350px;
-    align-content: center;
-    grid-template-columns: 15%  22%  22%  22% 17%;
-    grid-template-rows: 400px 60px;
-    grid-gap: 15px;     
-    margin-top:100px;
-  }
-  .elemento2:hover{
-      transform: translateY(-15px);;
-  }
-  .elemento3:hover{
-    transform: translateY(-15px);;
-}
-.elemento4:hover{
-    transform: translateY(-15px);;
-}
- 
-  .elemento2{
-    display:flex;
-    border-radius: 7%;
-    height: 270px;
-    margin-top: 9px;
-  }
-  .elemento3{
-    display:flex;
-    border-radius: 7%;
-  }
-  .elemento4{
-    display:flex;
-    border-radius: 7%;
-    height: 290px;
-    margin-top: 15px;
-  }
-  .elemento7{
-    color:#f5f5f5;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family: 'Quicksand';
-    background: rgb(140,154,155);
-    text-align: center;
-    font-size: 25px;
-    border-radius: 7%;
-    height: 60px;
-    margin-top:20px;
-  }
-  .elemento8 {
-    color:#f5f5f5;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family: 'Quicksand';
-    margin-bottom: 0px;
-    background: rgb(241,182,42);
-    text-align: center;
-    font-size: 25px;
-    border-radius: 7%;
-    height: 80px;
+    <div class="titulo"><h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1></div>
+  </div>
 
-    
+
+
+
+    <style>
+      .containerpodio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.6fr 1fr;
+  gap: 20px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titulo titulo titulo"
+    "dos uno- tres"
+    "dos uno- tres";
+}
+
+.dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagendos imagendos imagendos"
+    "imagendos imagendos imagendos"
+    "podiodos podiodos podiodos";
+  grid-area: dos;
+}
+
+.podiodos { grid-area: podiodos; 
+  color:#f5f5f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Quicksand';
+  background: rgb(140,154,155);
+  text-align: center;
+  font-size: 25px;
+  border-radius: 7%;
+  height: 60px;
+  margin-top:4px;
   }
-  .elemento9{
-    color:#f5f5f5;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family: 'Quicksand';
-    background: rgb(232,138,74);
-    text-align: center;
-    font-size: 25px;
-    border-radius: 7%;
-    height: 46px;
-    margin-top:33px
-  }
-  
-  
+
+.imagendos { grid-area: imagendos; }
+.imagendos:hover{
+      transform: translateY(-15px);;
+}
+.uno- {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.3fr 0.7fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagenuno imagenuno imagenuno"
+    "imagenuno imagenuno imagenuno"
+    "podiouno podiouno podiouno";
+  grid-area: uno-;
+}
+
+.podiouno { grid-area: podiouno; 
+  color:#f5f5f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Quicksand';
+  margin-bottom: 0px;
+  background: rgb(241,182,42);
+  text-align: center;
+  font-size: 25px;
+  border-radius: 7%;
+  height: 80px;
+  margin-top: 32px;
+}
+
+.imagenuno { grid-area: imagenuno; }
+.imagenuno:hover{
+      transform: translateY(-15px);;
+}
+.tres {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.6fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagentres imagentres imagentres"
+    "imagentres imagentres imagentres"
+    "podiotres podiotres podiotres";
+  grid-area: tres;
+}
+
+.podiotres { grid-area: podiotres; 
+  color:#f5f5f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Quicksand';
+  background: rgb(232,138,74);
+  text-align: center;
+  font-size: 25px;
+  border-radius: 7%;
+  height: 46px;
+}
+
+.imagentres { grid-area: imagentres; }
+.imagentres:hover{
+      transform: translateY(-15px);;
+}
+.titulo { grid-area: titulo;}
+@media screen and (max-width: 360px) {
+  .containerpodio {
+display: grid;
+grid-template-columns: 1fr 1fr 0.9fr 1.1fr;
+grid-template-rows: 0.2fr 1.8fr 1.2fr;
+gap: 10px 20px;
+grid-auto-flow: row;
+grid-template-areas:
+  "titulo titulo titulo titulo"
+  ". uno- uno- ."
+  "dos dos tres tres";
+width: 300px;
+}
+
+.titulo { grid-area: titulo; }
+
+.uno- {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 0.1fr 0.4fr 0.6fr;
+gap: 0px 40px;
+grid-auto-flow: row;
+grid-template-areas:
+  "imagenuno imagenuno imagenuno"
+  "imagenuno imagenuno imagenuno"
+  "podiouno podiouno podiouno";
+grid-area: uno-;
+}
+
+.imagenuno { grid-area: imagenuno; }
+
+.podiouno { grid-area: podiouno; }
+
+.tres {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1.6fr 0.4fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+  "imagentres imagentres imagentres"
+  "imagentres imagentres imagentres"
+  "podiotres podiotres podiotres";
+grid-area: tres;
+}
+
+.podiotres { grid-area: podiotres; }
+
+.imagentres { grid-area: imagentres; }
+
+.dos {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1.4fr 0.6fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+  "imagendos imagendos imagendos"
+  "imagendos imagendos imagendos"
+  "podiodos podiodos podiodos";
+grid-area: dos;
+}
+
+.podiodos { grid-area: podiodos; }
+
+.imagendos { grid-area: imagendos; }
+
+}
+
     </style>
   </div>
   <!-- Fin de sección podio -->
