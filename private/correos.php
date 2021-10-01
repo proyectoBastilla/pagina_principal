@@ -16,10 +16,10 @@ $cuerpo_verifica =
       border-width: 1px;
       border-radius: 10px;
       border-color: #D1D1D1;
-      margin-top: 1em;            
-      margin-left: 1em;
-      margin-right: 1em;
+      margin-top: 1em;  
+      margin-bottom: 1em;          
       padding: 2em;
+      margin-inline: 0;
       text-align: justify;
       background-color: white;
       font-family: Verdana;
@@ -70,22 +70,22 @@ $cuerpo_verifica =
       margin-bottom: 4em;
       display: block;
     }
-    @media screen and (min-width:200px) {
+    @media screen and (min-width:1000px) {
         #general {
-            margin-left: 1em;
-            margin-right: 1em;
+            margin-left: 20em !important;
+            margin-right: 20em !important;
         }
     }
     @media screen and (min-width:800px) {
         #general {
-            margin-left: 10em !important;
-            margin-right: 10em !important;
+            margin-left: 10em;
+            margin-right: 10em;
         }
     }
-    @media screen and (min-width:1300px) {
+    @media screen and (min-width:400px) {
         #general {
-            margin-left: 20em;
-            margin-right: 20em;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
   </style>
@@ -120,14 +120,14 @@ $cuerpo_cambio =
       border-width: 1px;
       border-radius: 10px;
       border-color: #D1D1D1;
-      margin-top: 1em;
-      margin-left: 20em;
-      margin-right: 20em;
+      margin-top: 1em;  
+      margin-bottom: 1em;          
       padding: 2em;
-      background-color: #FFF;
+      margin-inline: 0;
+      text-align: justify;
+      background-color: white;
       font-family: Verdana;
       color: #000;
-      text-align:justify;
     }
     #principal h1{
       text-align: center;
@@ -174,22 +174,22 @@ $cuerpo_cambio =
       margin-bottom: 4em;
       display: block;
     }
-    @media screen and (min-width:200px) {
+    @media screen and (min-width:1000px) {
         #general {
-            margin-left: 1em;
-            margin-right: 1em;
+            margin-left: 20em !important;
+            margin-right: 20em !important;
         }
     }
     @media screen and (min-width:800px) {
         #general {
-            margin-left: 10em !important;
-            margin-right: 10em !important;
+            margin-left: 10em;
+            margin-right: 10em;
         }
     }
-    @media screen and (min-width:1300px) {
+    @media screen and (min-width:400px) {
         #general {
-            margin-left: 20em;
-            margin-right: 20em;
+            margin-left: 0;
+            margin-right: 0;
         }
     }
   </style>
