@@ -226,12 +226,12 @@ a:hover {
   text-align: center;
   color: white;
   font-size: 18px;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   text-indent: 0;
 }
 
 .footer__col1 li {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 /* Modifica los íconos(links) del footer */
@@ -242,6 +242,13 @@ a:hover {
   color: #FFF;
   padding: 8px;
   cursor: pointer;
+  display: block;
+  margin-inline: 5rem;
+}
+
+.footer__plus {
+  margin-inline: rem !important;
+  
 }
 
 .footer__icon:hover {

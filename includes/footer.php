@@ -31,7 +31,7 @@
                   <i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
 
             <!-- Correo -->
-            <li><a class="footer__icon mb-2" href="acerca#sec-cont" role="button">
+            <li><a class="footer__icon" href="acerca#sec-cont" role="button">
                 <i class="far fa-envelope fa-lg"></i> Contáctanos</a></li>
 
             
@@ -64,7 +64,7 @@
               <br></br>
               <a href="mapa">
                 <button class="footer__icon">
-                  <h5>conoce más</h5>
+                  <h5>Conoce más</h5>
                 </button></a>
             </div>
           </div>

@@ -30,7 +30,6 @@
       <a href="acerca" class="header__nav-item">Nosotros</a>
       <a href="contacto" class="header__nav-item">Contacto</a>
 
-
       <div class="header__right">
         <!-- Búsqueda -->
         <div class="header__nav-item search">
@@ -58,8 +57,10 @@
 
         <div class="header__nav-item login-btn">
           <!-- Button trigger modal -->
-          <i class="far fa-user" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-          <p>Cuenta</p>
+          <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="far fa-user"></i>
+            <p>Cuenta</p>
+          </div>
         </div>
 
         <!-- Modal -->
@@ -134,8 +135,10 @@
 
         <div class="header__nav-item login-btn">
           <!-- Button trigger modal -->
-          <i class="far fa-user" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-          <p>Cuenta</p>
+          <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="far fa-user"></i>
+            <p>Cuenta</p>
+          </div>
         </div>
 
         <!-- Modal -->

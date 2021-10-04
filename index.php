@@ -8,45 +8,34 @@ include("./includes/header.php") ?>
 
   <img src="https://i.ibb.co/PWkH6zD/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
 
-  <!-- Sección podio 
-  <?php
-          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 2";
+  <div class="index-section-2">
+    <div class="containerpodio">
+      <div class="dos">
+        <div class="podiodos">
+          <h1>2° PUESTO</h1>
+        </div>
+        <div class="imagendos">
+          <?php
+          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 2";
           $result = mysqli_query($mysql, $query);
-          while ($row = mysqli_fetch_array($result)) {
+          for ($i = 0; $i < 1; $i++) {
+            $row = mysqli_fetch_array($result);
           ?>
-            <div class="imagen">
+            <div class="elemento2">
               <a href="libros?a=desc&id=<?= $row["id"] ?>">
                 <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
               </a>
             </div>
           <?php
           } ?>
-
--->
-  <div class="index-section-2">
-  <div class="containerpodio">
-    <div class="dos">
-      <div class="podiodos"><h1>2° PUESTO</h1></div>
-        <div class="imagendos">
-                <?php
-                    $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 2";
-                $result = mysqli_query($mysql, $query);
-                for ($i=0; $i < 1; $i++) {
-                    $row = mysqli_fetch_array($result);
-                ?>
-                    <div class="elemento2">
-                    <a href="libros?a=desc&id=<?= $row["id"] ?>">
-                        <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-                    </a>
-                    </div>
-                <?php
-                } ?>
-         </div>    
-    </div>
-    <div class="uno-">
-      <div class="podiouno"><h1>1° PUESTO</h1></div>
-      <div class="imagenuno">
-      <?php
+        </div>
+      </div>
+      <div class="uno-">
+        <div class="podiouno">
+          <h1>1° PUESTO</h1>
+        </div>
+        <div class="imagenuno">
+          <?php
           $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
           $result = mysqli_query($mysql, $query);
           for ($i = 0; $i < 1; $i++) {
@@ -59,12 +48,14 @@ include("./includes/header.php") ?>
             </div>
           <?php
           } ?>
+        </div>
       </div>
-    </div>
-    <div class="tres">
-      <div class="podiotres"><H1>3° PUESTO</H1></div>
-      <div class="imagentres">
-      <?php
+      <div class="tres">
+        <div class="podiotres">
+          <H1>3° PUESTO</H1>
+        </div>
+        <div class="imagentres">
+          <?php
           $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 3";
           $result = mysqli_query($mysql, $query);
           for ($i = 0; $i < 1; $i++) {
@@ -77,6 +68,10 @@ include("./includes/header.php") ?>
             </div>
           <?php
           } ?>
+        </div>
+      </div>
+      <div class="titulo">
+        <h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1>
       </div>
     </div>
     <div class="titulo"><h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1></div>
@@ -121,19 +116,19 @@ include("./includes/header.php") ?>
     <h1 class="text-center">
       <b>Proyecto La Bastilla</b>
     </h1>
-    <p style="font-size: 18px;">Esta página es una vitrina comercial para el reconocido Pasaje la Bastilla de la ciudad de Medellín.
-      
-      <h3 class="text-center">¿Qué significa esto?</h3>
-      
+    <p>Esta página es una vitrina comercial para el reconocido Pasaje la Bastilla de la ciudad de Medellín.</p>
+    <br>
+    <h4 class="text-center">¿Qué significa esto?</h4>
+    <p>
       Significa que esta página no se encarga de reproducir ni vender los productos de las librerías aquí expuestas y como mencionamos,
       somos una vitrina en la web con el fin de dar mayor visibilidad a este lugar tan querido por generaciones
-     por ser el lugar en donde puedes encontrar todo tipo de libros.
-     <br><br>
-     Así mismo, queremos incentivar a las ciudadanos
+      por ser el lugar en donde puedes encontrar todo tipo de libros.
+      <br><br>
+      Así mismo, queremos incentivar a las ciudadanos
       más jóvenes a la lectura, ya que es una importante costumbre que se ha ido perdiendo con el pasar de los años. 
-     Lo haremos por medio de la web, ya que es el medio más utilizado actualmente y así mostrarles las cómodas y económicas
-    opciones de lectura.
-     </p>
+      Lo haremos por medio de la web, ya que es el medio más utilizado actualmente y así mostrarles las cómodas y económicas
+      opciones de lectura.
+    </p>
     </div>
   <!--Fin texto descripción -->
 </main>
