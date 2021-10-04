@@ -167,8 +167,8 @@ include("./includes/header.php") ?>
                 <div class="libros__tarjeta-container">
                   <div class="libros__tarjeta-blur"></div>
                   <div class="libros__tarjeta-info">
-                    <h4 class="text-center"><b><?= $row["nombre"] ?></b></h4>
-                    <h5 class="text-center"><?= $row["autor"] ?></h5>
+                    <h5 class="text-center"><b><?= $row["nombre"] ?></b></h5>
+                    <p class="text-center mb-4"><?= $row["autor"] ?></p>
                     <h5><i class="far fa-thumbs-up"></i> <?= $row["likes"] ?> Likes</h5>
                   </div>
                   <img class="libros__tarjeta-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">

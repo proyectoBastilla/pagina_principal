@@ -5,6 +5,14 @@ body {
   color: #000;
 }
 
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+}
+
 /* Cambia todos los párrafos de la página */
 p {
   font-size: 16px;
@@ -33,7 +41,6 @@ a:hover {
 .header,
 .header-frente {
   overflow: hidden;
-  background-color: #333;
   display: flexbox;
   align-items: center;
   z-index: 80;
@@ -98,10 +105,6 @@ a:hover {
   color: #C4C4C4;
 }
 
-.tooltip-inner {
-  background-color: #3d3d3d;
-}
-
 .login-btn p,
 .deseos-btn p,
 .gestor-btn p {
@@ -152,7 +155,7 @@ a:hover {
 }
 
 .buscar-btn {
-  color: #000;
+  color: #222;
   background-color: #C4C4C4;
 }
 
@@ -213,8 +216,8 @@ a:hover {
 
 /* Modifica la barra completa del footer */
 .footer {
-  padding-top: 2.5em;
-  padding-bottom: 2.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin-top: 1.5em;
   margin-bottom: 0;
   background-color: #222;
@@ -243,17 +246,30 @@ a:hover {
   padding: 8px;
   cursor: pointer;
   display: block;
-  margin-inline: 5rem;
-}
-
-.footer__plus {
-  margin-inline: rem !important;
-  
+  margin-inline: 4rem;
 }
 
 .footer__icon:hover {
   background-color: #FFF;
   color: #000;
+  border: 2px solid #222;
+}
+
+.footer__plus {
+  border: 2px solid #222;
+  border-radius: 10px;
+  background-color: #FFF;
+  color: #222;
+  padding: 8px;
+  cursor: pointer;
+  display: block;
+  margin-inline: 3.5rem;  
+}
+
+.footer__plus:hover {
+  background-color: #222;
+  color: #FFF;
+  border: 2px solid #FFF;
 }
 
 .index-section-2 {
@@ -369,7 +385,7 @@ a:hover {
   z-index: 95;
   width: 50px;
   height: 50px;
-  background: #000;
+  background: #222;
   bottom: 40px;
   right: 50px;
   text-align: center;
@@ -405,14 +421,14 @@ a:hover {
   }
 
   /* Márgenes del form de contacto */
-  #contacto {
+  .contact {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
   }
 
   /* Espaciado entre opciones */
-  #contacto input {
+  .contact input {
     margin-bottom: 1rem;
   }
 
@@ -459,14 +475,14 @@ a:hover {
   }
 
   /* Márgenes del form de contacto */
-  #contacto {
+  .contact {
     margin-left: 5rem;
     margin-right: 5rem;
     margin-bottom: 2rem;
   }
 
   /* Espaciado entre opciones */
-  #contacto input {
+  .contact input {
     margin-bottom: 1rem;
   }
 
@@ -512,7 +528,7 @@ a:hover {
   }
 
   /* Márgenes del form de contacto */
-  #contacto {
+  .contact {
     margin-left: 12rem;
     margin-right: 12rem;
     margin-bottom: 2rem;
@@ -560,7 +576,7 @@ a:hover {
   }
 
   /* Márgenes del form de contacto */
-  #contacto {
+  .contact {
     margin-left: 12rem;
     margin-right: 12rem;
     margin-bottom: 2rem;

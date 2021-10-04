@@ -71,10 +71,9 @@ include("./includes/header.php") ?>
         </div>
       </div>
       <div class="titulo">
-        <h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1>
+        <h1 class="text-center mt-5"><b>TOP LIBROS MÁS GUSTADOS</b></h1>
       </div>
     </div>
-    <div class="titulo"><h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1></div>
   </div>
   </div>
   <!-- Fin de sección podio -->

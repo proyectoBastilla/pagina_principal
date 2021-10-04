@@ -7,14 +7,11 @@
 <footer class="footer">
   <div class="container p-4">
     <!-- texto -->
-    <section class="mb-4">
-    <hr width=100% style="color:white; height: 3px;">
-
-      <h4 style="text-align:center; color:white; font-family: 'Quicksand';">
-        Daremos a conocer los diferentes libros y librerías que se encuentran en el pasaje La Bastiila de una forma virtual y segura
-      </h4>
+    <section class="mb-5">
+      <h5 style="text-align:center; color:white;">
+        Daremos a conocer los diferentes libros y librerías que se encuentran en el pasaje La Bastilla de una forma virtual y segura
+      </h5>
     </section>
-    <hr width=100% style="color:white; height: 3px;">
 
     <!-- Inicio columnas -->
     <section>
@@ -22,7 +19,7 @@
       <div class="row">
         <!--Columna 1-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h4 class="text-white">Redes Sociales</h4>
+          <h3 class="text-white">Redes Sociales</h3>
           <!-- Redes -->
           <ul class="footer__col1 list-unstyled">
 
@@ -49,7 +46,7 @@
 
         <!--Columna 2-->
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h4 class="text-white">Bienvenidos </h4>
+          <h3 class="text-white">Bienvenidos </h3>
           <img src="https://i.ibb.co/yYJTtQS/favicon.png" alt="favicon" style="height: 190px">
           <h4 class="text-white">Pasaje La Bastilla</h4>
         </div>
@@ -57,13 +54,13 @@
 
         <!--Columna 3-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h4 class="text-white">Mapa</h4>
+          <h3 class="text-white">Mapa</h3>
           <div class="card">
             <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 167px">
               <iframe id="map-google" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.764716496399!2d-75.5665046!3d6.2482134!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44285620849f25%3A0xb81bd00a721b3e1!2sCentro%20Comercial%20del%20Libro%20y%20la%20Cultura!5e0!3m2!1ses-419!2sco!4v1626363860754!5m2!1ses-419!2sco" allow="fullscreen" loading="eager"></iframe>
               <br></br>
               <a href="mapa">
-                <button class="footer__icon">
+                <button class="footer__plus">
                   <h5>Conoce más</h5>
                 </button></a>
             </div>
