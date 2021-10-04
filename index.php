@@ -81,193 +81,9 @@ include("./includes/header.php") ?>
     </div>
     <div class="titulo"><h1 class="text-center"><b>TOP MÁS GUSTADOS</b></h1></div>
   </div>
-
-
-
-
-    <style>
-      .containerpodio {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1.6fr 1fr;
-  gap: 20px 30px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "titulo titulo titulo"
-    "dos uno- tres"
-    "dos uno- tres";
-}
-
-.dos {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1.5fr 0.5fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "imagendos imagendos imagendos"
-    "imagendos imagendos imagendos"
-    "podiodos podiodos podiodos";
-  grid-area: dos;
-}
-
-.podiodos { grid-area: podiodos; 
-  color:#f5f5f5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family: 'Quicksand';
-  background: rgb(140,154,155);
-  text-align: center;
-  font-size: 25px;
-  border-radius: 7%;
-  height: 60px;
-  margin-top:4px;
-  }
-
-.imagendos { grid-area: imagendos; }
-.imagendos:hover{
-      transform: translateY(-15px);;
-}
-.uno- {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1.3fr 0.7fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "imagenuno imagenuno imagenuno"
-    "imagenuno imagenuno imagenuno"
-    "podiouno podiouno podiouno";
-  grid-area: uno-;
-}
-
-.podiouno { grid-area: podiouno; 
-  color:#f5f5f5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family: 'Quicksand';
-  margin-bottom: 0px;
-  background: rgb(241,182,42);
-  text-align: center;
-  font-size: 25px;
-  border-radius: 7%;
-  height: 80px;
-  margin-top: 32px;
-}
-
-.imagenuno { grid-area: imagenuno; }
-.imagenuno:hover{
-      transform: translateY(-15px);;
-}
-.tres {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1.6fr 0.4fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "imagentres imagentres imagentres"
-    "imagentres imagentres imagentres"
-    "podiotres podiotres podiotres";
-  grid-area: tres;
-}
-
-.podiotres { grid-area: podiotres; 
-  color:#f5f5f5;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family: 'Quicksand';
-  background: rgb(232,138,74);
-  text-align: center;
-  font-size: 25px;
-  border-radius: 7%;
-  height: 46px;
-}
-
-.imagentres { grid-area: imagentres; }
-.imagentres:hover{
-      transform: translateY(-15px);;
-}
-.titulo { grid-area: titulo;}
-@media screen and (max-width: 360px) {
-  .containerpodio {
-display: grid;
-grid-template-columns: 1fr 1fr 0.9fr 1.1fr;
-grid-template-rows: 0.2fr 1.8fr 1.2fr;
-gap: 10px 20px;
-grid-auto-flow: row;
-grid-template-areas:
-  "titulo titulo titulo titulo"
-  ". uno- uno- ."
-  "dos dos tres tres";
-width: 300px;
-}
-
-.titulo { grid-area: titulo; }
-
-.uno- {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 0.1fr 0.4fr 0.6fr;
-gap: 0px 40px;
-grid-auto-flow: row;
-grid-template-areas:
-  "imagenuno imagenuno imagenuno"
-  "imagenuno imagenuno imagenuno"
-  "podiouno podiouno podiouno";
-grid-area: uno-;
-}
-
-.imagenuno { grid-area: imagenuno; }
-
-.podiouno { grid-area: podiouno; }
-
-.tres {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr 1.6fr 0.4fr;
-gap: 0px 0px;
-grid-auto-flow: row;
-grid-template-areas:
-  "imagentres imagentres imagentres"
-  "imagentres imagentres imagentres"
-  "podiotres podiotres podiotres";
-grid-area: tres;
-}
-
-.podiotres { grid-area: podiotres; }
-
-.imagentres { grid-area: imagentres; }
-
-.dos {
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr 1.4fr 0.6fr;
-gap: 0px 0px;
-grid-auto-flow: row;
-grid-template-areas:
-  "imagendos imagendos imagendos"
-  "imagendos imagendos imagendos"
-  "podiodos podiodos podiodos";
-grid-area: dos;
-}
-
-.podiodos { grid-area: podiodos; }
-
-.imagendos { grid-area: imagendos; }
-
-}
-
-    </style>
   </div>
   <!-- Fin de sección podio -->
-<br></br>
-<br></br>
-<br></br>
-<br></br>
+
   <!-- Inicio Carrusel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -278,7 +94,10 @@ grid-area: dos;
     <!-- Imágenes Carrusel -->
     <div class="carousel-inner">
       <div class="carousel-item active">
+        <a href="libros?pag=1">
         <img src="https://i.ibb.co/SR4R0YP/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
+        </a>
+        
       </div>
       <div class="carousel-item">
         <img src="https://i.ibb.co/Rv6vZc3/banner-3.jpg" class="d-block w-100" alt="Banner número 3">
@@ -299,17 +118,23 @@ grid-area: dos;
 
   <!--Inicio texto descripción -->
   <div class="textoIndex">
-    <p style="font-size: 18px;">Esta página es una vitrina comercial-pedagógica para el reconocido Pasaje la Bastilla de la ciudad de Medellín,
-      más específicamente del Centro Comercial del Libro y la Cultura. ¿Qué significa esto? Significa que esta
-      página no se encarga de reproducir ni vender los productos de las librerías aquí expuestas, y, como mencionamos,
-      somos una vitrina en la web con el fin de dar mayor visibilidad a este lugar, tan querido por los paisas durante
-      generaciones por ser el lugar donde puedes encontrar todo tipo de libros, de todos los precios y con sus diferentes
-      ediciones, así como vender los propios para conseguir descuentos en tus próximas compras de libros.<br><br>Así mismo,
-      queremos incentivar la lectura, una bella e importante costumbre que se ha ido perdidendo en los últimos años, y
-      es ahí a donde pretendemos apuntar, a las generaciones jóvenes; entrando en su principal nicho, la web, para llegar
-      con mayor facilidad hasta ellos y mostrarles las cómodas y económicas opciones de buena lectura que tiene dentro
-      de su propia ciudad.</p>
-  </div>
+    <h1 class="text-center">
+      <b>Proyecto La Bastilla</b>
+    </h1>
+    <p style="font-size: 18px;">Esta página es una vitrina comercial para el reconocido Pasaje la Bastilla de la ciudad de Medellín.
+      
+      <h3 class="text-center">¿Qué significa esto?</h3>
+      
+      Significa que esta página no se encarga de reproducir ni vender los productos de las librerías aquí expuestas y como mencionamos,
+      somos una vitrina en la web con el fin de dar mayor visibilidad a este lugar tan querido por generaciones
+     por ser el lugar en donde puedes encontrar todo tipo de libros.
+     <br><br>
+     Así mismo, queremos incentivar a las ciudadanos
+      más jóvenes a la lectura, ya que es una importante costumbre que se ha ido perdiendo con el pasar de los años. 
+     Lo haremos por medio de la web, ya que es el medio más utilizado actualmente y así mostrarles las cómodas y económicas
+    opciones de lectura.
+     </p>
+    </div>
   <!--Fin texto descripción -->
 </main>
 

@@ -8,11 +8,11 @@
   <div class="container p-4">
     <!-- texto -->
     <section class="mb-4">
-      <p style="text-align:center; color:white; font-family: 'Quicksand';">
+    <hr width=100% style="color:white; height: 3px;">
+
+      <h4 style="text-align:center; color:white; font-family: 'Quicksand';">
         Daremos a conocer los diferentes libros y librerías que se encuentran en el pasaje La Bastiila de una forma virtual y segura
-        <br></br>
-        Aclaramos que no pertenecemos ni representamos a ninguna librería en particular, somos un grupo de estudiantes que, por el contrario, queremos generar un espacio para reunir las diferentes librerías que componen el conocido Pasaje la Bastilla ubicado en la ciudad de Medellín, Colombia.
-      </p>
+      </h4>
     </section>
     <hr width=100% style="color:white; height: 3px;">
 
@@ -26,21 +26,23 @@
           <!-- Redes -->
           <ul class="footer__col1 list-unstyled">
 
+            <!-- Instagram -->
+            <li><a class="footer__icon" href="https://www.instagram.com/la_bastilla_proyecto/" target="_blank" role="button">
+                  <i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
+
             <!-- Correo -->
             <li><a class="footer__icon mb-2" href="acerca#sec-cont" role="button">
                 <i class="far fa-envelope fa-lg"></i> Contáctanos</a></li>
 
-            <!-- Instagram -->
-            <li><a class="footer__icon" href="https://www.instagram.com/la_bastilla_proyecto/" target="_blank" role="button">
-                <i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
-
+            
             <!-- Acerca de o info -->
-            <li><a class="footer__icon" href="acerca" role="button">
+            <li><a class="footer__icon" href="contacto" role="button">
                 <i class="far fa-user fa-lg"></i> Nosotros</a></li>
+            
+            <li><a class="footer__icon" href="registro" role="button">
+            <i class="fas fa-user-plus"></i> Regístrate gratis</a></li>
 
-            <!-- registro -->
-            <li><a class="footer__icon" href="registro" role="button">Regístrate gratis</a></li>
-
+            
           </ul>
         </div>
         <!-- fin de la columna 1-->
@@ -49,7 +51,7 @@
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
           <h4 class="text-white">Bienvenidos </h4>
           <img src="https://i.ibb.co/yYJTtQS/favicon.png" alt="favicon" style="height: 190px">
-          <h3 class="text-white">Pasaje La Bastilla</h3>
+          <h4 class="text-white">Pasaje La Bastilla</h4>
         </div>
         <!--fin de la columna 2-->
 
@@ -62,7 +64,7 @@
               <br></br>
               <a href="mapa">
                 <button class="footer__icon">
-                  <h5>Ver más</h5>
+                  <h5>conoce más</h5>
                 </button></a>
             </div>
           </div>

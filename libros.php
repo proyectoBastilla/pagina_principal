@@ -158,7 +158,7 @@ include("./includes/header.php") ?>
     ?>
     <!-- Tarjeta general de los libros -->
     <div class="card">
-        <h3 id="libros_titulo">Te podría interesar...</h3>
+        <h3 id="libros_titulo">Busca tus libros favoritos con nosotros <i class="far fa-smile-wink "></i></h3>
         <div class="libros">
           <!-- Tarjetas de cada uno de los libros -->
           <?php while ($row = mysqli_fetch_array($result)) { ?>
@@ -167,8 +167,8 @@ include("./includes/header.php") ?>
                 <div class="libros__tarjeta-container">
                   <div class="libros__tarjeta-blur"></div>
                   <div class="libros__tarjeta-info">
+                    <h4 class="text-center"><b><?= $row["nombre"] ?></b></h4>
                     <h5 class="text-center"><?= $row["autor"] ?></h5>
-                    <h5 class="text-center"><?= $row["nombre"] ?></h5>
                     <h5><i class="far fa-thumbs-up"></i> <?= $row["likes"] ?> Likes</h5>
                   </div>
                   <img class="libros__tarjeta-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">

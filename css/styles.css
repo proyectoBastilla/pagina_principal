@@ -39,7 +39,7 @@ a:hover {
   z-index: 80;
   width: 100%;
   top: 0;
-  background-color: #000000;
+  background-color: #222;
   color: #f5f5f5;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -53,7 +53,7 @@ a:hover {
 }
 
 .navLogo img {
-  height: 2rem;
+  height: 2.3rem;
   width: 5rem;
 }
 
@@ -62,6 +62,8 @@ a:hover {
   margin: 0;
   padding-inline: 0.5rem;
   line-height: 40px;
+  background-color: #222;
+
 }
 
 .header__nav-item:hover,
@@ -170,7 +172,7 @@ a:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
-  background-color: #000;
+  background-color: #222;
   color: #C4C4C4;
 }
 
@@ -215,7 +217,7 @@ a:hover {
   padding-bottom: 2.5em;
   margin-top: 1.5em;
   margin-bottom: 0;
-  background-color: #000;
+  background-color: #222;
   text-align: center;
   bottom: 0;
 }
@@ -268,6 +270,9 @@ a:hover {
   max-height: 350px;
   overflow: hidden;
   margin: 10px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 2%;
+  
 }
 
 .libros__tarjeta:hover {
@@ -290,9 +295,10 @@ a:hover {
   top: 0.5rem;
   left: 0rem;
   font-size: 18px;
-  background: white;
+  background: rgb(34, 34, 34);
+  color: #C4C4C4;
   padding: 10px;
-  border-color: #bbbbbb;
+  border-color: #292929;
   border-width: 1px;
   border-style: solid;
   border-radius: 0 10px 10px 0;
@@ -602,4 +608,179 @@ a:hover {
   .header .search {
     width: fit-content;
   }
+}
+
+.containerpodio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.6fr 1fr;
+  gap: 20px 30px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titulo titulo titulo"
+    "dos uno- tres"
+    "dos uno- tres";
+}
+
+.dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.5fr 0.5fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagendos imagendos imagendos"
+    "imagendos imagendos imagendos"
+    "podiodos podiodos podiodos";
+  grid-area: dos;
+}
+
+.podiodos { grid-area: podiodos; 
+  color:#f5f5f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Quicksand';
+  background: rgb(140,154,155);
+  text-align: center;
+  font-size: 25px;
+  border-radius: 7%;
+  height: 60px;
+  margin-top:4px;
+  }
+
+.imagendos { grid-area: imagendos; }
+.imagendos:hover{
+      transform: translateY(-15px);;
+}
+.uno- {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.3fr 0.7fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagenuno imagenuno imagenuno"
+    "imagenuno imagenuno imagenuno"
+    "podiouno podiouno podiouno";
+  grid-area: uno-;
+}
+
+.podiouno { grid-area: podiouno; 
+  color:#f5f5f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Quicksand';
+  margin-bottom: 0px;
+  background: rgb(241,182,42);
+  text-align: center;
+  font-size: 25px;
+  border-radius: 7%;
+  height: 80px;
+  margin-top: 32px;
+}
+
+.imagenuno { grid-area: imagenuno; }
+.imagenuno:hover{
+      transform: translateY(-15px);;
+}
+.tres {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1.6fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "imagentres imagentres imagentres"
+    "imagentres imagentres imagentres"
+    "podiotres podiotres podiotres";
+  grid-area: tres;
+}
+
+.podiotres { grid-area: podiotres; 
+  color:#f5f5f5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: 'Quicksand';
+  background: rgb(232,138,74);
+  text-align: center;
+  font-size: 25px;
+  border-radius: 7%;
+  height: 46px;
+}
+
+.imagentres { grid-area: imagentres; }
+.imagentres:hover{
+      transform: translateY(-15px);;
+}
+.titulo { grid-area: titulo;}
+@media screen and (max-width: 360px) {
+  .containerpodio {
+display: grid;
+grid-template-columns: 1fr 1fr 0.9fr 1.1fr;
+grid-template-rows: 0.2fr 1.8fr 1.2fr;
+gap: 10px 20px;
+grid-auto-flow: row;
+grid-template-areas:
+  "titulo titulo titulo titulo"
+  ". uno- uno- ."
+  "dos dos tres tres";
+width: 300px;
+}
+
+.titulo { grid-area: titulo; }
+
+.uno- {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 0.1fr 0.4fr 0.6fr;
+gap: 0px 40px;
+grid-auto-flow: row;
+grid-template-areas:
+  "imagenuno imagenuno imagenuno"
+  "imagenuno imagenuno imagenuno"
+  "podiouno podiouno podiouno";
+grid-area: uno-;
+}
+
+.imagenuno { grid-area: imagenuno; }
+
+.podiouno { grid-area: podiouno; }
+
+.tres {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1.6fr 0.4fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+  "imagentres imagentres imagentres"
+  "imagentres imagentres imagentres"
+  "podiotres podiotres podiotres";
+grid-area: tres;
+}
+
+.podiotres { grid-area: podiotres; }
+
+.imagentres { grid-area: imagentres; }
+
+.dos {
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1.4fr 0.6fr;
+gap: 0px 0px;
+grid-auto-flow: row;
+grid-template-areas:
+  "imagendos imagendos imagendos"
+  "imagendos imagendos imagendos"
+  "podiodos podiodos podiodos";
+grid-area: dos;
+}
+
+.podiodos { grid-area: podiodos; }
+
+.imagendos { grid-area: imagendos; }
+
 }
