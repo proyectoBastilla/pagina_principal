@@ -31,21 +31,23 @@ include("./includes/header.php") ?>
                   <tr>
                     <th>Título</th>
                     <th>Autor</th>
+                    <th>Género</th>
                     <th>Año</th>
                     <th>Disponibilidad</th>
-                    <th>Acciones</th>
+                    <th>MODIFÍCALO</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
                   $id = $_SESSION["id_lib"]; //
-                  $query = "SELECT id, titulo, autor, año, disponible FROM libros WHERE libreria='$id'";
+                  $query = "SELECT id, titulo, autor, genero, año, disponible FROM libros WHERE libreria='$id'";
                   $result = mysqli_query($mysql, $query);
                   //imprimir la base de datos
                   while ($row = mysqli_fetch_array($result)) { ?>
                     <tr id="libro-<?= $row["id"] ?>">
                       <td><?= $row["titulo"]; ?></td>
                       <td><?= $row["autor"]; ?></td>
+                      <td><?= $row["genero"]; ?></td>
                       <td><?= $row["año"]; ?></td>
                       <td>
                         <?php
@@ -57,7 +59,7 @@ include("./includes/header.php") ?>
                         ?>
                       </td>
                       <td>
-                        <a href="vista-libro?action=edit" class="btn btn-secondary btn-sm">
+                        <a href="vista-libro?action=edit&libro=<?=$row["id"]?>" class="btn btn-secondary btn-sm">
                           <i class="fas fa-edit"></i>
                         </a>
                         <a href="funciones.php?a=" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i></a>

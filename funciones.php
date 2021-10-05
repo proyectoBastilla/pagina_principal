@@ -215,6 +215,7 @@ function login($mysql, $correo, $contra) {
         $_SESSION["sesion"] = true;
         $_SESSION["libreria"] = true;
         $_SESSION["nombre_lib"] = $nombre["nombre"];
+        $_SESSION["id_iniciado"] = $id["id"];
         $_SESSION["correo_lib"] = $correo;
         $_SESSION["id_lib"] = $id["id"];
         header("location: index");
