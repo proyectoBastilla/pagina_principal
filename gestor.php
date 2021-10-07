@@ -44,7 +44,7 @@ include("./includes/header.php") ?>
                   $result = mysqli_query($mysql, $query);
                   //imprimir la base de datos
                   while ($row = mysqli_fetch_array($result)) { ?>
-                    <tr id="libro-<?= $row["id"] ?>">
+                    <tr>
                       <td><?= $row["titulo"]; ?></td>
                       <td><?= $row["autor"]; ?></td>
                       <td><?= $row["genero"]; ?></td>
@@ -59,10 +59,12 @@ include("./includes/header.php") ?>
                         ?>
                       </td>
                       <td>
-                        <a href="vista-libro?action=edit&libro=<?=$row["id"]?>" class="btn btn-secondary btn-sm">
+                        <a href="vista-libro?action=edit&libro=<?= $row["id"] ?>" class="btn btn-secondary btn-sm">
                           <i class="fas fa-edit"></i>
                         </a>
-                        <a href="funciones.php?a=" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i></a>
+                        <a href="funciones.php?a=borrar&libro<?= $row["id"] ?>" class="btn btn-danger btn-sm">
+                          <i class="fa fa-fw fa-trash"></i>
+                        </a>
                       </td>
                     </tr>
                   <?php } ?>

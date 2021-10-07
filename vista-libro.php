@@ -31,7 +31,7 @@ if ($_GET["action"] == "agg") {
       <div class="card-body">
 
         <?php if (isset($agg)) : ?>
-          <form method="POST" action="funciones?a=agglibro" role="form">
+          <form method="POST" action="funciones.php?a=agglibro" role="form">
 
             <div class="box box-info padding-1">
               <div class="box-body">
@@ -62,9 +62,9 @@ if ($_GET["action"] == "agg") {
                     </div>
                   </div>
                   <div class="mb-3 row">
-                    <label for="disponible" class="col-sm-2 col-form-label">Uso</label>
+                    <label for="uso" class="col-sm-2 col-form-label">Uso</label>
                     <div class="col-sm-8">
-                      <select class="form-select" id="disponible">
+                      <select class="form-select" id="uso">
                         <option selected>Escoge el uso que ha tenido el libro</option>
                         <option value="1">Nuevo</option>
                         <option value="0">Usado / Segunda Mano</option>
@@ -95,7 +95,7 @@ if ($_GET["action"] == "agg") {
 
         <?php elseif (isset($edit)) : ?>
 
-          <form method="POST" action="funciones?a=editlibro" role="form">
+          <form method="POST" action="funciones?a=update&libro=<?= $libro["id"] ?>" role="form">
 
             <div class="box box-info padding-1">
               <div class="box-body">
@@ -126,14 +126,30 @@ if ($_GET["action"] == "agg") {
                     </div>
                   </div>
                   <div class="mb-3 row">
-                    <label for="disponible" class="col-sm-2 col-form-label">Uso</label>
+                    <label for="disponible" class="col-sm-2 col-form-label">Disponibilidad</label>
                     <div class="col-sm-8">
-                      <select class="form-select" id="disponible">
+                      <select name="disponible" class="form-select" id="disponible">
+                        <?php if ($libro["disponible"] == 1) : ?>
+                          <option>Cambia la disponibilidad del libro</option>
+                          <option selected value="1">Disponible</option>
+                          <option value="0">Agotado</option>
+                        <?php elseif ($libro["uso"] == 0) : ?>
+                          <option>Cambia la disponibilidad del libro</option>
+                          <option value="1">Disponible</option>
+                          <option selected value="0">Agotado</option>
+                        <?php endif; ?>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="uso" class="col-sm-2 col-form-label">Uso</label>
+                    <div class="col-sm-8">
+                      <select name="uso" class="form-select" id="uso">
                         <?php if ($libro["uso"] == 1) : ?>
                           <option>Cambia el uso que ha tenido el libro</option>
                           <option selected value="1">Nuevo</option>
                           <option value="0">Usado / Segunda Mano</option>
-                        <?php elseif ($libro["uso"] == 0) : ?> 
+                        <?php elseif ($libro["uso"] == 0) : ?>
                           <option>Cambia el uso que ha tenido el libro</option>
                           <option value="1">Nuevo</option>
                           <option selected value="0">Usado / Segunda Mano</option>

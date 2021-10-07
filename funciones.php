@@ -7,11 +7,41 @@ ESTE IF DEFINE QUE FUNCIÓN SE USARÁ
 LAS FUNCIONES ESTÁN DEFINIDAS DESPUÉS
 EN EL MISMO ORDEN QUE SON NOMBRADAS AQUÍ*/
 
-if ($_GET["a"]=="cambio") {
+if ($_GET["a"] == "update") {
 
-  //Toma el ID del libro para usar la función
-  $id_lib = $_GET["id"];
-  cambio_disponible($id_lib, $mysql);
+  $id_libro = $_GET["libro"];
+  $id_libreria = $_SESSION["id_lib"];
+  $titulo = $_POST["titulo"];
+  $autor = $_POST["autor"];
+  $genero = $_POST["genero"];
+  $año = $_POST["año"];
+  $disponible = $_POST["disponible"];
+  $uso = $_POST["uso"];
+  $sinopsis = $_POST["sinopsis"];
+  $imagen = $_POST["imagen"];
+
+  update_libro($mysql, $id_libro, $id_libreria, $titulo, $autor, $genero, $año, $disponible, $uso, $sinopsis, $imagen); 
+
+} elseif ($_GET["a"] == "borrar") {
+
+  //Toma el ID del libro
+  $id_libro = $_GET["libro"];
+
+  //Función con las variables externas necesarias
+  borrar_libro($mysql, $id_libro);
+
+} elseif ($_GET["a"] == "agglibro") {
+
+  $id_libreria = $_SESSION["id_lib"];
+  $titulo = $_POST["titulo"];
+  $autor = $_POST["autor"];
+  $genero = $_POST["genero"];
+  $año = $_POST["año"];
+  $uso = $_POST["uso"];
+  $sinopsis = $_POST["sinopsis"];
+  $imagen = $_POST["imagen"];
+
+  create_libro($mysql, $id_libreria, $titulo, $autor, $genero, $año, $uso, $sinopsis, $imagen);
 
 } elseif ($_GET["a"]=="logout") {
 
@@ -103,24 +133,6 @@ if ($_GET["a"]=="cambio") {
 
 
 /* DE AQUÍ EN ADELANTE EMPIEZAN LAS FUNCIONES COMO TAL */
-
-function cambio_disponible($id, $mysql) {
-
-  $query_id = "SELECT disponible FROM libros WHERE id='$id'";
-  $result_id = mysqli_query($mysql, $query_id);
-  $disponible = mysqli_fetch_array($result_id);
-
-  if ($disponible["disponible"]==1) {
-    $query_disp = "UPDATE libros SET disponible='' WHERE id='$id'";
-    $result_disp = mysqli_query($mysql, $query_disp);
-  } else {
-    $query_disp = "UPDATE libros SET disponible='1' WHERE id='$id'";
-    $result_disp = mysqli_query($mysql, $query_disp);
-  }
-  $id_back = $id - 3;
-  header("location: gestor#libro-$id_back");
-}
-
 
 function logout() {
   session_unset();
@@ -427,5 +439,39 @@ function dislike($mysql, $id_libro, $id_like) {
 
   header("location: libros?a=desc&id=$id_libro");
 
+}
+
+
+function borrar_libro($mysql, $id_libro) {
+
+  $query = "DELETE FROM libros WHERE id='$id_libro'";
+  $result = mysqli_query($mysql, $query);
+
+  header('location: gestor');
+}
+
+
+function update_libro($mysql, $id_libro, $id_libreria, $titulo, $autor, $genero, $año, $disponible, $uso, $sinopsis, $imagen) {
+
+  $query_libreria = "SELECT titulo FROM libros WHERE id='$id_libro' AND libreria='$id_libreria'";
+  $result_libreria = mysqli_query($mysql, $query_libreria);
+  $validador = mysqli_fetch_array($result_libreria);
+
+  if (!empty($validador)) {
+
+    $query = "UPDATE libros SET titulo = '$titulo', autor = '$autor', genero = '$genero', año = '$año', libreria = '$id_libreria', disponible = '$disponible', uso = '$uso', sinopsis = '$sinopsis', imagen = '$imagen' WHERE id='$id_libro'";
+    $result = mysqli_query($mysql, $query);
+
+  }
+  header('location: gestor');
+}
+
+
+function create_libro($mysql, $id_libreria, $titulo, $autor, $genero, $año, $uso, $sinopsis, $imagen) {
+
+  $query = "INSERT INTO libros (titulo, autor, genero, año, libreria, disponible, uso, sinopsis, imagen) VALUES ('$titulo', '$autor', '$genero', '$año', '$id_libreria', '1', '$uso', '$sinopsis', '$imagen')";
+  $result = mysqli_query($mysql, $query);
+
+  header('location: gestor');
 }
 ?>
