@@ -89,7 +89,7 @@ include("./includes/header.php") ?>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <a href="libros?pag=1">
-        <img src="https://i.ibb.co/SR4R0YP/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
+      <img src="https://i.ibb.co/HtrMbpm/banner-2.jpg" class="d-block w-100" alt="Banner número 2">
         </a>
         
       </div>
