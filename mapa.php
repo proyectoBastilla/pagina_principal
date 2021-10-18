@@ -10,11 +10,15 @@ include("./includes/header.php") ?>
       <!--Google map-->
       <div class="card">
         <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 600px">
-         <iframe id="map-google" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.764716496399!2d-75.5665046!3d6.2482134!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44285620849f25%3A0xb81bd00a721b3e1!2sCentro%20Comercial%20del%20Libro%20y%20la%20Cultura!5e0!3m2!1ses-419!2sco!4v1626363860754!5m2!1ses-419!2sco" allow="fullscreen" loading="eager"></iframe>
-          </iframe>
+        <img src="https://i.ibb.co/19TnDrm/mapa.png" alt="mapa" border="0">  
           <br></br>
           <a href="acerca#contacto">
-          <button type="button" class="btn btn-dark btn-lg btn-block text-center">Contáctanos</button></a>
+            <button type="button" class="btn btn-dark btn-lg btn-block text-center">Contáctanos</button>
+          </a>
+          <a href="https://www.google.com/maps/place/Centro+Comercial+del+Libro+y+la+Cultura/@6.2484843,-75.5665868,18.79z/data=!4m5!3m4!1s0x0:0xb81bd00a721b3e1!8m2!3d6.2484896!4d-75.566758?hl=es-419" target="_blank">
+            <button type="button"  class="btn btn-dark btn-lg btn-block text-center">Amplía el mapa</button>
+          </a>
+
         </div>
         </div>
       <br></br>
