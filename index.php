@@ -9,72 +9,44 @@ include("./includes/header.php") ?>
   <img src="https://i.ibb.co/PWkH6zD/banner-1.jpg" class="d-block w-100" alt="Banner número 1">
 
   <div class="index-section-2">
-    <div class="containerpodio">
-      <div class="dos">
-        <div class="podiodos">
-          <h1>2° PUESTO</h1>
-        </div>
-        <div class="imagendos">
-          <?php
-          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 2";
-          $result = mysqli_query($mysql, $query);
-          for ($i = 0; $i < 1; $i++) {
-            $row = mysqli_fetch_array($result);
-          ?>
-            <div class="elemento2">
-              <a href="libros?a=desc&id=<?= $row["id"] ?>">
-                <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-              </a>
+    <!-- Tarjetas lanzamientos -->
+ 
+    <div class="mx-sm-4 my-sm-4">
+            <div class="titulo">
+                <h1 class="text-center mt-5"><b>TOP LIBROS MÁS GUSTADOS</b></h1>
             </div>
-          <?php
-          } ?>
-        </div>
-      </div>
-      <div class="uno-">
-        <div class="podiouno">
-          <h1>1° PUESTO</h1>
-        </div>
-        <div class="imagenuno">
-          <?php
-          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 1";
-          $result = mysqli_query($mysql, $query);
-          for ($i = 0; $i < 1; $i++) {
-            $row = mysqli_fetch_array($result);
-          ?>
-            <div class="elemento3">
-              <a href="libros?a=desc&id=<?= $row["id"] ?>">
-                <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-              </a>
+            <div class="libros">
+                <?php
+                    $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes DESC LIMIT 5";
+                    $result = mysqli_query($mysql, $query);
+                    $i = 1;
+                    while ($row = mysqli_fetch_array($result)) {
+                        ?>
+                        <div class="libros__tarjeta">
+                            <a href="libros?a=desc&id=<?= $row["id"] ?>">
+                                <div class="libros__tarjeta-container">
+                                    <div class="libros__tarjeta-blur"></div>
+                                    <div class="libros__tarjeta-info">
+                                        <h5><b>Conoce más</b></h5>
+                                        <h5><i class="far fa-thumbs-up"></i> <?= $row["likes"] ?> Likes</h5>
+                                    </div>
+                                        <img class="libros__tarjeta-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
+                                        <span class="libros__tarjeta-cartel">
+                                            <h4>¡Ganadores!</h4>
+                                        </span>                 
+                                    
+                                        <div class="card-body">
+                                            <h5 class="text-start"><?= $row["titulo"] ?></h5>
+                                        </div>
+                                </div>
+                            </a>
+                        </div>
+                        <?php 
+                        $i++;
+                     } ?>
             </div>
-          <?php
-          } ?>
+
         </div>
-      </div>
-      <div class="tres">
-        <div class="podiotres">
-          <H1>3° PUESTO</H1>
-        </div>
-        <div class="imagentres">
-          <?php
-          $query = "SELECT id, titulo, autor, imagen, likes FROM libros ORDER BY likes ASC LIMIT 3";
-          $result = mysqli_query($mysql, $query);
-          for ($i = 0; $i < 1; $i++) {
-            $row = mysqli_fetch_array($result);
-          ?>
-            <div class="elemento4">
-              <a href="libros?a=desc&id=<?= $row["id"] ?>">
-                <img class="libros__tarjetas-imagen card-img-top" src="<?= $row["imagen"] ?>" alt="Portada libro">
-              </a>
-            </div>
-          <?php
-          } ?>
-        </div>
-      </div>
-      <div class="titulo">
-        <h1 class="text-center mt-5"><b>TOP LIBROS MÁS GUSTADOS</b></h1>
-      </div>
-    </div>
-  </div>
   </div>
   <!-- Fin de sección podio -->
 
