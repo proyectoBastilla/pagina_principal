@@ -22,24 +22,18 @@
           <h3 class="text-white">Redes Sociales</h3>
           <!-- Redes -->
           <ul class="footer__col1 list-unstyled">
-
             <!-- Instagram -->
             <li><a class="footer__icon" href="https://www.instagram.com/la_bastilla_proyecto/" target="_blank" role="button">
-                  <i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
-
+                <i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
             <!-- Correo -->
             <li><a class="footer__icon" href="acerca#sec-cont" role="button">
                 <i class="far fa-envelope fa-lg"></i> Contáctanos</a></li>
-
-            
             <!-- Acerca de o info -->
             <li><a class="footer__icon" href="contacto" role="button">
                 <i class="far fa-user fa-lg"></i> Nosotros</a></li>
-            
-            <li><a class="footer__icon" href="registro" role="button">
-            <i class="fas fa-user-plus"></i> Regístrate gratis</a></li>
 
-            
+            <li><a class="footer__icon" href="registro" role="button">
+                <i class="fas fa-user-plus"></i> Regístrate gratis</a></li>
           </ul>
         </div>
         <!-- fin de la columna 1-->
@@ -55,24 +49,20 @@
         <!--Columna 3-->
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <h3 class="text-white">Mapa</h3>
-          <div class="card">
-            <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 167px">
-              <iframe id="map-google" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d495.764716496399!2d-75.5665046!3d6.2482134!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44285620849f25%3A0xb81bd00a721b3e1!2sCentro%20Comercial%20del%20Libro%20y%20la%20Cultura!5e0!3m2!1ses-419!2sco!4v1626363860754!5m2!1ses-419!2sco" allow="fullscreen" loading="eager"></iframe>
-              <br></br>
-              <a href="mapa">
-                <button class="footer__plus">
-                  <h5>Conoce más</h5>
-                </button></a>
-            </div>
-          </div>
+          <img src="https://i.ibb.co/0pNtLGg/minimapa.png" alt="minimapa" style="height: 190px;">
+          <br></br>
+          <a href="mapa">
+            <button class="footer__plus">
+              <h5>Conoce más</h5>
+            </button>
+          </a>
         </div>
-        <!--fin de la columna 3-->
       </div>
       <!-- Fin de columnas-->
     </section>
   </div>
 </footer>
-<!-- Footer -->
+<!-- Fin Footer -->
 
 
 <!-- SCRIPTS -->

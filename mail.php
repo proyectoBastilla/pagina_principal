@@ -4,7 +4,7 @@ session_start();
 include("private/credenciales.php");
 include("private/correos.php");
 
-//Estas líneas llaman los archivos y clases necesarias para el PHPMailer
+//Estas líneas llaman los archivos y clases necesarias para el SendGrid
 require("vendor/autoload.php");
 
 //Asignación mensaje del correo. Definidos en "private/correos"
@@ -54,9 +54,9 @@ if ($_GET["type"]=="contacto") {
   $_SESSION["mensaje_color"] = "success";
   header("location: acerca#sec-cont");
 } else {
-  header("location: login");
   $_SESSION["mensaje"] = "Revisa tu bandeja de entrada, también spam ;)";
   $_SESSION["mensaje_color"] = "success";
+  header("location: login");
 }
 
 ?>
